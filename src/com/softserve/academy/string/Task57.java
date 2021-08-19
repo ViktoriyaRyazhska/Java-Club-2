@@ -7,25 +7,22 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Task59 {
+public class Task57 {
     public static void main(String[] args) {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        Character symbol;
+        String line;
 
-        System.out.println("\nTask 59: get position in alphabet. ");
+        System.out.println("\nTask 57: remove spaces from string ");
 
         try {
-            System.out.print("Enter character a-z (lower case only): ");
-            symbol = br.readLine().charAt(0);
-            if (symbol < 97 || symbol > 122) {
-                throw new IOException();
-            }
-            System.out.println(position(symbol));
+            System.out.print("Enter string: ");
+            line = br.readLine();
+            System.out.println("String with no spaces: " + noSpace(line));
 
         } catch (IOException |
                 NumberFormatException e) {
             System.out.println(ConsoleColors.RED + "You have entered wrong character, please try again" + ConsoleColors.RESET);
-            Task59.main(args);
+            Task57.main(args);
         }
 
         System.out.println(ConsoleColors.GREEN + "To back to main menu input 1 ");
@@ -36,7 +33,7 @@ public class Task59 {
                     Main.main(args);
                     break;
                 case "2":
-                    Task59.main(args);
+                    Task57.main(args);
                     break;
                 default:
                     System.err.println(ConsoleColors.RED + "You need ro put 1 or 2 ");
@@ -49,8 +46,7 @@ public class Task59 {
         }
     }
 
-
-    public static String position(char alphabet) {
-        return "Position of alphabet: " + (alphabet - 96);
+    public static String noSpace(final String x) {
+        return x.replaceAll(" ", "");
     }
 }
