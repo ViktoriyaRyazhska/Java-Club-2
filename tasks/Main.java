@@ -12,8 +12,8 @@ public class Main {
 		System.out.println("Enter the number of task");
 		int taskNum = Integer.parseInt(br.readLine());
 		
-		// тут вставляємо main наших задач і будемо викликати за допомогою switch-case
-		// добавляємо нові case по нумерації 1,2,3, ....
+		// Ã‘â€šÃ‘Æ’Ã‘â€š Ã�Â²Ã‘ï¿½Ã‘â€šÃ�Â°Ã�Â²Ã�Â»Ã‘ï¿½Ã‘â€�Ã�Â¼Ã�Â¾ main Ã�Â½Ã�Â°Ã‘Ë†Ã�Â¸Ã‘â€¦ Ã�Â·Ã�Â°Ã�Â´Ã�Â°Ã‘â€¡ Ã‘â€“ Ã�Â±Ã‘Æ’Ã�Â´Ã�ÂµÃ�Â¼Ã�Â¾ Ã�Â²Ã�Â¸Ã�ÂºÃ�Â»Ã�Â¸Ã�ÂºÃ�Â°Ã‘â€šÃ�Â¸ Ã�Â·Ã�Â° Ã�Â´Ã�Â¾Ã�Â¿Ã�Â¾Ã�Â¼Ã�Â¾Ã�Â³Ã�Â¾Ã‘Å½ switch-case
+		// Ã�Â´Ã�Â¾Ã�Â±Ã�Â°Ã�Â²Ã�Â»Ã‘ï¿½Ã‘â€�Ã�Â¼Ã�Â¾ Ã�Â½Ã�Â¾Ã�Â²Ã‘â€“ case Ã�Â¿Ã�Â¾ Ã�Â½Ã‘Æ’Ã�Â¼Ã�ÂµÃ‘â‚¬Ã�Â°Ã‘â€ Ã‘â€“Ã‘â€” 1,2,3, ....
 		
 		while (true) {
 			
@@ -26,19 +26,26 @@ public class Main {
 			case 2:
 				
 				Task2.main(args);
+							
+			case 3:
 				
-			case 3
-			
 				Task3.main(args);
-			
-			case 4
-			
+				
+			case 4:
+				
 				Task4.main(args);
+				
+<<<<<<< HEAD:tasks/Main.java
+			case 5:
+				
+				Task5.main(args);
 			
 			case 6
 				Task6.main(args);
 			
 			
+=======
+>>>>>>> Team1:Main.java
 			}
 			
 		}
