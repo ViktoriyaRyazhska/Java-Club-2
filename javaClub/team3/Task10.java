@@ -25,13 +25,13 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Task10 {
-    public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int age = 0;
+public class Task10 extends Task{
+    int age = 0;
+    @Override
+    void execute() {
         try {
             System.out.println("Please enter your age: ");
-            age = Integer.parseInt(br.readLine());
+            age = Integer.parseInt(bufferedReader.readLine());
         } catch (IOException e) {
             e.printStackTrace();
         } catch (NumberFormatException e) {

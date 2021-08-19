@@ -8,13 +8,13 @@ import java.io.InputStreamReader;
 //However, she's in love with Johnny, and would like to greet him
 //slightly different. She added a special case to her function, but she made a mistake.
 
-public class Task5 {
-    public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String name = null;
+public class Task5 extends Task{
+    String name = null;
+    @Override
+    void execute() {
         try{
             System.out.println("Please enter name: ");
-            name = br.readLine();
+            name = bufferedReader.readLine();
         } catch (IOException e) {
             e.printStackTrace();
         }
