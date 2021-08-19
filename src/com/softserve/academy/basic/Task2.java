@@ -26,7 +26,7 @@ public class Task2 {
             System.out.println("put second");
             numberTwo =Integer.parseInt(br.readLine());
             result = multiply(numberOne,numberTwo);
-            System.out.println("Double Integer is " +  result);
+            System.out.println("multiplying  is " +  result);
 
         } catch (IOException |
                 NumberFormatException e) {
@@ -42,10 +42,10 @@ public class Task2 {
                     Main.main(args);
                     break;
                 case "2":
-                    DoubleInteger.main(args);
+                    Task2.main(args);
                     break;
                 default:
-                    System.err.println(ConsoleColors.RED + "You need ro put 1 or 2 ");
+                    System.err.println(ConsoleColors.RED + "You need to put 1 or 2 ");
                     System.err.println("You transfer to menu " + ConsoleColors.RESET);
                     DoubleInteger.main(args);
             }
