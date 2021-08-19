@@ -14,10 +14,9 @@ public class MainClasses {
         text();
         try {
             switch (br.readLine()) {
-                case "1":
-
+                case "7":
+                    Task7.main(args);
                     break;
-
                 default:
                     System.err.println(ConsoleColors.RED +"You need to put number with 1 to * ");
                     System.err.println("You transfer to menu "+ ConsoleColors.RESET);
@@ -34,7 +33,7 @@ public class MainClasses {
     private static void text() {
 
         System.out.println(ConsoleColors.GREEN + "Please enter TASK number" + ConsoleColors.RESET);
-        System.out.println(ConsoleColors.GREEN + "1" );
+        System.out.println(ConsoleColors.GREEN + "7" + ConsoleColors.RESET + " Get opposite number");
         System.out.println(ConsoleColors.RESET );
 
 
