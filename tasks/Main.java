@@ -34,18 +34,14 @@ public class Main {
 			case 4:
 				
 				Task4.main(args);
-				
-<<<<<<< HEAD:tasks/Main.java
+
 			case 5:
 				
 				Task5.main(args);
 			
 			case 6
 				Task6.main(args);
-			
-			
-=======
->>>>>>> Team1:Main.java
+
 			}
 			
 		}
