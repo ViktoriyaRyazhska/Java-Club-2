@@ -22,6 +22,9 @@ public class MainBasic {
                     case "8":
                         Task8.main(args);
                         break;
+                    case "9":
+                        Task9.main(args);
+                        break;
                     default:
                         System.err.println(ConsoleColors.RED +"You need to put number with 1 to * ");
                         System.err.println("You transfer to menu "+ ConsoleColors.RESET);

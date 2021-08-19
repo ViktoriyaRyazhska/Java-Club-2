@@ -1,31 +1,32 @@
-package com.softserve.academy.basic;
+package com.softserve.academy.string;
 
 import com.softserve.academy.ConsoleColors;
 import com.softserve.academy.Main;
+import com.softserve.academy.basic.Task8;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Task8 {
+public class Task59 {
     public static void main(String[] args) {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int year;
+        Character symbol;
 
-        System.out.println("\nTask 8: get century from year. ");
+        System.out.println("\nTask 59: get position in alphabet. ");
 
         try {
-            System.out.print("Enter year: ");
-            year = Integer.parseInt(br.readLine());
-            if (year <= 0) {
+            System.out.print("Enter character a-z (lower case only): ");
+            symbol = br.readLine().charAt(0);
+            if (symbol < 97 || symbol > 122) {
                 throw new IOException();
             }
-            System.out.println("Century: " +  century(year));
+            System.out.println(position(symbol));
 
         } catch (IOException |
                 NumberFormatException e) {
-            System.out.println(ConsoleColors.RED + "You have entered wrong year, please try again" + ConsoleColors.RESET);
-            Task8.main(args);
+            System.out.println(ConsoleColors.RED + "You have entered wrong character, please try again" + ConsoleColors.RESET);
+            Task59.main(args);
         }
 
         System.out.println(ConsoleColors.GREEN + "To back to main menu input 1 ");
@@ -36,12 +37,12 @@ public class Task8 {
                     Main.main(args);
                     break;
                 case "2":
-                    Task8.main(args);
+                    Task59.main(args);
                     break;
                 default:
                     System.err.println(ConsoleColors.RED + "You need ro put 1 or 2 ");
                     System.err.println("You transfer to menu " + ConsoleColors.RESET);
-                    Task8.main(args);
+                    Task59.main(args);
             }
         } catch (
                 IOException e) {
@@ -49,7 +50,8 @@ public class Task8 {
         }
     }
 
-    public static int century(int number) {
-        return number % 100 == 0? number / 100 : (number / 100) + 1;
+
+    public static String position(char alphabet) {
+        return "Position of alphabet: " + (alphabet - 96);
     }
 }
