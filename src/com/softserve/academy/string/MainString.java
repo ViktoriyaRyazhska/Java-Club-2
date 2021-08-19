@@ -16,9 +16,10 @@ public class MainString {
         try {
             switch (br.readLine()) {
                 case "1":
-
                     break;
-
+                case "9":
+                    Task59.main(args);
+                    break;
                 default:
                     System.err.println(ConsoleColors.RED +"You need to put number with 1 to * ");
                     System.err.println("You transfer to menu "+ ConsoleColors.RESET);
@@ -36,6 +37,6 @@ public class MainString {
 
         System.out.println(ConsoleColors.GREEN + "Please enter TASK number" + ConsoleColors.RESET);
         System.out.println(ConsoleColors.GREEN + "1" + ConsoleColors.RESET + "  ");
-
+        System.out.println(ConsoleColors.GREEN + "9" + ConsoleColors.RESET + " Get position of a character in alphabet");
     }
 }

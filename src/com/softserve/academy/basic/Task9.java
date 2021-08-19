@@ -12,17 +12,17 @@ public class Task9 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int number;
 
-        System.out.println("\n Task 9: get negative number. ");
+        System.out.println("\nTask 9: get negative number. ");
 
         try {
-            System.out.println("Enter year: ");
+            System.out.print("Enter number: ");
             number = Integer.parseInt(br.readLine());
             System.out.println("Negative: " +  makeNegative(number));
 
         } catch (IOException |
                 NumberFormatException e) {
             System.out.println(ConsoleColors.RED + "You have not entered number in correct way, please try again" + ConsoleColors.RESET);
-            Task2.main(args);
+            Task9.main(args);
         }
 
         System.out.println(ConsoleColors.GREEN + "To back to main menu input 1 ");
@@ -38,7 +38,7 @@ public class Task9 {
                 default:
                     System.err.println(ConsoleColors.RED + "You need ro put 1 or 2 ");
                     System.err.println("You transfer to menu " + ConsoleColors.RESET);
-                    DoubleInteger.main(args);
+                    Task9.main(args);
             }
         } catch (
                 IOException e) {
