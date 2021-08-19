@@ -5,20 +5,20 @@ Slobodyanyuk Bogdan #1 (Tasks: 1, 4, 7, 10, etc.)
 Stanasiuk Oleg #2 (Tasks: 2, 5, 8, 11, etc.)  
 Voronko Eugene #3 (Tasks: 3, 6, 9, 12, etc.) 
 
-int usersAmount = 3;
-int n = user.getId(); // #n
-do  {
-    System.out.println(n);
-    System.out.println(taskList.getTask(n));
-} while (n < taskList.length; n += usersAmount);
+int usersAmount = 3;  
+int n = user.getId(); // #n  
+do  {  
+    System.out.println(n);  
+    System.out.println(taskList.getTask(n));  
+} while (n < taskList.length; n += usersAmount);  
 
-e.g.
-int usersAmount = 3;
-int n = Stanasiuk Oleg.getId();
-do  {
-    System.out.println(2);
-    System.out.println(https://www.codewars.com/kata/function-3-multiplying-two-numbers);
-} while (2 < 71; 2 += 3);
+e.g.  
+int usersAmount = 3;  
+int n = Stanasiuk Oleg.getId();  
+do  {  
+    System.out.println(2);  
+    System.out.println(https://www.codewars.com/kata/function-3-multiplying-two-numbers);  
+} while (2 < 71; 2 += 3);  
 
 ### Basic program
 1  https://www.codewars.com/kata/you-cant-code-under-pressure-number-1  
