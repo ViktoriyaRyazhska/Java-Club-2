@@ -19,6 +19,9 @@ public class MainBasic {
                     case "2":
                         Task2.main(args);
                         break;
+                    case "8":
+                        Task8.main(args);
+                        break;
                     default:
                         System.err.println(ConsoleColors.RED +"You need to put number with 1 to * ");
                         System.err.println("You transfer to menu "+ ConsoleColors.RESET);
@@ -38,7 +41,7 @@ public class MainBasic {
             System.out.println(ConsoleColors.GREEN + "Please enter TASK number" + ConsoleColors.RESET);
             System.out.println(ConsoleColors.GREEN + "1" + ConsoleColors.RESET + "  Double Integer");
             System.out.println(ConsoleColors.GREEN + "2" + ConsoleColors.RESET + "  multiplying two numbers");
-
+            System.out.println(ConsoleColors.GREEN + "8" + ConsoleColors.RESET + "  Get century from year");
 
         }
 
