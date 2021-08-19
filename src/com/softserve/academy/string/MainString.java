@@ -23,6 +23,9 @@ public class MainString {
                 case "9":
                     Task59.main(args);
                     break;
+                case "17":
+                    Task67.main(args);
+                    break;
                 default:
                     System.err.println(ConsoleColors.RED +"You need to put number with 1 to * ");
                     System.err.println("You transfer to menu "+ ConsoleColors.RESET);
@@ -42,5 +45,6 @@ public class MainString {
         System.out.println(ConsoleColors.GREEN + "1" + ConsoleColors.RESET + "  ");
         System.out.println(ConsoleColors.GREEN + "7" + ConsoleColors.RESET + " Remove spaces from string");
         System.out.println(ConsoleColors.GREEN + "9" + ConsoleColors.RESET + " Get position of a character in alphabet");
+        System.out.println(ConsoleColors.GREEN + "17" + ConsoleColors.RESET + " Change case of each char in string to opposite");
     }
 }
