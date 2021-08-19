@@ -34,14 +34,11 @@ public class Main {
 			case 4:
 				
 				Task4.main(args);
-
-			case 5:
 				
-				Task5.main(args);
-			
-			case 6
-				Task6.main(args);
-
+			case 8:
+				
+				Task8.main(args);
+				
 			}
 			
 		}
