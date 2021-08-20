@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9552760-886e-4e25-8efe-c131b1d6eb35" name="Changes" comment="Changes">
-      <change afterPath="$PROJECT_DIR$/src/com/softserve/academy/classes/Task15.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b9552760-886e-4e25-8efe-c131b1d6eb35" name="Changes" comment="Changes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -168,14 +165,7 @@
       <option name="project" value="LOCAL" />
       <updated>1629411522742</updated>
     </task>
-    <task id="LOCAL-00002" summary="Changes">
-      <created>1629456882183</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1629456882183</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,10 +216,6 @@
       <screen x="0" y="25" width="1280" height="999" />
     </state>
     <state x="119" y="99" width="1026" height="840" key="SettingsEditor/0.25.1280.999@0.25.1280.999" timestamp="1629411393528" />
-    <state x="231" y="258" width="802" height="523" key="Vcs.Push.Dialog.v2" timestamp="1629456894090">
-      <screen x="0" y="25" width="1280" height="999" />
-    </state>
-    <state x="231" y="258" width="802" height="523" key="Vcs.Push.Dialog.v2/0.25.1280.999@0.25.1280.999" timestamp="1629456894090" />
     <state x="339" y="416" width="585" height="223" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1629456443514">
       <screen x="0" y="25" width="1280" height="999" />
     </state>
