@@ -11,22 +11,22 @@ import java.io.InputStreamReader;
 //Kata.MakeNegative(-5); // return -5
 //Kata.MakeNegative(0); // return 0
 
-public class Task9 {
-    public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String input = null;
+public class Task9 extends Task{
+    @Override
+    void execute() {
+        System.out.println("Please enter a number: ");
         try {
-            System.out.println("Please enter a number: ");
-            input = br.readLine();
-        } catch (IOException e) {
+            String input = scanner.nextLine();
+            System.out.println("Done!");
+            System.out.println(MakeNegative(Integer.parseInt(input)));
+        } catch (Exception e) {
             e.printStackTrace();
         }
-        System.out.println("Done!");
-        System.out.println(MakeNegative(Integer.parseInt(input)));
     }
 
     public static int MakeNegative(int number)
     {
         return Math.abs(number)*-1;
     }
+
 }
