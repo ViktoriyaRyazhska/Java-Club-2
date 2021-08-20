@@ -1,4 +1,4 @@
-package javaClub.team3.tests;
+package javaClub.team3.Tests;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
