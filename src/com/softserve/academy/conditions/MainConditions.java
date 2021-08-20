@@ -15,8 +15,11 @@ public class MainConditions {
         text();
         try {
             switch (br.readLine()) {
-                case "1":
-
+                case "25":
+                    Task25.main(args);
+                    break;
+                case "26":
+                    Task26.main(args);
                     break;
                 default:
                     System.err.println(ConsoleColors.RED +"You need to put number with 1 to * ");
@@ -35,7 +38,9 @@ public class MainConditions {
     private static void text() {
 
         System.out.println(ConsoleColors.GREEN + "Please enter TASK number" + ConsoleColors.RESET);
-        System.out.println(ConsoleColors.GREEN + "1" + ConsoleColors.RESET + "  ");
+        System.out.println(ConsoleColors.GREEN + "25" + ConsoleColors.RESET + "     Timmy love Sarah ");
+        System.out.println(ConsoleColors.GREEN + "26" + ConsoleColors.RESET + "     Convert boolean values to strings 'Yes' or 'No ");
+
 
     }
 }
