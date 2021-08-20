@@ -1,8 +1,7 @@
-package com.softserve.academy.collections;
+package com.softserve.academy.conditions;
 
 import com.softserve.academy.ConsoleColors;
 import com.softserve.academy.Main;
-import com.softserve.academy.basic.Task3;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -20,7 +19,7 @@ public class Task25 {
         boolean love ;
 
         System.out.println("");
-        System.out.println("collections task25 ");
+        System.out.println("conditions task25 ");
         System.out.println("Douse Timmy love Sarah ? ");
         System.out.println("put number of petals flowers");
 

@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9552760-886e-4e25-8efe-c131b1d6eb35" name="Changes" comment="Changes">
-      <change afterPath="$PROJECT_DIR$/src/com/softserve/academy/classes/Task15.java" afterDir="false" />
+    <list default="true" id="b9552760-886e-4e25-8efe-c131b1d6eb35" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/softserve/academy/conditions/Task26.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/conditions/Task26Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_08_2021_18_48__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_08_2021_18_48__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_08_2021_18_48__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_08_2021_18_48__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java-Club-2/com/softserve/academy/ConsoleColors.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Club-2/com/softserve/academy/ConsoleColors.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java-Club-2/com/softserve/academy/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Club-2/com/softserve/academy/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java-Club-2/com/softserve/academy/basic/DoubleInteger.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Club-2/com/softserve/academy/basic/DoubleInteger.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java-Club-2/com/softserve/academy/basic/MainBasic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Club-2/com/softserve/academy/basic/MainBasic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java-Club-2/com/softserve/academy/classes/MainClasses.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Club-2/com/softserve/academy/classes/MainClasses.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java-Club-2/com/softserve/academy/collections/MainCollection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Club-2/com/softserve/academy/collections/MainCollection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java-Club-2/com/softserve/academy/conditions/MainConditions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Club-2/com/softserve/academy/conditions/MainConditions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java-Club-2/com/softserve/academy/loops/MainLoops.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Club-2/com/softserve/academy/loops/MainLoops.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java-Club-2/com/softserve/academy/opp/MainOPP.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Club-2/com/softserve/academy/opp/MainOPP.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java-Club-2/com/softserve/academy/string/MainString.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Club-2/com/softserve/academy/string/MainString.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/softserve/academy/collections/MainCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/softserve/academy/collections/MainCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/softserve/academy/collections/Task25.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/softserve/academy/conditions/Task25.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/softserve/academy/conditions/MainConditions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/softserve/academy/conditions/MainConditions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/collections/Task25Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/conditions/Task25Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,13 +57,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/junit-4.8.1.jar" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
-  <component name="RunManager" selected="JUnit.Task25Test">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.softserve.academy.Main" />
       <module name="Java-Club-2" />
@@ -76,26 +77,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Task25" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.softserve.academy.collections.Task25" />
+    <configuration name="Task26" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.softserve.academy.conditions.Task26" />
       <module name="Java-Club-2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.softserve.academy.collections.*" />
+          <option name="PATTERN" value="com.softserve.academy.conditions.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -108,43 +98,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Task12Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Java-Club-2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="classes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="classes" />
-      <option name="MAIN_CLASS_NAME" value="classes.Task12Test" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Task25Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Java-Club-2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="collections.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="collections" />
-      <option name="MAIN_CLASS_NAME" value="collections.Task25Test" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Task25Test" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Task25" />
-        <item itemvalue="JUnit.Task12Test" />
         <item itemvalue="JUnit.All in Java-Club-2" />
+        <item itemvalue="Application.Task26" />
       </list>
     </recent_temporary>
   </component>
@@ -161,82 +119,9 @@
       <workItem from="1629387493860" duration="761000" />
       <workItem from="1629388549234" duration="629000" />
     </task>
-    <task id="LOCAL-00001" summary="Changes">
-      <created>1629411522742</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1629411522742</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Changes">
-      <created>1629456882183</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1629456882183</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="&quot;&quot;" />
-    <MESSAGE value="Changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="444" y="209" width="376" height="621" key="#com.intellij.ide.util.MemberChooser" timestamp="1629452489531">
-      <screen x="0" y="25" width="1280" height="999" />
-    </state>
-    <state x="444" y="209" width="376" height="621" key="#com.intellij.ide.util.MemberChooser/0.25.1280.999@0.25.1280.999" timestamp="1629452489531" />
-    <state x="415" y="263" width="426" height="507" key="FileChooserDialogImpl" timestamp="1629411323298">
-      <screen x="0" y="25" width="1280" height="999" />
-    </state>
-    <state x="415" y="263" width="426" height="507" key="FileChooserDialogImpl/0.25.1280.999@0.25.1280.999" timestamp="1629411323298" />
-    <state width="1224" height="261" key="GridCell.Tab.0.bottom" timestamp="1629456498550">
-      <screen x="0" y="25" width="1280" height="999" />
-    </state>
-    <state width="1224" height="261" key="GridCell.Tab.0.bottom/0.25.1280.999@0.25.1280.999" timestamp="1629456498550" />
-    <state width="1224" height="261" key="GridCell.Tab.0.center" timestamp="1629456498549">
-      <screen x="0" y="25" width="1280" height="999" />
-    </state>
-    <state width="1224" height="261" key="GridCell.Tab.0.center/0.25.1280.999@0.25.1280.999" timestamp="1629456498549" />
-    <state width="1224" height="261" key="GridCell.Tab.0.left" timestamp="1629456498548">
-      <screen x="0" y="25" width="1280" height="999" />
-    </state>
-    <state width="1224" height="261" key="GridCell.Tab.0.left/0.25.1280.999@0.25.1280.999" timestamp="1629456498548" />
-    <state width="1224" height="261" key="GridCell.Tab.0.right" timestamp="1629456498550">
-      <screen x="0" y="25" width="1280" height="999" />
-    </state>
-    <state width="1224" height="261" key="GridCell.Tab.0.right/0.25.1280.999@0.25.1280.999" timestamp="1629456498550" />
-    <state x="119" y="99" width="1026" height="840" key="SettingsEditor" timestamp="1629411393528">
-      <screen x="0" y="25" width="1280" height="999" />
-    </state>
-    <state x="119" y="99" width="1026" height="840" key="SettingsEditor/0.25.1280.999@0.25.1280.999" timestamp="1629411393528" />
-    <state x="231" y="258" width="802" height="523" key="Vcs.Push.Dialog.v2" timestamp="1629456894090">
-      <screen x="0" y="25" width="1280" height="999" />
-    </state>
-    <state x="231" y="258" width="802" height="523" key="Vcs.Push.Dialog.v2/0.25.1280.999@0.25.1280.999" timestamp="1629456894090" />
-    <state x="339" y="416" width="585" height="223" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1629456443514">
-      <screen x="0" y="25" width="1280" height="999" />
-    </state>
-    <state x="339" y="416" width="585" height="223" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.25.1280.999@0.25.1280.999" timestamp="1629456443514" />
-    <state x="451" y="438" width="361" height="163" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1629456876482">
-      <screen x="0" y="25" width="1280" height="999" />
-    </state>
-    <state x="451" y="438" width="361" height="163" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1280.999@0.25.1280.999" timestamp="1629456876482" />
   </component>
 </project>

@@ -1,7 +1,8 @@
-package collections;
+package conditions;
 
-import com.softserve.academy.collections.Task25;
-import org.junit.jupiter.api.Test;
+import com.softserve.academy.conditions.Task25;
+import org.junit.Test;
+
 
 import static org.junit.Assert.assertEquals;
 
