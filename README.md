@@ -1,8 +1,9 @@
 # Java-Club-2
-## Team 5
-Diakiv Marta  
-Maksym Kuzbyt  
-Votus Liubomyr  
-Kychma Nazar  
-Huzar Dmitry  
+## Team 3
+
+1 Міша Медик
+2 Вячеслав Михальченко
+3 Діма Санницький
+4 Анна Шауерман
+5 ПавлоСколоздра  
 
