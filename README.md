@@ -1,4 +1,4 @@
-# Team 4
+# Part1 Team 4
 
 Slobodyanyuk Bogdan #1 // (Tasks: 1, 4, 7, 10, etc.)  
 // Androshchuk Iryna  
