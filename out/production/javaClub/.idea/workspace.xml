@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="af71d58c-5e6f-493e-81a6-569ac29068d1" name="Default Changelist" comment="Task4.java and Task9.java have been added to the project and Main.java has modified">
+      <change beforePath="$PROJECT_DIR$/javaClub/team3/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javaClub/team3/Task.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javaClub/team3/Task10.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javaClub/team3/Task11.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javaClub/team3/Task2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javaClub/team3/Task4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javaClub/team3/Task5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javaClub/team3/Task7.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javaClub/team3/Task9.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javaClub/team3/Tests/Task10Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javaClub/team3/Tests/Task4Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javaClub/team3/Tests/Task5Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javaClub/team3/Tests/Task9Test.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="ProjectId" id="1wtxcTrFmcVK2g6yw57hRUFHvyW" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="javaClub.team3.Tests" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main.java">
+    <configuration name="Main.java" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="15" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="javaClub.team3.Main.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="javaClub.team3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="15" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="Java-Club-2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Task10Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Java-Club-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="javaClub.team3.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="javaClub.team3.Tests" />
+      <option name="MAIN_CLASS_NAME" value="javaClub.team3.Tests.Task10Test" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Task5Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Java-Club-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="javaClub.team3.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="javaClub.team3.Tests" />
+      <option name="MAIN_CLASS_NAME" value="javaClub.team3.Tests.Task5Test" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main.java" />
+      <item itemvalue="JUnit.Task5Test" />
+      <item itemvalue="JUnit.Task10Test" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.Task10Test" />
+        <item itemvalue="JUnit.Task5Test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="af71d58c-5e6f-493e-81a6-569ac29068d1" name="Default Changelist" comment="" />
+      <created>1629291766063</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1629291766063</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Task4.java and Task9.java have been added to the project and Main.java has modified">
+      <created>1629296799950</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1629296799950</updated>
+    </task>
+    <task id="LOCAL-00002" summary="A package for tests has been created&#10;Tests for task5 and task10 have been created">
+      <created>1629303864394</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1629303864394</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Test for task10 got fixed output">
+      <created>1629313597897</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1629313597897</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/Team3" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Task4.java and Task9.java have been added to the project and Main.java has modified" />
+    <MESSAGE value="A package for tests has been created&#10;Tests for task5 and task10 have been created" />
+    <MESSAGE value="Test for task10 got fixed output" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test for task10 got fixed output" />
+  </component>
+</project>
