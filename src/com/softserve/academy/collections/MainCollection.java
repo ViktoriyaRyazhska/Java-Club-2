@@ -2,6 +2,7 @@ package com.softserve.academy.collections;
 
 import com.softserve.academy.ConsoleColors;
 import com.softserve.academy.basic.DoubleInteger;
+import com.softserve.academy.basic.Task2;
 import com.softserve.academy.classes.MainClasses;
 
 import java.io.BufferedReader;
@@ -14,8 +15,8 @@ public class MainCollection {
         text();
         try {
             switch (br.readLine()) {
-                case "1":
-
+                case "25":
+                    Task25.main(args);
                     break;
 
                 default:
@@ -35,7 +36,7 @@ public class MainCollection {
     private static void text() {
 
         System.out.println(ConsoleColors.GREEN + "Please enter TASK number" + ConsoleColors.RESET);
-        System.out.println(ConsoleColors.GREEN + "1" + ConsoleColors.RESET + "  ");
+        System.out.println(ConsoleColors.GREEN + "25" + ConsoleColors.RESET + " Opposites Attract");
 
     }
 }
