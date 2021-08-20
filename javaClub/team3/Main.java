@@ -13,6 +13,7 @@ public class Main {
         Map<Integer, Task> taskMap = new LinkedHashMap<>();
         taskMap.put(5, new Task5());
         taskMap.put(10, new Task10());
+        taskMap.put(15, new Task15());
 
         while (true) {
             System.out.println("Please enter task number: ");
