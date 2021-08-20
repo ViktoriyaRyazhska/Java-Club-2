@@ -32,11 +32,11 @@ public class Main {
 				break;
 			}
 			case 4: {
-				Task4.main(args);
+				//Task4.main(args);
 				break;
 			}
 			case 5: {
-				//Task5.main(args);
+				Task5.main(args);
 				break;
 			}
 			case 6: {
