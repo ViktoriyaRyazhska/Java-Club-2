@@ -1,9 +1,6 @@
 package com.softserve.academy.loops;
 
 import com.softserve.academy.ConsoleColors;
-import com.softserve.academy.basic.DoubleInteger;
-import com.softserve.academy.classes.MainClasses;
-import com.softserve.academy.collections.MainCollection;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -15,12 +12,17 @@ public class MainLoops {
         text();
         try {
             switch (br.readLine()) {
-                case "1":
-
+                case "35":
+                    Task35.main(args);
+                    break;
+                case "36":
+                    Task36.main(args);
+                case "37":
+                    Task37.main(args);
                     break;
                 default:
-                    System.err.println(ConsoleColors.RED +"You need to put number with 1 to * ");
-                    System.err.println("You transfer to menu "+ ConsoleColors.RESET);
+                    System.err.println(ConsoleColors.RED + "You need to put number with 1 to * ");
+                    System.err.println("You transfer to menu " + ConsoleColors.RESET);
                     MainLoops.main(args);
 
             }
@@ -35,7 +37,9 @@ public class MainLoops {
     private static void text() {
 
         System.out.println(ConsoleColors.GREEN + "Please enter TASK number" + ConsoleColors.RESET);
-        System.out.println(ConsoleColors.GREEN + "1" + ConsoleColors.RESET + "  ");
+        System.out.println(ConsoleColors.GREEN + "35" + ConsoleColors.RESET + "     return a new array with each value doubled ");
+        System.out.println(ConsoleColors.GREEN + "36" + ConsoleColors.RESET + "      Counting sheep... ");
+        System.out.println(ConsoleColors.GREEN + "37" + ConsoleColors.RESET + "      Reversed sequence ");
 
     }
 }
