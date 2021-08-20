@@ -20,7 +20,7 @@ public class Main {
 		switch (taskNum) {
 			
 			case 1:{
-				Task.main(args);
+				Task1.main(args);
 				break;
 			}
 			case 2: {
