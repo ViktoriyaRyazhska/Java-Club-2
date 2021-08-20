@@ -11,11 +11,14 @@ public class Main {
         int taskNumber = 0;
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         Map<Integer, Task> taskMap = new LinkedHashMap<>();
+        taskMap.put(2, new Task2());
         taskMap.put(5, new Task5());
+        taskMap.put(7, new Task7());
         taskMap.put(10, new Task10());
+        taskMap.put(11, new Task11());
 
         while (true) {
-            System.out.println("Please enter task number: ");
+            System.out.println("Please enter task number, 0 for exit: ");
             try {
                 taskNumber = Integer.parseInt(br.readLine());
             } catch (NumberFormatException e) {
@@ -24,6 +27,7 @@ public class Main {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            if (taskNumber == 0) return;
             if (!taskMap.containsKey(taskNumber)) {
                 System.err.println("There is no such task!");
             } else {
