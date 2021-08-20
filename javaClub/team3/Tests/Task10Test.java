@@ -10,18 +10,18 @@ class Task10Test {
 
     @Test
     void datingRange_LessThen1() {
-        assertEquals("Wrong age!", datingRange(-3));
+        assertEquals("Wrong age.", datingRange(-3));
     }
     @Test
     void datingRange_MoreThan100() {
-        assertEquals("Wrong age!", datingRange(120));
+        assertEquals("Wrong age.", datingRange(120));
     }
     @Test
     void datingRange_LessThan14() {
-        assertEquals("age = 5   =>   4-5", datingRange(5));
+        assertEquals("4-5", datingRange(5));
     }
     @Test
     void datingRange_MoreThan14() {
-        assertEquals("age = 27   =>   20-40", datingRange(27));
+        assertEquals("20-40", datingRange(27));
     }
 }
