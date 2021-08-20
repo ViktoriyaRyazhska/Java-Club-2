@@ -16,6 +16,8 @@ public class Main {
         taskMap.put(7, new Task7());
         taskMap.put(10, new Task10());
         taskMap.put(11, new Task11());
+        taskMap.put(15, new Task15());
+
 
         while (true) {
             System.out.println("Please enter task number, 0 for exit: ");
