@@ -8,7 +8,18 @@
 
 package javaClub.team3;
 
-public class Task11 {
+public class Task11 extends Task{
+    @Override
+    void execute() {
+        System.out.println("Input temp in kelvin");
+        try {
+            int k = scanner.nextInt();
+            System.out.println("Your temp (Celsius) " + weatherInfo(k));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public static String weatherInfo(int temp) {
         double c = convertToCelsius(temp);
         if (c <= 0)
