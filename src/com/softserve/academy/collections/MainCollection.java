@@ -1,9 +1,7 @@
 package com.softserve.academy.collections;
 
 import com.softserve.academy.ConsoleColors;
-import com.softserve.academy.basic.DoubleInteger;
-import com.softserve.academy.basic.Task2;
-import com.softserve.academy.classes.MainClasses;
+import com.softserve.academy.conditions.Task25;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -15,9 +13,6 @@ public class MainCollection {
         text();
         try {
             switch (br.readLine()) {
-                case "25":
-                    Task25.main(args);
-                    break;
 
                 default:
                     System.err.println(ConsoleColors.RED +"You need to put number with 1 to * ");
