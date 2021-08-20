@@ -1,8 +1,6 @@
 package com.softserve.academy.classes;
 
 import com.softserve.academy.ConsoleColors;
-import com.softserve.academy.basic.DoubleInteger;
-import com.softserve.academy.basic.MainBasic;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -20,12 +18,15 @@ public class MainClasses {
                 case "8":
                     Task8.main(args);
                     break;
+                case "12":
+                    Task12.main(args);
+                    break;
                 case "13":
                     Task13.main(args);
                     break;
                 default:
-                    System.err.println(ConsoleColors.RED +"You need to put number with 1 to * ");
-                    System.err.println("You transfer to menu "+ ConsoleColors.RESET);
+                    System.err.println(ConsoleColors.RED + "You need to put number with 1 to * ");
+                    System.err.println("You transfer to menu " + ConsoleColors.RESET);
                     MainClasses.main(args);
             }
         } catch (IOException e) {
