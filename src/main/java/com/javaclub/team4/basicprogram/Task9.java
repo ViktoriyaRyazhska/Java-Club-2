@@ -14,19 +14,19 @@ import com.javaclub.team4.Task;
  */
 
 public class Task9 extends Task {
-	
+
 	private int n = 0;
 
 	@Override
 	public void runTask() {
-		
+
 		System.out.println("Please enter a number to transform it to negative one:");
 		try {
 			n = Integer.parseInt(br.readLine());
+			System.out.println(makeNegative(n) + " is the result.");
 		} catch (NumberFormatException | IOException e) {
 			System.out.println("It seems that the number you entered is not valid. Try again.");
 		}
-		System.out.println(makeNegative(n) + " is the result.");
 	}
 
 	public static int makeNegative(final int x) {

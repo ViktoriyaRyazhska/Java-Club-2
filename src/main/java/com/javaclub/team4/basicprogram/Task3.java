@@ -31,10 +31,10 @@ public class Task3 extends Task {
 			width = Double.parseDouble(br.readLine());
 			System.out.println("Height:");
 			height = Double.parseDouble(br.readLine());
+			System.out.println("The volume of such cuboid is " + getVolumeOfCuboid(length, width, height));
 		} catch (NumberFormatException | IOException e) {
 			System.out.println("It seems that the number you entered is not an integer. Try again.");
 		}
-		System.out.println("The volume of such cuboid is " + getVolumeOfCuboid(length, width, height));
 	}
 
 	public static double getVolumeOfCuboid(final double length, final double width, final double height) {
