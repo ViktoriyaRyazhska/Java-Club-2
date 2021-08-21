@@ -54,12 +54,14 @@ public class Main {
 			case 9:
 				//Task9.main(args);
 				break;
-			case 10:
+			case 10: {
 				Task10.main(args);
 				break;
-			case 11:
-				//Task11.main(args);
+			}
+			case 11: {
+				Task11.main(args);
 				break;
+			}
 			case 12:
 				//Task12.main(args);
 				break;
