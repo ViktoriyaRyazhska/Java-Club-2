@@ -26,7 +26,7 @@ public class Task9 extends Task {
 		} catch (NumberFormatException | IOException e) {
 			System.out.println("It seems that the number you entered is not valid. Try again.");
 		}
-		System.out.println(makeNegative(n) + " is the resul.");
+		System.out.println(makeNegative(n) + " is the result.");
 	}
 
 	public static int makeNegative(final int x) {
