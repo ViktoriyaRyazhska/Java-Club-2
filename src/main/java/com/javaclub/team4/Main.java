@@ -23,9 +23,10 @@ public class Main {
 		
 		tasks.put(3, new Task3());
 		tasks.put(6, new Task6());
+		tasks.put(9, new Task9());
 		
 		while (true) {
-			System.out.println("Please enter task number, 0 for exit:");
+			System.out.println("Please enter a task number, or 0 to end the program:");
 			try {
 				taskNumber = Integer.parseInt(br.readLine());
 			} catch (NumberFormatException e) {
