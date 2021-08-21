@@ -20,13 +20,13 @@ public class Task9 extends Task {
 	@Override
 	public void runTask() {
 		
-		System.out.println("Please enter a non-negative number to transform it into binary format:");
+		System.out.println("Please enter a number to transform it to negative one:");
 		try {
 			n = Integer.parseInt(br.readLine());
 		} catch (NumberFormatException | IOException e) {
-			System.out.println("It seems that the number you entered is not an integer. Try again.");
+			System.out.println("It seems that the number you entered is not valid. Try again.");
 		}
-		System.out.println(n + " in binary is ");
+		System.out.println(makeNegative(n) + " is the resul.");
 	}
 
 	public static int makeNegative(final int x) {
