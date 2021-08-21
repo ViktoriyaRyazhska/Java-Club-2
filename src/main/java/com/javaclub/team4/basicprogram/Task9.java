@@ -21,12 +21,7 @@ public class Task9 extends Task {
 	public void runTask() {
 
 		System.out.println("Please enter a number to transform it to negative one:");
-		if (n < Integer.MIN_VALUE) {
-			System.out.println("Please enter larger number");
-		}
-		if (n > Integer.MAX_VALUE) {
-			System.out.println("Please enter smaller number");
-		}
+
 		try {
 			n = Integer.parseInt(br.readLine());
 			System.out.println(makeNegative(n) + " is the result.");
@@ -42,4 +37,3 @@ public class Task9 extends Task {
 		return result;
 	}
 }
-//sdf
