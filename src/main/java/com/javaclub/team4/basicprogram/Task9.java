@@ -21,7 +21,7 @@ public class Task9 extends Task {
 	public void runTask() {
 
 		System.out.println("Please enter a number to transform it to negative one:");
-
+		
 		try {
 			n = Integer.parseInt(br.readLine());
 			System.out.println(makeNegative(n) + " is the result.");
