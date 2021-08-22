@@ -22,6 +22,7 @@ public class Main {
         taskMap.put(18, new Task18());
         taskMap.put(20, new Task20());
         taskMap.put(23, new Task23());
+        taskMap.put(25, new Task25());
         taskMap.put(28, new Task28());
         taskMap.put(33, new Task33());
 
