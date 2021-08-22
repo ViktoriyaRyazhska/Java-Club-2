@@ -23,11 +23,15 @@ public class Task37 {
         try {
             System.out.println("put number");
             index = Integer.parseInt(br.readLine());
-            System.out.println(Arrays.toString(reverse(index)));
-
+            if(index>0) {
+                System.out.println(Arrays.toString(reverse(index)));
+            }else {
+                System.out.println(ConsoleColors.RED + "You put wrong value try again" + ConsoleColors.RESET);
+                Task37.main(args);
+            }
         } catch (IOException | NumberFormatException e) {
             System.out.println(ConsoleColors.RED + "You put wrong value try again" + ConsoleColors.RESET);
-            Task36.main(args);
+            Task37.main(args);
         }
 
         System.out.println(ConsoleColors.GREEN + "Beak to main menu input 1 ");
@@ -44,7 +48,7 @@ public class Task37 {
                 default:
                     System.err.println(ConsoleColors.RED + "You need ro put 1 or 2 ");
                     System.err.println("You transfer to menu " + ConsoleColors.RESET);
-                    Task36.main(args);
+                    Task37.main(args);
             }
         } catch (IOException e) {
             e.printStackTrace();
