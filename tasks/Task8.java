@@ -8,15 +8,21 @@ public class Task8 {
 	
 	public static int whatCentury(int a) {
 		
-		int century = a / 100;
-		if (a % 100 >0) 
-			century +=1;
-			return century;
+		int century = 0;
 		
-		
-	}
+		try {
+			
+			century = a / 100;
+			if (a % 100 >0) 
+				century +=1;
+			
+		}catch (NumberFormatException e){
+			System.out.println(e);
+		}return century;
+	}	
+
 	
-	public static void main(String[] args) throws NumberFormatException, IOException {
+	public static void main(String[] args) throws IOException {
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Enter any year");
