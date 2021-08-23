@@ -50,7 +50,7 @@ do  {
 23 https://www.codewars.com/kata/rock-paper-scissors  
 24 https://www.codewars.com/kata/basic-mathematical-operations  
 25 https://www.codewars.com/kata/opposites-attract/train/java
-26 https://www.codewars.com/kata/convert-boolean-values-to-strings-yes-or-no/
+26 https://www.codewars.com/kata/convert-boolean-values-to-strings-yes-or-no/  
 27 https://www.codewars.com/kata/will-there-be-enough-space  
 28 https://www.codewars.com/kata/the-modulo-3-sequence  
 29 https://www.codewars.com/kata/switch-it-up  
