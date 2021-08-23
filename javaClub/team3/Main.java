@@ -12,10 +12,13 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         Map<Integer, Task> taskMap = new LinkedHashMap<>();
         taskMap.put(2, new Task2());
+        taskMap.put(4, new Task4());
         taskMap.put(5, new Task5());
         taskMap.put(7, new Task7());
+        taskMap.put(9, new Task9());
         taskMap.put(10, new Task10());
         taskMap.put(11, new Task11());
+        taskMap.put(14, new Task14());
         taskMap.put(15, new Task15());
         taskMap.put(18, new Task18());
         taskMap.put(23, new Task23());
