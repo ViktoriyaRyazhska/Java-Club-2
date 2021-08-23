@@ -17,7 +17,7 @@ public class Task45 extends Input {
         long start;
         long finish;
 
-        int count = 0;
+
 
         System.out.println("");
         System.out.println("Lops 45 ");

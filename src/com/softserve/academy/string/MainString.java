@@ -29,6 +29,9 @@ public class MainString {
                 case "9":
                     Task59.main(args);
                     break;
+                case "16":
+                    Task66.main(args);
+                    break;
                 case "17":
                     Task67.main(args);
                     break;
@@ -53,6 +56,7 @@ public class MainString {
         System.out.println(ConsoleColors.GREEN + "6" + ConsoleColors.RESET + " Are You Playing Banjo?");
         System.out.println(ConsoleColors.GREEN + "7" + ConsoleColors.RESET + " Remove spaces from string");
         System.out.println(ConsoleColors.GREEN + "9" + ConsoleColors.RESET + " Get position of a character in alphabet");
+        System.out.println(ConsoleColors.GREEN + "16" + ConsoleColors.RESET + " Sort and Stare");
         System.out.println(ConsoleColors.GREEN + "17" + ConsoleColors.RESET + " Change case of each char in string to opposite");
     }
 }
