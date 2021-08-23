@@ -5,7 +5,7 @@ import java.io.IOException;
 //https://www.codewars.com/kata/cat-years-dog-years/
 public class Task33 extends Task {
 
-	public static int[] humanYearsCatYearsDogYears(final int humanYears) {
+	public static int[] humanYearsCatYearsDogYears(final int humanYears) throws Exception {
 		int catYears = 0;
 		int dogYears = 0;
 
@@ -22,7 +22,7 @@ public class Task33 extends Task {
 			}
 			return new int[] { humanYears, catYears, dogYears };
 		}
-		return new int[] { 0, 0, 0 };
+		throw new Exception("Unknown value of human years");
 	}
 
 	@Override
@@ -39,6 +39,8 @@ public class Task33 extends Task {
 			e.printStackTrace();
 		} catch (NumberFormatException e) {
 			System.err.println("Not a number!");
+		} catch (Exception e) {
+			System.err.println(e.getMessage());
 		}
 
 	}
