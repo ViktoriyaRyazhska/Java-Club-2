@@ -18,8 +18,10 @@ public class Main {
         taskMap.put(8, new Task8());
         taskMap.put(10, new Task10());
         taskMap.put(11, new Task11());
+        taskMap.put(14, new Task14());
         taskMap.put(15, new Task15());
         taskMap.put(18, new Task18());
+        taskMap.put(19, new Task19());
         taskMap.put(20, new Task20());
         taskMap.put(23, new Task23());
         taskMap.put(25, new Task25());
