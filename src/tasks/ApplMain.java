@@ -44,7 +44,7 @@ public class ApplMain {
 			break;
 		}
 		case 6: {
-			// Task6.main(args);
+			Task6.main(args);
 			break;
 		}
 		case 7: {
