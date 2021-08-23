@@ -32,7 +32,7 @@ public class ApplMain {
 			break;
 		}
 		case 3: {
-			// Task3.main(args);
+			Task3.main(args);
 			break;
 		}
 		case 4: {
@@ -48,7 +48,7 @@ public class ApplMain {
 			break;
 		}
 		case 7: {
-			// Task1.main(args);
+			Task1.main(args);
 			break;
 		}
 		case 8: {
