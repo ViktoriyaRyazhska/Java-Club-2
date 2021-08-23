@@ -17,6 +17,12 @@ public class MainString {
             switch (br.readLine()) {
                 case "1":
                     break;
+                case "4":
+                    Task54.main(args);
+                    break;
+                case "6":
+                    Task56.main(args);
+                    break;
                 case "7":
                     Task57.main(args);
                     break;
@@ -43,6 +49,8 @@ public class MainString {
 
         System.out.println(ConsoleColors.GREEN + "Please enter TASK number" + ConsoleColors.RESET);
         System.out.println(ConsoleColors.GREEN + "1" + ConsoleColors.RESET + "  ");
+        System.out.println(ConsoleColors.GREEN + "4" + ConsoleColors.RESET + " Opposite number");
+        System.out.println(ConsoleColors.GREEN + "6" + ConsoleColors.RESET + " Are You Playing Banjo?");
         System.out.println(ConsoleColors.GREEN + "7" + ConsoleColors.RESET + " Remove spaces from string");
         System.out.println(ConsoleColors.GREEN + "9" + ConsoleColors.RESET + " Get position of a character in alphabet");
         System.out.println(ConsoleColors.GREEN + "17" + ConsoleColors.RESET + " Change case of each char in string to opposite");
