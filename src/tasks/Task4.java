@@ -12,7 +12,7 @@ public class Task4 {
         System.out.println("Your function should take two arguments: the size of the wall in millimeters " +
                 "and the size of a pixel in millimeters." + "\n" +
                 "It should return True if you can fit an exact number of pixels on the wall, " +
-                "otherwise it should return False.\n");
+                "otherwise it should return False. \n");
 
 
         System.out.print("Input size of the wall in millimeters:");
