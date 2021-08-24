@@ -96,7 +96,7 @@ public class Main {
 				//Task22.main(args);
 				break;
 			case 23:
-				//Task23.main(args);
+				Task23.main(args);
 				break;
 			case 24:
 				//Task24.main(args);
