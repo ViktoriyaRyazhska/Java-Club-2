@@ -9,7 +9,7 @@ import java.util.Scanner;
  *
  */
 
-public class Task18 {
+public class Task18 { 
 	public static int opposite(int number) {
 		// your code here
 		return -1 * number;

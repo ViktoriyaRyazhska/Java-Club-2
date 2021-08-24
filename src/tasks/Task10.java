@@ -15,7 +15,7 @@ package tasks;
 
 import java.util.Scanner;
 
-public class Task10 {
+public class Task10 { 
 
 	public static String datingRange(int age) {
 		
