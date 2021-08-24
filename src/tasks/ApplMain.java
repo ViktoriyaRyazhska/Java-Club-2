@@ -64,12 +64,45 @@ public class ApplMain {
 			break;
 		}
 		case 11: {
-			Task11.main(args);
+		//	Task10.main(args);
 			break;
 		}
 		
+
 		case 18: {
 			Task18.main(args);
+
+		case 12: {
+			//Task12.main(args);
+			break;
+		}
+		case 13: {
+		//	Task13.main(args);
+			break;
+		}
+		case 14: {
+			//Task14.main(args);
+			break;
+		}
+		case 15: {
+			//Task15.main(args);
+			break;
+		}
+		case 16: {
+			//Task16.main(args);
+			break;
+		}
+		case 17: {
+			//Task11.main(args);
+			break;
+		}
+		case 19: {
+			//Task19.main(args);
+			break;
+		}
+		case 22: {
+			Task22.main(args);
+
 			break;
 		}
 
