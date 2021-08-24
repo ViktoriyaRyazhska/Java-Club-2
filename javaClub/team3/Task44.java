@@ -4,6 +4,7 @@ import java.util.InputMismatchException;
 import java.util.stream.IntStream;
 
 public class Task44 extends Task{
+
     @Override
     void execute() {
         System.out.println("Enter the number : ");
