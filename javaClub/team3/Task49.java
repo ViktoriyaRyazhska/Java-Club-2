@@ -49,8 +49,6 @@ public class Task49 extends Task{
                     return "0";
                 case 'u':
                     return "(_)";
-                case ' ':
-                    return " ";
                 default:
                     return Character.toString(source);
             }

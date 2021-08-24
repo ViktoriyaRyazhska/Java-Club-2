@@ -6,8 +6,8 @@ import java.util.stream.IntStream;
 public class Task44 extends Task{
     @Override
     void execute() {
+        System.out.println("Enter the number : ");
         try{
-            System.out.println("Enter the number : ");
             int num = scanner.nextInt();
             while(num <=0){
                 System.out.println("Something is wrong. Enter the number again: ");
