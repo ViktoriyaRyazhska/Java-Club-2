@@ -68,6 +68,10 @@ public class ApplMain {
 			break;
 		}
 		
+
+		case 18: {
+			Task18.main(args);
+
 		case 12: {
 			//Task12.main(args);
 			break;
@@ -98,6 +102,7 @@ public class ApplMain {
 		}
 		case 22: {
 			Task22.main(args);
+
 			break;
 		}
 
