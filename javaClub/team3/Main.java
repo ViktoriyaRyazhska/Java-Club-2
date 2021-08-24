@@ -72,7 +72,7 @@ public class Main {
 //        taskMap.put(54, new Task54());
 //        taskMap.put(55, new Task55());
 //        taskMap.put(56, new Task56());
-//        taskMap.put(57, new Task57());
+        taskMap.put(57, new Task57());
 //        taskMap.put(58, new Task58());
 //        taskMap.put(59, new Task59());
 //        taskMap.put(60, new Task60());
