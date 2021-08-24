@@ -2,7 +2,7 @@ package javaClub.team3;
 
 import java.io.IOException;
 
-//https://www.codewars.com/kata/cat-years-dog-years/
+//https://www.codewars.com/kata/how-good-are-you-really/
 public class Task38 extends Task {
 
 	  public static boolean betterThanAverage(int[] classPoints, int yourPoints) {
