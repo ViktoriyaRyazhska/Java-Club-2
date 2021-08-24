@@ -1,38 +1,28 @@
 package java_core;
 
 public class Task2 {
-<<<<<<< HEAD
-	
-=======
->>>>>>> a6db57049ea5f497b262a760d3a818358a089b71
+
 	public static void main(String[] args) {
-		try {
+		
+    try {
 		Scanner in = new Scanner(System.in);
-	    System.out.print("Введіть число 1: ");
+	    System.out.print("Г‚ГўГҐГ¤ВіГІГј Г·ГЁГ±Г«Г® 1: ");
 	    int num1 = in.nextInt();
-	    System.out.print("Введіть число 2: ");
+	    System.out.print("Г‚ГўГҐГ¤ВіГІГј Г·ГЁГ±Г«Г® 2: ");
 	    int num2 = in.nextInt();
-	    System.out.print("Ваша відповідь: " + multiply(num1, num2));
-<<<<<<< HEAD
-		}catch(Exception e) {
-=======
+	    System.out.print("Г‚Г ГёГ  ГўВіГ¤ГЇГ®ГўВіГ¤Гј: " + multiply(num1, num2));
 		}catch(ArithmeticException e) {
->>>>>>> a6db57049ea5f497b262a760d3a818358a089b71
-        	System.out.println("Не коректне введення");
+
+        	System.out.println("ГЌГҐ ГЄГ®Г°ГҐГЄГІГ­ГҐ ГўГўГҐГ¤ГҐГ­Г­Гї");
         }
 		 }
 	
-<<<<<<< HEAD
-=======
-	
-	
-	
->>>>>>> a6db57049ea5f497b262a760d3a818358a089b71
+
     public static int multiply(int num1, int num2) {
-           
+         
         	int num3 = (int) num1 * num2;
         	return num3;
-        
-        
+      
+ 
     } 
 }
