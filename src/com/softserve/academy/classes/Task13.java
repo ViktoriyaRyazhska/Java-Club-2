@@ -1,38 +1,36 @@
 package com.softserve.academy.classes;
 
 import com.softserve.academy.ConsoleColors;
+import com.softserve.academy.Input;
 import com.softserve.academy.Main;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
-public class Task13 {
+public class Task13 extends Input {
+    private static int ONE_HUNDRED = 100;
+
+    public static final Task13 INST = new Task13();
+
+    private final int value;
+
+    private Task13() {
+        value = ONE_HUNDRED;
+    }
+
+
     public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int first;
-        int second;
-        String operator;
 
-        System.out.println("\nTask 24: basic calculator. ");
+        int number;
+        System.out.println("Task 13: return your number + 100 ");
 
         try {
-            System.out.print("Enter operator (*, +, -, /): ");
-            operator = br.readLine();
-            if (operator.equals("*") || operator.equals("+") || operator.equals("-") || operator.equals("/")) {
-                System.out.print("Enter first number: ");
-                first = Integer.parseInt(br.readLine());
-                System.out.print("Enter second number: ");
-                second = Integer.parseInt(br.readLine());
-                System.out.println("Result: " + basicMath(operator, first, second));
-            }
-            else {
-                throw new IOException();
-            }
+            System.out.print("Enter number: ");
+            number = Integer.parseInt(br.readLine());
+            System.out.println("Number : " + Task13.INST.plus100(number));
 
         } catch (IOException |
-                NumberFormatException | ArithmeticException e) {
-            System.out.println(ConsoleColors.RED + "You have done something wrong, please try again" + ConsoleColors.RESET);
+                NumberFormatException e) {
+            System.out.println(ConsoleColors.RED + "You have not entered number in correct way, please try again" + ConsoleColors.RESET);
             Task13.main(args);
         }
 
@@ -51,17 +49,18 @@ public class Task13 {
                     System.err.println("You transfer to menu " + ConsoleColors.RESET);
                     Task13.main(args);
             }
-        } catch (
-                IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
+            Main.main(args);
         }
+
+
     }
 
-    public static int basicMath(String op, int v1, int v2) {
-        if(op.equals("+")) return v1 + v2;
-        if(op.equals("/")) return v1 / v2;
-        if(op.equals("*")) return v1 * v2;
-        if(op.equals("-")) return v1 - v2;
-        return 0;
+
+    public int plus100(int n) {
+        return value + n;
     }
+
+
 }
