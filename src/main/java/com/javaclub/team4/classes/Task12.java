@@ -29,15 +29,16 @@ import lombok.*;
  * Note: make sure if you don't use Lombok to enforce proper naming conventions.
  */
 
+@NoArgsConstructor
+@AllArgsConstructor
 public class Task12 extends Task {
 
-	public @Getter int number;
-	public String stringValue;
-	public Object anObject;
+	private @Getter @Setter int number;
+	private @Getter @Setter String stringValue;
+	private @Getter @Setter Object anObject;
 
 	@Override
 	public void runTask() {
 
 	}
 }
-// asdf

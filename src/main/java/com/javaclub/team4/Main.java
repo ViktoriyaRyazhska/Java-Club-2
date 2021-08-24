@@ -24,6 +24,9 @@ public class Main {
 		tasks.put(3, new Task3());
 		tasks.put(6, new Task6());
 		tasks.put(9, new Task9());
+		tasks.put(18, new Task18());
+		tasks.put(21, new Task21());
+		tasks.put(24, new Task24());
 		
 		while (true) {
 			System.out.println("Please enter a task number, or 0 to end the program:");
