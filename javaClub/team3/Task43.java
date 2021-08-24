@@ -2,7 +2,7 @@ package javaClub.team3;
 
 import java.io.IOException;
 
-//https://www.codewars.com/kata/cat-years-dog-years/
+//https://www.codewars.com/kata/find-nearest-square-number/
 public class Task43 extends Task {
 
 	  public static int nearestSq(final int n) throws Exception{

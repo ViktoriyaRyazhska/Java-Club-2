@@ -1,7 +1,7 @@
 package javaClub.team3;
 
 import java.util.Arrays;
-
+//https://www.codewars.com/kata/rotations-and-reflections-i/
 public class Task48{
 	
 	public int[] arr;
