@@ -1,7 +1,7 @@
 # Java-Club-2
 
 ## Team 1
-Solomchak Ivan 
+Solomchak Ivan  
 Bohush Sviatoslav  
 Yanio Yura  
 Danihevych Oleksandr  
