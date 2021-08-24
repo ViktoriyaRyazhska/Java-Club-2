@@ -84,7 +84,7 @@ public class Main {
 				//Task18.main(args);
 				break;
 			case 19:
-				//Task19.main(args);
+				Task19.main(args);
 				break;
 			case 20:
 				//Task20.main(args);
