@@ -1,18 +1,7 @@
 package javaClub.team3;
 
-import java.io.IOException;
 
-//          You are going to write a simple console-style drawing board program.
-//
-//        Functions
-//        The drawing board is very simple so only these functions are supported.
-//
-//        Function	Description
-//        Create canvas	Create new empty canvas (filled with ' ') with given width and height
-//        Draw line / rectangle	Draw the line with 'x' which connects the given points.
-//        If the points are diagonal, a rectangle instead of diagonal line should be drawn
-//        Fill color	Fill the entire area connected to the given point with given character,
-//        also known as "bucket fill" in paint programs
+import java.io.IOException;
 
 public class Task15 extends Task {
     static char[][] canvasStorage;
@@ -46,12 +35,6 @@ public class Task15 extends Task {
                     height = Integer.parseInt(bufferedReader.readLine());
                 } catch (IOException e) {
                     e.printStackTrace();
-                } catch (NumberFormatException e) {
-                    e.printStackTrace();
-                }
-                if (width <= 0 || height <= 0) {
-                    System.err.println("Wrong input!");
-                    return;
                 }
                 canvasInstance = new Task15(width, height);
                 canvasExists = true;
@@ -59,69 +42,18 @@ public class Task15 extends Task {
             }
             if (canvasExists == true) {
                 try {
-                    int userChoice = 0;
-                    System.out.println("Please make your choice.");
-                    System.out.println("Press 1 to draw primitives.");
-                    System.out.println("Press 2 to use bucket fill.");
-                    System.out.println("Press 3 to reset canvas.");
-                    System.out.println("Press 4 to check empty cells.");
-                    userChoice = Integer.parseInt(bufferedReader.readLine());
-                    switch (userChoice) {
-                        case 1:
-                            System.out.println("(Coordinates starts from 0)");
-                            System.out.println("Please enter coordinates of a primitive to draw (x1): ");
-                            x1 = Integer.parseInt(bufferedReader.readLine());
-                            System.out.println("Please enter coordinates of a primitive to draw (y1): ");
-                            y1 = Integer.parseInt(bufferedReader.readLine());
-                            System.out.println("Please enter coordinates of a primitive to draw (x2): ");
-                            x2 = Integer.parseInt(bufferedReader.readLine());
-                            System.out.println("Please enter coordinates of a primitive to draw (y2): ");
-                            y2 = Integer.parseInt(bufferedReader.readLine());
-                            //Input validation:
-                            if (x1 < 0 || y1 < 0 || x2 < 0 || y2 < 0 ||
-                                    x1 >= canvasX - 2 || y1 >= canvasY - 2 ||
-                                    x2 >= canvasX - 2 || y2 >= canvasY - 2) {
-                                System.err.println("Wrong input!");
-                            } else if (x2 < x1 || y2 < y1) {
-                                System.err.println("x2 should be greater than x1, " +
-                                        "y2 should be greater than y1!");
-                            } else {
-                                canvasInstance.draw(x1, y1, x2, y2);
-                            }
-                            break;
-                        case 2:
-                            int bucketX = 0;
-                            int bucketY = 0;
-                            char bucketSymbol = ' ';
-                            System.out.println("(Coordinates starts from 0)");
-                            System.out.println("Please enter bucket fill X coordinate: ");
-                            bucketX = Integer.parseInt(bufferedReader.readLine());
-                            System.out.println("Please enter bucket fill Y coordinate: ");
-                            bucketY = Integer.parseInt(bufferedReader.readLine());
-                            System.out.println("Please enter a symbol with which you want to perform fill: ");
-                            bucketSymbol = bufferedReader.readLine().charAt(0);
-                            System.out.println(bucketSymbol);
-                            //Input validation:
-                            if (bucketX < 0 || bucketY < 0 || bucketX >= canvasX - 2 || bucketY >= canvasY - 2){
-                                System.err.println("Wrong input!");
-                            } else{
-                                bucketFill(bucketX, bucketY, bucketSymbol);
-                            }
-                            break;
-                        case 3:
-                            reset();
-                            break;
-                        case 4:
-                            System.out.println(checkForEmpty());
-                            break;
-                        default:
-                            System.err.println("Wrong input!");
-                    }
+                    System.out.println("Please enter coordinates of a primitive to draw (x1): ");
+                    x1 = Integer.parseInt(bufferedReader.readLine());
+                    System.out.println("Please enter coordinates of a primitive to draw (y1): ");
+                    y1 = Integer.parseInt(bufferedReader.readLine());
+                    System.out.println("Please enter coordinates of a primitive to draw (x2): ");
+                    x2 = Integer.parseInt(bufferedReader.readLine());
+                    System.out.println("Please enter coordinates of a primitive to draw (y2): ");
+                    y2 = Integer.parseInt(bufferedReader.readLine());
                 } catch (IOException e) {
                     e.printStackTrace();
-                } catch (NumberFormatException e) {
-                    System.err.println("Wrong input!");
                 }
+                canvasInstance.draw(x1, y1, x2, y2);
             }
             System.out.println("Press 'Q' to quit, press any key to repeat: ");
             try {
@@ -133,8 +65,6 @@ public class Task15 extends Task {
         }
     }
 
-    //This method creates 2 dimensional [int] array which will contains
-    //pre-defined X*Y canvas.
     public static void drawCanvas(int x, int y) {
         canvasX = x + 2;
         canvasY = y + 2;
@@ -150,12 +80,12 @@ public class Task15 extends Task {
                     currentCharacter = ' ';
                 }
                 canvasStorage[j][i] = currentCharacter;
+                System.out.print(currentCharacter);
             }
+            System.out.println();
         }
     }
 
-    //This method just paints the canvas.
-    //Should be executed after each operation.
     public static void repaint() {
         for (int i = 0; i < canvasY; i++) {
             for (int j = 0; j < canvasX; j++) {
@@ -165,14 +95,11 @@ public class Task15 extends Task {
         }
     }
 
-    //Method to draw points
     public static void drawPoint(int x, int y) {
-        canvasStorage[x + 1][y + 1] = 'o';
+        canvasStorage[x + 1][y + 1] = 'x';
         repaint();
     }
 
-    //Method to draw lines/rectangles on canvas.
-    //If the points are diagonal, a rectangle instead of diagonal line should be drawn
     public Task15 draw(int x1, int y1, int x2, int y2) {
         if (x1 == x2) {
             //Vertical line;
@@ -206,53 +133,5 @@ public class Task15 extends Task {
         }
         repaint();
         return this;
-    }
-
-    int counter = 0;
-
-    //Fill the entire area connected to the given point with given character,
-    //also known as "bucket fill" in paint programs
-    public void bucketFill(int x, int y, char c) {
-        counter++;
-        if (x < 0 || y < 0 || x >= canvasX - 2 || y >= canvasY - 2) {
-            return;
-        }
-        if (canvasStorage[x + 1][y + 1] == c) {
-            return;
-        }
-        if (canvasStorage[x + 1][y + 1] != ' ') {
-            return;
-        }
-        canvasStorage[x + 1][y + 1] = c;
-        bucketFill(x - 1, y, c);
-        bucketFill(x, y + 1, c);
-        bucketFill(x + 1, y, c);
-        bucketFill(x, y - 1, c);
-        repaint();
-        System.out.println(counter);
-
-    }
-
-    //Makes canvas empty
-    public void reset() {
-        for (int i = 1; i < canvasY - 1; i++) {
-            for (int j = 1; j < canvasX - 1; j++) {
-                canvasStorage[j][i] = ' ';
-            }
-        }
-        repaint();
-    }
-
-    //Checks if there are an empty cells left.
-    public boolean checkForEmpty() {
-        boolean containsEmpty;
-        for (int i = 1; i < canvasY - 1; i++) {
-            for (int j = 1; j < canvasX - 1; j++) {
-                if (canvasStorage[j][i] == ' ') {
-                    return true;
-                }
-            }
-        }
-        return false;
     }
 }
