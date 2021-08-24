@@ -5,13 +5,11 @@ package javaClub.team3;
 public class Task12 extends Task{
     @Override
     void execute() {
+        System.out.println("Nothing to output");
     }
-
 }
 
 class EncapsulationDemo{
-    private static final EncapsulationDemo singleton = new EncapsulationDemo();
-
     private int number;
     private String stringValue;
     private Object anObject;
