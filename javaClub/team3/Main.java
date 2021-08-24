@@ -46,13 +46,44 @@ public class Main {
         taskMap.put(33, new Task33());
 //      taskMap.put(34, new Task34());
         taskMap.put(35, new Task35());
+//      taskMap.put(36, new Task34());
+//      taskMap.put(37, new Task34());
+//      taskMap.put(38, new Task34());
+//      taskMap.put(39, new Task34());
         taskMap.put(40, new Task40());
+//      taskMap.put(41, new Task34());
+//      taskMap.put(42, new Task34());
+//      taskMap.put(43, new Task34());
+//      taskMap.put(44, new Task34());
         taskMap.put(45, new Task45());
+//      taskMap.put(46, new Task34());
+//      taskMap.put(47, new Task34());
+//      taskMap.put(48, new Task34());
+//      taskMap.put(49, new Task34()); 
         taskMap.put(50, new Task50());
+//      taskMap.put(51, new Task34());
+//      taskMap.put(52, new Task34());
+//      taskMap.put(53, new Task34());
+//      taskMap.put(54, new Task34());      
         taskMap.put(55, new Task55());
+//      taskMap.put(56, new Task34());
+//      taskMap.put(57, new Task34());
+//      taskMap.put(58, new Task34());
+//      taskMap.put(59, new Task34());        
         taskMap.put(60, new Task60());
+//      taskMap.put(61, new Task34());
+//      taskMap.put(62, new Task34());
+//      taskMap.put(63, new Task34());
+//      taskMap.put(64, new Task34()); 
         taskMap.put(65, new Task65());
+//      taskMap.put(66, new Task34());
+//      taskMap.put(67, new Task34());
+//      taskMap.put(68, new Task34());
+//      taskMap.put(69, new Task34());         
         taskMap.put(70, new Task70());
+//      taskMap.put(71, new Task34());
+//      taskMap.put(72, new Task34());      
+        
 
         while (true) {
             System.out.println("Please enter task number, 0 for exit: ");
