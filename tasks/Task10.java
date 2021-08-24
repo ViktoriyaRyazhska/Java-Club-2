@@ -3,16 +3,19 @@ import java.util.Scanner;
 
 public class Task10 {
 	 public static void main(String[] args) {
-         
-	Scanner in = new Scanner(System.in);
-    System.out.print("Введіть свій вік: ");
-    int age = in.nextInt();
-    if((int)age >= 14) {
-    System.out.println(datingRange(age));
-    }else {
-    	System.out.println("Ви ще занадто юні.");
-    	}
-    
+		 try {
+				Scanner in = new Scanner(System.in);
+			    System.out.print("Введіть свій вік: ");
+			    int age = in.nextInt();
+			    if((int)age >= 14) {
+			    System.out.println(datingRange(age));
+			    }else {
+			    	System.out.println("Ви ще занадто юні.");
+			    }
+			    }catch(Exception e) {
+			    	System.out.println("Не коректне введення");
+			    }
+			    	
 	 }
 	 
 	public static String datingRange(int age) {
