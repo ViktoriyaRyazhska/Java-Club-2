@@ -46,9 +46,7 @@ public static void setResoult(int playerNumber) {
 			p2 = bufferedReader.readLine();
 		} catch (IOException e) {
 			e.printStackTrace();
-		} catch (NumberFormatException e) {
-			System.err.println("Not a number!");
-		}
+		} 
 		System.out.println(rps(p1, p2));
 
 	}
