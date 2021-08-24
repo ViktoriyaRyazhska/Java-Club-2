@@ -89,7 +89,7 @@ public class Main {
 //        taskMap.put(70, new Task70());
 
 //        taskMap.put(71, new Task71());
-//        taskMap.put(72, new Task72());
+        taskMap.put(72, new Task72());
 
         while (true) {
             System.out.println("Please enter task number, 0 for exit: ");
