@@ -1,5 +1,7 @@
 package java_core;
 
+import java.util.Scanner;
+
 public class Task2 {
 
 	public static void main(String[] args) {
@@ -13,7 +15,7 @@ public class Task2 {
 		
 		 }
 
-    public static int multiply(int num1, int num2) {
+  public static int multiply(int num1, int num2) {
 
     	try {  
     	int num3 = (int) num1 * num2;
@@ -21,6 +23,7 @@ public class Task2 {
     	}catch(NumberFormatException e) {
         	System.out.println("You must enter number");
         }
+		return num2;
     	
     } 
 }
