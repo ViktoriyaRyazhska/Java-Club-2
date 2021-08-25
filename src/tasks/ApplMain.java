@@ -52,7 +52,7 @@ public class ApplMain {
 			break;
 		}
 		case 8: {
-			// Task8.main(args);
+			Task8.main(args);
 			break;
 		}
 		case 9: {
