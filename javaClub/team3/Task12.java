@@ -14,11 +14,7 @@ class EncapsulationDemo{
     private String stringValue;
     private Object anObject;
 
-    EncapsulationDemo(){
-        number = 0;
-        stringValue = null;
-        anObject = null;
-    }
+    EncapsulationDemo(){}
     EncapsulationDemo(int number, String string, Object anObject) {
         setNumber(number);
         setStringValue(string);
