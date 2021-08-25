@@ -39,7 +39,7 @@ public class Task4 {
             Task4.main(args);
         }
 
-        System.out.println(ConsoleColors.GREEN + "Beak to main menu input 1 ");
+        System.out.println(ConsoleColors.GREEN + "Back to main menu input 1 ");
         System.out.println("Try again  input 2 " + ConsoleColors.RESET);
         try {
             switch (br.readLine()) {

@@ -1,12 +1,10 @@
 package loops;
 
 import com.softserve.academy.loops.Task45;
-import org.junit.Assert;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import java.util.Arrays;
 
-import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 public class Task45Test {
