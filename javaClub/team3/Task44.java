@@ -10,15 +10,15 @@ public class Task44 extends Task{
         System.out.println("Enter the number : ");
         try{
             int num = scanner.nextInt();
-            while(num <=0){
-                System.out.println("Something is wrong. Enter the number again: ");
-                num = scanner.nextInt();
-            }
-            System.out.println("The summation is "+summation(num));
+            GrassHopper gr = new GrassHopper();
+            System.out.println("The summation is " + gr.summation(num));
         } catch (InputMismatchException e) {
             e.printStackTrace();
         }
     }
+}
+
+class GrassHopper {
     public static int summation(int n) {
         return IntStream.range(1, n + 1).sum();
     }

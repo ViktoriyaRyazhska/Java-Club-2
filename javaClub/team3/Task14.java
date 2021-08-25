@@ -38,10 +38,10 @@ class Fraction
     }
 
     public Fraction add(Fraction f2) {
-        long top= this.top * f2.bottom + this.bottom * f2.top;
-        long bottom= this.bottom * f2.bottom;
-        Fraction newOne = new Fraction(top, bottom);
-        return newOne.Reduction();
+        Fraction r = new Fraction((this.top * f2.bottom) +
+                (f2.top * this.bottom),
+                (this.bottom * f2.bottom));
+        return r.Reduction();
     }
 
     public Fraction Reduction() {

@@ -16,17 +16,17 @@ public class Task9 extends Task{
     void execute() {
         System.out.println("Please enter a number: ");
         try {
-            String input = scanner.nextLine();
+            int num = scanner.nextInt();
             System.out.println("Done!");
-            System.out.println(MakeNegative(Integer.parseInt(input)));
+            Kata9 kata = new Kata9();
+            System.out.println(kata.MakeNegative(num));
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-
-    public static int MakeNegative(int number)
-    {
-        return Math.abs(number)*-1;
+}
+class Kata9 {
+    public static int MakeNegative(int number) {
+        return Math.abs(number) * -1;
     }
-
 }

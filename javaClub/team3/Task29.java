@@ -6,18 +6,20 @@ public class Task29 extends Task {
         try{
             System.out.println("Enter the number between 0-9: ");
             int num = scanner.nextInt();
-            while(num <=0 || num >=10){
-                System.out.println("Something is wrong. Enter the number between 0-9: ");
-                num = scanner.nextInt();
-            }
-            System.out.println(switchItUp(num));
+            Kata29 kata = new Kata29();
+            System.out.println(kata.switchItUp(num));
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+}
+
+class Kata29
+{
     public static String switchItUp(int number)
     {
         switch(number){
+            case 0: return "Zero";
             case 1: return "One";
             case 2: return "Two";
             case 3: return "Three";

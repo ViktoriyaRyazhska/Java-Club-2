@@ -8,12 +8,18 @@ public class Task54 extends Task{
         System.out.println("Enter the number:");
         try{
             int num = scanner.nextInt();
-
-            System.out.println("The opposite number is "+opposite(num));
+            Kata54 kata = new Kata54();
+            System.out.println("The opposite number is " + kata.opposite(num));
         } catch (InputMismatchException e) {
             e.printStackTrace();
         }
     }
+}
 
-    public static int opposite(int number) { return -1*number; }
+class Kata54
+{
+    public static int opposite(int number)
+    {
+        return -1*number;
+    }
 }

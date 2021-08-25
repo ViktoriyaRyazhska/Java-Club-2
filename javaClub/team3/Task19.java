@@ -4,27 +4,23 @@ public class Task19 extends Task {
     @Override
     void execute() {
         try{
-            int n=0,a=0,b=0;
             System.out.println("Enter the first number: ");
-            EnterNumber(n);
+            long n = scanner.nextLong();
             System.out.println("Enter the second number: ");
-            EnterNumber(a);
+            long a = scanner.nextLong();
             System.out.println("Enter the third number: ");
-            EnterNumber(b);
-            System.out.println(isDivisible(n,a,b));
+            long b = scanner.nextLong();
+
+            DivisibleNb div = new DivisibleNb();
+            System.out.println(div.isDivisible(n,a,b));
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-    public void EnterNumber(long a){
-        a = scanner.nextLong();
-        while(a < 0){
-            System.out.println("Something is wrong/ Enter the number again:");
-            a = scanner.nextLong();
-        }
-    }
+}
 
-    public static boolean isDivisible(long n, long x, long y) {
+class DivisibleNb {
+    public boolean isDivisible(long n, long x, long y) {
         if(n%x == 0 && n%y == 0){
             return true;
         }

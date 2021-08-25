@@ -11,11 +11,16 @@ public class Task24 extends Task{
             int val1 = scanner.nextInt();
             System.out.println("Enter the second value: ");
             int val2 = scanner.nextInt();
-            System.out.println(basicMath(op, val1, val2));
+            BasicOperations oper = new BasicOperations();
+            System.out.println(oper.basicMath(op, val1, val2));
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+}
+
+class BasicOperations
+{
     public static Integer basicMath(String op, int v1, int v2)
     {
         switch(op){
@@ -26,6 +31,5 @@ public class Task24 extends Task{
             default: return 0;
         }
     }
-
 }
 

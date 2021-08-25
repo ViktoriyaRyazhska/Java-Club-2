@@ -8,15 +8,19 @@ public class Task59 extends Task{
         System.out.println("Enter the letter:");
         try{
             char num = scanner.next().charAt(0);
-            System.out.println(position(num));
+            Kata59 kata = new Kata59();
+            System.out.println(kata.position(num));
         } catch (InputMismatchException e) {
             e.printStackTrace();
         }
     }
+}
 
-    public static String position(char letter)
+class Kata59
+{
+    public String position(char alphabet)
     {
-        String alphabet = "abcdefghijklmnopqrstuvwxyz";
-        return "Position of alphabet: "+(alphabet.indexOf(letter)+1);
+        String alphabet1 = "abcdefghijklmnopqrstuvwxyz";
+        return "Position of alphabet: "+(alphabet1.indexOf(alphabet)+1);
     }
 }
