@@ -7,7 +7,10 @@ public class Task27 extends Task{
     void execute() {
         Bob bob = new Bob();
         System.out.println("Print cap, on and wait passengers values");
-        System.out.println(bob.enough(scanner.nextInt(), scanner.nextInt(), scanner.nextInt()));
+        int cap = scanner.nextInt();
+        int on = scanner.nextInt();
+        int wait = scanner.nextInt();
+        System.out.println(bob.enough(cap, on, wait));
     }
 }
 
