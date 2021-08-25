@@ -7,9 +7,9 @@ public class Task17 extends Task{
     void execute() {
         System.out.println("Print width, length, height values");
         int []values = new int[3];
-        for (int i = 0; i < 3; i++) {
-            values[i] = scanner.nextInt();
-        }
+        values[0] = scanner.nextInt();
+        values[1] = scanner.nextInt();
+        values[2] = scanner.nextInt();
         Block block = new Block(values);
         System.out.println("Volume: " + block.getVolume() + "\nSurface area: " + block.getSurfaceArea());
     }
