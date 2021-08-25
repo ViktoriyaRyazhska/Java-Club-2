@@ -20,7 +20,7 @@ public class Task27Test {
         Assert.assertEquals(Task27.Enough(10, 5,5), 0);
         Assert.assertNotEquals(Task27.Enough(10, 5,6), 0);
         Assert.assertNotEquals(Task27.Enough(10, 0,11), 0);
-        
+
 
     }
 }
