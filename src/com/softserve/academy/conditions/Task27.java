@@ -48,7 +48,7 @@ public class Task27 {
                     Main.main(args);
                     break;
                 case "2":
-                    Task7.main(args);
+                    Task27.main(args);
                     break;
                 default:
                     System.err.println(ConsoleColors.RED + "You need to put 1 or 2 ");
