@@ -6,7 +6,9 @@ public class Task22 extends Task{
     void execute() {
         System.out.println("Print your birth year and year you want to know how old you will/were");
         AgeDiff ageDiff = new AgeDiff();
-        System.out.println(ageDiff.CalculateAge(scanner.nextInt(), scanner.nextInt()));
+        int birth = scanner.nextInt();
+        int yearTo = scanner.nextInt();
+        System.out.println(ageDiff.CalculateAge(birth, yearTo));
     }
 }
 
