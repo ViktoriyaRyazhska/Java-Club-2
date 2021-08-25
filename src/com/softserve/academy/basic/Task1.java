@@ -7,7 +7,7 @@ import com.softserve.academy.Main;
 import java.io.IOException;
 
 
-public class Task1  {
+public class Task1 extends Input  {
     public static void main(String[] args) {
 
         int numbDouble;
