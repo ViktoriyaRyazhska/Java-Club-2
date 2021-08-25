@@ -3,7 +3,7 @@ package java_core;
 import java.util.Scanner;
 
 public class Task1 {
-    public static void main(String[] args) {
+    public static int Double(){
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter your integer number:");
         int i;
@@ -14,9 +14,13 @@ public class Task1 {
                 break;
             }
             catch (Exception wrongInputDataType) {
-                System.out.println("Wront input data type...");
+                System.out.println("Wrong input data type...");
             }
         } while (true);
-        System.out.println(2 * i);
+        return i*2;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Double());
     }
 }
