@@ -1,14 +1,14 @@
 package com.softserve.academy.classes;
 
 import com.softserve.academy.ConsoleColors;
+import com.softserve.academy.Input;
 import com.softserve.academy.Main;
 import com.softserve.academy.basic.Task3;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
-public class Task12  {
+
+public class Task12 extends Input {
     private int number = 0;
     private String stringValue;
     private Object anObject;
@@ -47,8 +47,6 @@ public class Task12  {
 
 
     public static void main(String[] args) {
-
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         System.out.println("");
         System.out.println("Classes task12 ");

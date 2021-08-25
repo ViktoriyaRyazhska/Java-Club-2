@@ -5,9 +5,8 @@ import com.softserve.academy.Input;
 import com.softserve.academy.Main;
 
 import java.util.*;
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
+
 
 public class Task3 extends Input {
     private static Map<Character, String> dictionary;

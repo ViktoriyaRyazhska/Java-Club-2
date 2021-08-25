@@ -4,9 +4,9 @@ import com.softserve.academy.ConsoleColors;
 import com.softserve.academy.Input;
 import com.softserve.academy.Main;
 
-import java.io.BufferedReader;
+
 import java.io.IOException;
-import java.io.InputStreamReader;
+
 
 public class Task8 extends Input {
     public static void main(String[] args) {
