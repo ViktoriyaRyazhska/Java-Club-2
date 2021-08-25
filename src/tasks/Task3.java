@@ -3,7 +3,7 @@ package tasks;
 import java.util.Scanner;
 
 public class Task3 {
-	public static void main(String[] args) {
+	public static void main(String[] args) { 
 		Scanner scanner = new Scanner(System.in);
 		double length;
 		double width;
@@ -51,7 +51,7 @@ public class Task3 {
 	public static double getVolumeOfCuboid(final double length, final double width, final double height) {
 		
 			double volume = length * width * height;
-			return Math.abs(volume;)
+			return Math.abs(volume);
 		
 	}
 
