@@ -51,7 +51,7 @@ public class Main {
 //      taskMap.put(34, new Task34());
         taskMap.put(35, new Task35());
 //      taskMap.put(36, new Task34());
-//      taskMap.put(37, new Task34());
+        taskMap.put(37, new Task34());
 //      taskMap.put(38, new Task34());
 //      taskMap.put(39, new Task34());
         taskMap.put(40, new Task40());
@@ -90,8 +90,7 @@ public class Main {
         taskMap.put(70, new Task70());
         
 //      taskMap.put(71, new Task34());
-//      taskMap.put(72, new Task34());      
-        
+//      taskMap.put(72, new Task34());    
 
         while (true) {
             System.out.println("Please enter task number, 0 for exit: ");
