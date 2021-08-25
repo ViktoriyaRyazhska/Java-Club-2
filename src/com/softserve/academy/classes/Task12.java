@@ -8,7 +8,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Task12 {
+public class Task12  {
     private int number = 0;
     private String stringValue;
     private Object anObject;

@@ -3,9 +3,8 @@ package com.softserve.academy.basic;
 import com.softserve.academy.ConsoleColors;
 import com.softserve.academy.Input;
 import com.softserve.academy.Main;
-import java.io.BufferedReader;
+
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 
 public class Task2 extends Input {
@@ -48,7 +47,7 @@ public class Task2 extends Input {
                 default:
                     System.err.println(ConsoleColors.RED + "You need to put 1 or 2 ");
                     System.err.println("You transfer to menu " + ConsoleColors.RESET);
-                    DoubleInteger.main(args);
+                    Task2.main(args);
             }
         } catch (
                 IOException e) {

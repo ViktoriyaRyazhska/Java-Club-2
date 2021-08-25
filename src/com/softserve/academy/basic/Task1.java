@@ -1,16 +1,16 @@
 package com.softserve.academy.basic;
 
 import com.softserve.academy.ConsoleColors;
+import com.softserve.academy.Input;
 import com.softserve.academy.Main;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class DoubleInteger {
+public class Task1  {
     public static void main(String[] args) {
 
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int numbDouble;
 
         System.out.println("");
@@ -24,7 +24,7 @@ public class DoubleInteger {
 
         } catch (IOException | NumberFormatException e) {
             System.out.println(ConsoleColors.RED + "You don't put wrong number try again" + ConsoleColors.RESET);
-            DoubleInteger.main(args);
+            Task1.main(args);
         }
 
         System.out.println(ConsoleColors.GREEN + "Beak to main menu input 1 ");
@@ -35,12 +35,12 @@ public class DoubleInteger {
                     Main.main(args);
                     break;
                 case "2":
-                    DoubleInteger.main(args);
+                    Task1.main(args);
                     break;
                 default:
                     System.err.println(ConsoleColors.RED + "You need ro put 1 or 2 ");
                     System.err.println("You transfer to menu " + ConsoleColors.RESET);
-                    DoubleInteger.main(args);
+                    Task1.main(args);
             }
         } catch (IOException e) {
             e.printStackTrace();

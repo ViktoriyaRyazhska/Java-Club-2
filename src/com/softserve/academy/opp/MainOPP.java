@@ -1,17 +1,14 @@
 package com.softserve.academy.opp;
 
 import com.softserve.academy.ConsoleColors;
-import com.softserve.academy.basic.DoubleInteger;
-import com.softserve.academy.classes.MainClasses;
-import com.softserve.academy.collections.MainCollection;
+import com.softserve.academy.Input;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class MainOPP {
+public class MainOPP extends Input {
     public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         text();
         try {
             switch (br.readLine()) {
