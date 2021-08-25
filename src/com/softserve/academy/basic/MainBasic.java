@@ -25,6 +25,9 @@ public class MainBasic {
                     case "4":
                         Task4.main(args);
                         break;
+                    case "7":
+                        Task7.main(args);
+                        break;
                     case "8":
                         Task8.main(args);
                         break;
