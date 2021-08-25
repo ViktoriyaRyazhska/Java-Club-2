@@ -1,4 +1,4 @@
-package tasks;
+package tests;
 
 import static org.junit.Assert.*;
 import tasks.Task7;
