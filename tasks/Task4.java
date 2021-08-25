@@ -8,12 +8,19 @@ public class Task4 {
 	
 	public static boolean isDivisible (int a, int b) {
 		
+		try {
+			
 		int div = a %  b;
 		if ( div == 0) {
 			return true;
 		}else {
 			return false;
 		}
+	} catch(NumberFormatException e) {
+		System.out.print(e);
+	}catch( ArithmeticException e) {
+		System.err.print(e);
+	}return true;
 	}
 	
 	public static void main(String[] args) throws NumberFormatException, IOException {
@@ -24,7 +31,7 @@ public class Task4 {
 		System.out.println("Enter the value of milimeters");
 		int mm = Integer.parseInt(br.readLine());
 		
-		isDivisible(pix, mm);
+		System.out.println(isDivisible(pix, mm));
 		
 	}
 
