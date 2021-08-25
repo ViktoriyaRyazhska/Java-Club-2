@@ -8,10 +8,8 @@ public class Task47 extends Task{
 }
 
 class God {
-    public Human[] create(){
-        Human[] humans = new Human[2];
-        humans[0] = new Man("Adam");
-        humans[1] = new Woman("Eve");
+    public static Human[] create(){
+        Human[] humans = new Human[]{new Man("Adam"), new Woman("Eve")};
         return humans;
     }
 }
