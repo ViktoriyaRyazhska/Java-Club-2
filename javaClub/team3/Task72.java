@@ -7,7 +7,13 @@ import java.util.Map;
 public class Task72 extends Task{
     @Override
     void execute() {
-
+        System.out.println("Print key-word");
+        String key = scanner.nextLine();
+        System.out.println("Now print explanation to word");
+        String value = scanner.nextLine();
+        Dictionary dictionary = new Dictionary();
+        dictionary.newEntry(key, value);
+        System.out.println(key + " - " + dictionary.look(key));
     }
 }
 
@@ -15,7 +21,6 @@ class Dictionary {
     private Map<String, String> entries = new HashMap<>();
 
     public Dictionary(){
-
     }
 
     public void newEntry(String key, String value){
