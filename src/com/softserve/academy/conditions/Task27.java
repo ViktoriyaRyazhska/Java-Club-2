@@ -29,6 +29,8 @@ public class Task27 {
             System.out.println("Write the quantity of the people waiting for the bus: ");
             wait = Integer.parseInt(br.readLine());
             if (wait < 0) throw new IOException("Illegal input");
+            if(Enough(cap, on, wait) == 0) System.out.println("There is enough place on bus for everyone. ");
+            else System.out.println("There is no place for " + Enough(cap, on, wait) + " people on the bus");
 
 
 
@@ -57,6 +59,8 @@ public class Task27 {
             e.printStackTrace();
             Main.main(args);
         }
+
+
 
 
     }
