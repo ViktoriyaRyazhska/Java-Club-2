@@ -1,4 +1,4 @@
-package com.softserve.academy.conditions;
+package com.softserve.academy.classes;
 
 import com.softserve.academy.ConsoleColors;
 import com.softserve.academy.Main;
@@ -14,12 +14,12 @@ public class Task23 {
         String command2;
 
         try{
-            System.out.println("Write in the first symbol: ");
+            System.out.println("Write in the first symbol:  (scissors / rock / paper)");
             command1 = br.readLine();
-            if (command1 != "scissors" || command1 != "rock" ||command1 != "paper") throw new IOException("Illegal input");
+           if (!command1.equals("scissors") && !command1.equals("rock") && !command1.equals("paper")) throw new IOException("Illegal input");
             System.out.println("Write in the second symbol: ");
             command2 = br.readLine();
-            if (command2 != "scissors" || command1 != "rock" ||command1 != "paper") throw new IOException("Illegal input");
+            if (!command1.equals("scissors") && !command1.equals("rock") && !command1.equals("paper")) throw new IOException("Illegal input");
 
             System.out.println(rsp(command1, command2));
 
@@ -55,20 +55,22 @@ public class Task23 {
     }
 
     public static String rsp(String command1, String command2){
+        if(!command1.equals(command2)) {
         int num = 0;
         switch (command1){
             case "scissors":
-                if(command2 == "rock") num = 2;
+                if(command2.equals("rock")) num = 2;
                 else num = 1;
                 break;
             case "rock":
-                if(command2 == "paper") num = 2;
+                if(command2.equals("paper")) num = 2;
                 else num = 1;
                 break;
             case "paper":
-                if(command2 == "scissors") num = 2;
+                if(command2.equals("scissors")) num = 2;
                 else num = 1;
         }
-        return "The winner is player number " + num + ". Congratulations!";
+        return "The winner is player number " + num + ". Congratulations!";}
+        return "Draw";
     }
 }
