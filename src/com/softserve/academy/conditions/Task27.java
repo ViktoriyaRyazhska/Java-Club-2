@@ -53,7 +53,7 @@ public class Task27 {
                 default:
                     System.err.println(ConsoleColors.RED + "You need to put 1 or 2 ");
                     System.err.println("You transfer to menu " + ConsoleColors.RESET);
-                    Task7.main(args);
+                    Task27.main(args);
             }
         } catch (IOException e) {
             e.printStackTrace();
