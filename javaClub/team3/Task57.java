@@ -4,11 +4,11 @@ public class Task57 extends Task{
     @Override
     void execute() {
         System.out.println("Print string to remove spaces");
-        System.out.println(new Kata().noSpace(scanner.nextLine()));
+        System.out.println(new Kata57().noSpace(scanner.nextLine()));
     }
 }
 
-class Kata {
+class Kata57 {
     public String noSpace(final String x) {
         return x.replaceAll(" ", "");
     }
