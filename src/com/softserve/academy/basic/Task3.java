@@ -1,16 +1,16 @@
 package com.softserve.academy.basic;
 
 import com.softserve.academy.ConsoleColors;
+import com.softserve.academy.Input;
 import com.softserve.academy.Main;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 
-public class Task3 {
+import java.io.IOException;
+
+
+public class Task3 extends Input {
     public static void main(String[] args) {
 
-    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     double length;
     double width;
     double height;

@@ -1,20 +1,20 @@
 package com.softserve.academy.basic;
 
 import com.softserve.academy.ConsoleColors;
+import com.softserve.academy.Input;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
-public class MainBasic {
+
+public class MainBasic extends Input {
 
         public static void main (String[]args){
-            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
             text();
             try {
                 switch (br.readLine()) {
                     case "1":
-                        DoubleInteger.main(args);
+                        Task1.main(args);
                         break;
                     case "2":
                         Task2.main(args);

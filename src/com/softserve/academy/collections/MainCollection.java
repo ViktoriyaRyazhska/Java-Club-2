@@ -1,15 +1,13 @@
 package com.softserve.academy.collections;
 
 import com.softserve.academy.ConsoleColors;
-import com.softserve.academy.conditions.Task25;
+import com.softserve.academy.Input;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
-public class MainCollection {
+
+public class MainCollection extends Input {
     public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         text();
         try {
             switch (br.readLine()) {
