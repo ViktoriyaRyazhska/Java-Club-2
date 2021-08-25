@@ -22,7 +22,7 @@ public class Task27 {
         try {
             System.out.println("Write the capacity of the bus: ");
             cap = Integer.parseInt(br.readLine());
-            if (cap < 0) throw new IOException("Illegal input");
+            if (cap < 1) throw new IOException("Illegal input");
             System.out.println("Write the quantity of people on the bus: ");
             on = Integer.parseInt(br.readLine());
             if (on < 0 || on > cap) throw new IOException("Illegal input");
