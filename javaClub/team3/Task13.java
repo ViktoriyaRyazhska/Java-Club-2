@@ -18,6 +18,7 @@ public class Task13 extends Task{
 	  
 	  public int plus100(int n) {
 	    return value + n;
+
 	  }
 	  
 	@Override

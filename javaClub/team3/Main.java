@@ -48,12 +48,12 @@ public class Main {
 //        taskMap.put(31, new Task31());
         taskMap.put(32, new Task32());
         taskMap.put(33, new Task33());
-//        taskMap.put(34, new Task34());
+        taskMap.put(34, new Task34());
         taskMap.put(35, new Task35());
 //        taskMap.put(36, new Task36());
         taskMap.put(37, new Task37());
 //        taskMap.put(38, new Task38());
-//        taskMap.put(39, new Task39());
+        taskMap.put(39, new Task39());
         taskMap.put(40, new Task40());
         
 //        taskMap.put(41, new Task41());
