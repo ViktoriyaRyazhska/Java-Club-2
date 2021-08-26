@@ -17,14 +17,14 @@ public class Task64 extends Task{
             e.printStackTrace();
         }
     }
-}
 
-class CodeWars {
-    public static int strCount(String str, char letter) {
-        int counter =0;
-        for (char element : str.toCharArray()){
-            if (element == letter) counter++;
+    public static class CodeWars {
+        public static int strCount(String str, char letter) {
+            int counter =0;
+            for (char element : str.toCharArray()){
+                if (element == letter) counter++;
+            }
+            return counter;
         }
-        return counter;
     }
 }
