@@ -6,13 +6,18 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class Task2Test {
-Task2 task = new Task2();
+
 
     @Test
     public void sampleTest() {
-        assertEquals(4, task.multiply(2, 2));
-        assertEquals(10, task.multiply(5, 2));
-        assertEquals(100, task.multiply(100, 1));
-        assertEquals(0, task.multiply(0, 1000));
+        assertEquals(4, Task2.multiply(2, 2));
+        assertEquals(10, Task2.multiply(5, 2));
+        assertEquals(100, Task2.multiply(100, 1));
+        assertEquals(0, Task2.multiply(0, 1000));
+    }
+
+    @Test(expected = ArithmeticException.class)
+    public void sampleTestOutRangeInt (){
+        Task2.multiply(999999999,999999999);
     }
 }

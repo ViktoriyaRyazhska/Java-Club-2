@@ -3,9 +3,8 @@ package com.softserve.academy.basic;
 import com.softserve.academy.ConsoleColors;
 import com.softserve.academy.Input;
 import com.softserve.academy.Main;
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.math.BigInteger;
 
 
 public class Task2 extends Input {
@@ -56,8 +55,9 @@ public class Task2 extends Input {
         }
     }
 
-        public static int multiply ( int num1, int num2){
-            return num1 * num2;
+        public static int multiply ( int num1, int num2)throws ArithmeticException {
+            BigInteger br = BigInteger.valueOf(num1).multiply(BigInteger.valueOf(num2));
+            return br.intValueExact();
         }
 
 }
