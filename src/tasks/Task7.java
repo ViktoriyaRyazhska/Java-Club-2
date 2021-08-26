@@ -2,7 +2,7 @@ package tasks;
 
 import java.util.Scanner;
 
-public class Task7 {
+public class Task7 { 
     public static void main (String[] args){
         Scanner scanner = new Scanner(System.in);
         int h;
@@ -48,7 +48,7 @@ public class Task7 {
 
 
     }
-
+    
     public static int Past(int h, int m, int s)
     {
         h = h * 3600000;
