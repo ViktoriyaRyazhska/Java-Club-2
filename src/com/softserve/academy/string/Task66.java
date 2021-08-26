@@ -29,7 +29,8 @@ public class Task66 extends Input {
             System.out.println(twoSort(words));
 
 
-        } catch (IOException | NumberFormatException e) {
+        } catch (IOException | NumberFormatException | NullPointerException e) {
+            e.printStackTrace();
             System.out.println(ConsoleColors.RED + "You put wrong value try again" + ConsoleColors.RESET);
             Task66.main(args);
         }
@@ -61,7 +62,8 @@ public class Task66 extends Input {
 
 
 
-    public static String twoSort(String[] s) {
+    public static String twoSort(String[] s) throws NullPointerException{
+        if(s == null){throw new NullPointerException();}
         Arrays.sort(s);
         System.out.println(Arrays.toString(s));
         String first = null;

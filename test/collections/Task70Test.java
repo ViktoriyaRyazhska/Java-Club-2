@@ -1,6 +1,7 @@
 package collections;
 
 import com.softserve.academy.collections.Task70;
+import com.softserve.academy.string.Task66;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -23,5 +24,9 @@ public class Task70Test {
         assertThrows(ArithmeticException.class, () -> Task70.createList(0));
         assertThrows(ArithmeticException.class, () -> Task70.createList(-1));
 
+    }
+    @Test
+    public void notNullTest (){
+        assertThrows(NullPointerException.class,() -> Task70.createList((Integer)null));
     }
 }
