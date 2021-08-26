@@ -3,7 +3,14 @@ package java_core;
 import java.util.Scanner;
 
 public class Task5 {
-	public static String Greet(){
+	public static String Greet(String name){
+		if(name.equals("Johnny"))
+			return "Hello, my love!";
+		else
+			return "Hello, " + name + "!";
+	}
+
+	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter your name:");
 		String name = sc.nextLine();
@@ -15,13 +22,6 @@ public class Task5 {
 
 		name = name.substring(0, 1).toUpperCase() + name.substring(1); //робить першу літеру веливою
 
-		if(name.equals("Johnny"))
-			return "Hello, my love!";
-		else
-			return "Hello, " + name + "!";
-	}
-
-	public static void main(String[] args) {
-		System.out.println(Greet());
+		System.out.println(Greet(name));
 	}
 }
