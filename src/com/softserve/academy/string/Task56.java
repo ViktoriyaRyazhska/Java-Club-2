@@ -20,7 +20,8 @@ public class Task56 extends Input {
             System.out.println(areYouPlayingBanjo(br.readLine()));
 
 
-        } catch (IOException | NumberFormatException e) {
+        } catch (IOException | NumberFormatException | NullPointerException e) {
+            e.printStackTrace();
             System.out.println(ConsoleColors.RED + "You put wrong value try again" + ConsoleColors.RESET);
             Task56.main(args);
         }
@@ -52,6 +53,7 @@ public class Task56 extends Input {
 
 
     public static String areYouPlayingBanjo(String name) {
+        if(name == null){throw new NullPointerException();}
 
         if (name.charAt(0) == 'r' || name.charAt(0) == 'R') {
             return "Rikke plays banjo";

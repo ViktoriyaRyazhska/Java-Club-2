@@ -11,7 +11,7 @@ public class Task57 extends Input {
 
         String line;
 
-        System.out.println("\nTask 57: remove spaces from string ");
+        System.out.println("Task 57: remove spaces from string ");
 
         try {
             System.out.print("Enter string: ");

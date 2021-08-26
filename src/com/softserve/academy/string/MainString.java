@@ -17,6 +17,9 @@ public class MainString extends Input {
                 case "4":
                     Task54.main(args);
                     break;
+                case "5":
+                    Task55.main(args);
+                    break;
                 case "6":
                     Task56.main(args);
                     break;
@@ -53,6 +56,7 @@ public class MainString extends Input {
         System.out.println(ConsoleColors.GREEN + "Please enter TASK number" + ConsoleColors.RESET);
         System.out.println(ConsoleColors.GREEN + "1" + ConsoleColors.RESET + "  ");
         System.out.println(ConsoleColors.GREEN + "4" + ConsoleColors.RESET + " Opposite number");
+        System.out.println(ConsoleColors.GREEN + "5" + ConsoleColors.RESET + " Replace all dots");
         System.out.println(ConsoleColors.GREEN + "6" + ConsoleColors.RESET + " Are You Playing Banjo?");
         System.out.println(ConsoleColors.GREEN + "7" + ConsoleColors.RESET + " Remove spaces from string");
         System.out.println(ConsoleColors.GREEN + "9" + ConsoleColors.RESET + " Get position of a character in alphabet");

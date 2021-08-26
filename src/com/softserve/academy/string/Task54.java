@@ -4,7 +4,6 @@ import com.softserve.academy.ConsoleColors;
 import com.softserve.academy.Input;
 import com.softserve.academy.Main;
 
-
 import java.io.IOException;
 
 
@@ -13,22 +12,18 @@ public class Task54 extends Input {
         int a;
 
         System.out.println("");
-        System.out.println("String 54 ");
-        System.out.println("Opposite number");
+        System.out.println("String 55 ");
+        System.out.println("Replace all dots");
         System.out.println("I can given you a opposite number");
         System.out.println("for example: 1 ---> -1  ");
 
         try {
             System.out.println("put number");
             a = Integer.parseInt(br.readLine());
-            if (a>0) {
-                System.out.println(opposite(a));
-            }else{
-                System.out.println(ConsoleColors.RED + "You put wrong value try again" + ConsoleColors.RESET);
-                Task54.main(args);
-            }
+            System.out.println(opposite(a));
 
-        } catch (IOException | NumberFormatException e) {
+        } catch (IOException | NumberFormatException | NullPointerException e) {
+            e.printStackTrace();
             System.out.println(ConsoleColors.RED + "You put wrong value try again" + ConsoleColors.RESET);
             Task54.main(args);
         }
@@ -54,13 +49,11 @@ public class Task54 extends Input {
             Main.main(args);
         }
     }
+            public static int opposite ( int number) throws NullPointerException {
+                if ((Integer) number == null) {
+                    throw new NullPointerException();
+                }
+                return -number;
+            }
 
-
-
-
-    public static int opposite(int number)
-    {
-        return -number;
-    }
-
-}
+        }
