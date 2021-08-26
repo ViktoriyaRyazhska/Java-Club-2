@@ -4,9 +4,9 @@ import com.softserve.academy.basic.Task2;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class Task2Test {
-
     @Test
     public void sampleTest() {
         assertEquals(4, Task2.multiply(2, 2));
