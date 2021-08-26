@@ -28,9 +28,9 @@ public class Task2 extends Input {
             result = multiply(numberOne,numberTwo);
             System.out.println("multiplying  is " +  result);
 
-        } catch (IOException |
-                NumberFormatException e) {
-            System.out.println(ConsoleColors.RED + "You don't put wrong number try again" + ConsoleColors.RESET);
+        } catch (IOException |NumberFormatException | ArithmeticException e) {
+            e.printStackTrace();
+            System.out.println(ConsoleColors.RED + "You put wrong number try again" + ConsoleColors.RESET);
             Task2.main(args);
         }
 

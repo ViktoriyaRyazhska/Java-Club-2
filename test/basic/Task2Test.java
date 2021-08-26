@@ -4,6 +4,7 @@ import com.softserve.academy.basic.Task2;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class Task2Test {
 
@@ -16,8 +17,8 @@ public class Task2Test {
         assertEquals(0, Task2.multiply(0, 1000));
     }
 
-    @Test(expected = ArithmeticException.class)
-    public void sampleTestOutRangeInt (){
-        Task2.multiply(999999999,999999999);
-    }
+     @Test
+     public void sampleTestOutRangeInt (){
+    assertThrows(ArithmeticException.class, () -> Task2.multiply(999999999, 999999999));
+     }
 }
