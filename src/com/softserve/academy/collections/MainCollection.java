@@ -13,6 +13,9 @@ public class MainCollection {
         text();
         try {
             switch (br.readLine()) {
+                case  "4":
+                    Task72.main(args);
+                    break;
 
                 default:
                     System.err.println(ConsoleColors.RED +"You need to put number with 1 to * ");
@@ -32,6 +35,7 @@ public class MainCollection {
 
         System.out.println(ConsoleColors.GREEN + "Please enter TASK number" + ConsoleColors.RESET);
         System.out.println(ConsoleColors.GREEN + "25" + ConsoleColors.RESET + " Opposites Attract");
+        System.out.println(ConsoleColors.GREEN + "4" + ConsoleColors.RESET + " Interactive Dictionary");
 
     }
 }
