@@ -1,8 +1,11 @@
 package javaClub.team3;
 
+import java.util.Scanner;
+
 public class Task29 extends Task {
     @Override
     void execute() {
+        Scanner scanner = new Scanner(System.in);
         try{
             System.out.println("Enter the number between 0-9: ");
             int num = scanner.nextInt();

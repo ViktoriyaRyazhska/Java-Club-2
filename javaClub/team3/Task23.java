@@ -1,13 +1,19 @@
 package javaClub.team3;
 
 import java.io.IOException;
+import java.util.InputMismatchException;
 
 //https://www.codewars.com/kata/rock-paper-scissors/
 public class Task23 extends Task {
-	private String p1, p2;
+
 	private static String resoult;
 
 	public static String rps(String p1, String p2) {
+
+		if (p1 == null || p2 == null) throw new InputMismatchException();
+		
+		if (!(isValidInput(p1) && isValidInput(p2))) throw new InputMismatchException();
+		
 		if (p1.equals(p2))
 			return "Draw!";
 
@@ -30,24 +36,30 @@ public class Task23 extends Task {
 		}
 		return resoult;
 	}
-
-public static void setResoult(int playerNumber) {
-		resoult = "Player " + playerNumber + " won!";
+	public static boolean isValidInput(String p) {
 		
+		return p.equals("scissors") || p.equals("paper") || p.equals("rock");
+		
+	}
+	public static void setResoult(int playerNumber) {
+		resoult = "Player " + playerNumber + " won!";
+
 	}
 
 	@Override
 	void execute() {
 		
 		try {
+			
 			System.out.println("Please enter player 1: ");
-			p1 = bufferedReader.readLine();
+			String p1 = bufferedReader.readLine();
 			System.out.println("Please enter player 2: ");
-			p2 = bufferedReader.readLine();
+			String p2 = bufferedReader.readLine();
+			System.out.println(rps(p1, p2));
 		} catch (IOException e) {
 			e.printStackTrace();
-		} 
-		System.out.println(rps(p1, p2));
+		}
+		
 
 	}
 

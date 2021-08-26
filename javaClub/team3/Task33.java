@@ -1,11 +1,12 @@
 package javaClub.team3;
 
 import java.io.IOException;
+import java.util.InputMismatchException;
 
 //https://www.codewars.com/kata/cat-years-dog-years/
 public class Task33 extends Task {
 
-	public static int[] humanYearsCatYearsDogYears(final int humanYears) throws Exception {
+	public static int[] humanYearsCatYearsDogYears(final int humanYears)  {
 		int catYears = 0;
 		int dogYears = 0;
 
@@ -22,7 +23,7 @@ public class Task33 extends Task {
 			}
 			return new int[] { humanYears, catYears, dogYears };
 		}
-		throw new Exception("Unknown value of human years");
+		throw new InputMismatchException("Unknown value of human years");
 	}
 
 	@Override
