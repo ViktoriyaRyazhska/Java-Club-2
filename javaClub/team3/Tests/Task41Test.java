@@ -1,4 +1,4 @@
 package javaClub.team3.Tests;
 
-public class Task37Test {
+public class Task41Test {
 }
