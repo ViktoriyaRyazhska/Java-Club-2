@@ -18,7 +18,6 @@ public class Task45 extends Input {
         long finish;
 
 
-
         System.out.println("");
         System.out.println("Lops 45 ");
         System.out.println("Gap in Primes");
@@ -33,16 +32,11 @@ public class Task45 extends Input {
             System.out.println("put finish of numerical line >=2  (won't go beyond 1100000)");
             finish = Long.parseLong(br.readLine());
 
-         if(gap >= 2 && start >=2 && finish <= 1100000 ) {
-             System.out.println(Arrays.toString(gap(gap,start,finish)));
-         }else {
-             System.out.println(ConsoleColors.RED + "You put wrong value try again" + ConsoleColors.RESET);
-             Task45.main(args);
-         }
+            System.out.println(Arrays.toString(gap(gap, start, finish)));
 
 
-
-        } catch (IOException | NumberFormatException e) {
+        } catch (IOException | NumberFormatException | ArithmeticException e) {
+            e.printStackTrace();
             System.out.println(ConsoleColors.RED + "You put wrong value try again" + ConsoleColors.RESET);
             Task45.main(args);
         }
@@ -70,14 +64,18 @@ public class Task45 extends Input {
     }
 
 
-    public static long[] gap(int g, long m, long n) {
-        List<Long> listPrimeNumbs = allPrimeNumbsBetween(m, n);
-        for (int i = 0; i < listPrimeNumbs.size() - 1; i++) {
-            if (listPrimeNumbs.get(i + 1) - listPrimeNumbs.get(i) == g) {
-                return new long[]{listPrimeNumbs.get(i), listPrimeNumbs.get(i + 1)};
+    public static long[] gap(int g, long m, long n) throws ArithmeticException {
+
+        if (g >= 2 || m >= 2 || n <= 1100000) {
+            throw new ArithmeticException("gap >= 2 ,start of numerical line >=2,finish of numerical line >=2  (won't go beyond 1100000) ");
+        } else {
+            List<Long> listPrimeNumbs = allPrimeNumbsBetween(m, n);
+            for (int i = 0; i < listPrimeNumbs.size() - 1; i++) {
+                if (listPrimeNumbs.get(i + 1) - listPrimeNumbs.get(i) == g) {
+                    return new long[]{listPrimeNumbs.get(i), listPrimeNumbs.get(i + 1)};
+                }
             }
         }
-
         return null;
     }
 
