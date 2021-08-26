@@ -59,7 +59,7 @@ public class Task12 extends Input {
                     Main.main(args);
                     break;
                 case "2":
-                    Task3.main(args);
+                    Task12.main(args);
                     break;
                 default:
                     System.err.println(ConsoleColors.RED + "You need ro put 1 or 2 ");

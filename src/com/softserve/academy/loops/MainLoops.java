@@ -11,15 +11,15 @@ public class MainLoops extends Input {
         text();
         try {
             switch (br.readLine()) {
-                case "35":
+                case "4":
                     Task35.main(args);
                     break;
-                case "36":
+                case "5":
                     Task36.main(args);
-                case "37":
+                case "6":
                     Task37.main(args);
                     break;
-                case "45":
+                case "14":
                     Task45.main(args);
                     break;
                 default:
@@ -39,10 +39,10 @@ public class MainLoops extends Input {
     private static void text() {
 
         System.out.println(ConsoleColors.GREEN + "Please enter TASK number" + ConsoleColors.RESET);
-        System.out.println(ConsoleColors.GREEN + "35" + ConsoleColors.RESET + " return a new array with each value doubled ");
-        System.out.println(ConsoleColors.GREEN + "36" + ConsoleColors.RESET + " Counting sheep... ");
-        System.out.println(ConsoleColors.GREEN + "37" + ConsoleColors.RESET + " Reversed sequence ");
-        System.out.println(ConsoleColors.GREEN + "45" + ConsoleColors.RESET + " Gap in Prime ");
+        System.out.println(ConsoleColors.GREEN + "4" + ConsoleColors.RESET + " return a new array with each value doubled ");
+        System.out.println(ConsoleColors.GREEN + "5" + ConsoleColors.RESET + " Counting sheep... ");
+        System.out.println(ConsoleColors.GREEN + "6" + ConsoleColors.RESET + " Reversed sequence ");
+        System.out.println(ConsoleColors.GREEN + "14" + ConsoleColors.RESET + " Gap in Prime ");
 
     }
 }

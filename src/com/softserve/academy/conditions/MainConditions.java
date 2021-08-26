@@ -11,10 +11,10 @@ public class MainConditions extends Input {
         text();
         try {
             switch (br.readLine()) {
-                case "25":
+                case "1":
                     Task25.main(args);
                     break;
-                case "26":
+                case "2":
                     Task26.main(args);
                     break;
                 default:
@@ -34,8 +34,8 @@ public class MainConditions extends Input {
     private static void text() {
 
         System.out.println(ConsoleColors.GREEN + "Please enter TASK number" + ConsoleColors.RESET);
-        System.out.println(ConsoleColors.GREEN + "25" + ConsoleColors.RESET + "     Timmy love Sarah ");
-        System.out.println(ConsoleColors.GREEN + "26" + ConsoleColors.RESET + "     Convert boolean values to strings 'Yes' or 'No ");
+        System.out.println(ConsoleColors.GREEN + "1" + ConsoleColors.RESET + "     Timmy love Sarah ");
+        System.out.println(ConsoleColors.GREEN + "2" + ConsoleColors.RESET + "     Convert boolean values to strings 'Yes' or 'No ");
 
 
     }
