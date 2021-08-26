@@ -8,11 +8,9 @@ public class Task11 {
         Scanner scanner = new Scanner(System.in);
         int fahrenheit = scanner.nextInt();
 
-        System.out.println(GrassHopper.weatherInfo(fahrenheit));
+        System.out.println(weatherInfo(fahrenheit));
     }
-}
 
- class GrassHopper {
 
     public static String weatherInfo(int temp) {
         double c = convertToCelsius(temp);
@@ -23,7 +21,7 @@ public class Task11 {
     }
 
     public static double convertToCelsius(int temperature) {
-        return  (temperature - 32) *(5/9.0);
+        return (temperature - 32) * (5 / 9.0);
     }
 
 }

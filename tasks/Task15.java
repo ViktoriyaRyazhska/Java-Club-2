@@ -56,7 +56,7 @@ public class Task15 {
                       }else if ((j  == 0) || (j == canvasWidth-1)){
                           canvas[i][j] = '|';
                       }
-                      else canvas[i][j] = ' '; // пізда
+                      else canvas[i][j] = ' '; 
                   }
               }
           }
