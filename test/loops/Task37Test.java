@@ -1,7 +1,8 @@
 package loops;
 
 import com.softserve.academy.loops.Task37;
-import org.junit.jupiter.api.Test;
+import static org.junit.Assert.*;
+import org.junit.Test;
 
 
 import static org.junit.Assert.assertArrayEquals;

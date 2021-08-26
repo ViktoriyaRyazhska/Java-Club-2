@@ -1,8 +1,8 @@
 package loops;
 
 import com.softserve.academy.loops.Task45;
-import org.junit.Assert;
-import org.junit.jupiter.api.Test;
+import static org.junit.Assert.*;
+import org.junit.Test;
 
 import java.util.Arrays;
 

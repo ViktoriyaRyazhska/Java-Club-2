@@ -47,7 +47,7 @@ public class Task2 extends Input {
                 default:
                     System.err.println(ConsoleColors.RED + "You need to put 1 or 2 ");
                     System.err.println("You transfer to menu " + ConsoleColors.RESET);
-                    DoubleInteger.main(args);
+                    Task2.main(args);
             }
         } catch (
                 IOException e) {
