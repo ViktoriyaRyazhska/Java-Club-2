@@ -10,4 +10,9 @@ public class Task3Test {
         assertTrue("empty string", Task3.encode("").equals(""));
         assertTrue("abcdef string", Task3.encode("abcdef").equals("4bcd3f"));
     }
+
+    @Test
+    public void nullStringTest() {
+        assertEquals("", Task3.encode(null));
+    }
 }

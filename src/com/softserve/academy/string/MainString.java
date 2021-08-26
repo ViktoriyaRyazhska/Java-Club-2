@@ -26,6 +26,9 @@ public class MainString extends Input {
                 case "7":
                     Task57.main(args);
                     break;
+                case "8":
+                    Task58.main(args);
+                    break;
                 case "9":
                     Task59.main(args);
                     break;
@@ -59,6 +62,7 @@ public class MainString extends Input {
         System.out.println(ConsoleColors.GREEN + "5" + ConsoleColors.RESET + " Replace all dots");
         System.out.println(ConsoleColors.GREEN + "6" + ConsoleColors.RESET + " Are You Playing Banjo?");
         System.out.println(ConsoleColors.GREEN + "7" + ConsoleColors.RESET + " Remove spaces from string");
+        System.out.println(ConsoleColors.GREEN + "8" + ConsoleColors.RESET + " Combine all of the letters of the three inputed strings in groups");
         System.out.println(ConsoleColors.GREEN + "9" + ConsoleColors.RESET + " Get position of a character in alphabet");
         System.out.println(ConsoleColors.GREEN + "15" + ConsoleColors.RESET + " The returned value must be a string, and have '***' between each of its letters.");
         System.out.println(ConsoleColors.GREEN + "16" + ConsoleColors.RESET + " Sort and Stare");
