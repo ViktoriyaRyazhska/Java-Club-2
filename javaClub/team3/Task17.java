@@ -7,6 +7,7 @@ package javaClub.team3;
 *
 * Exceptions:
 * InputMismatchException when any value <= 0
+* InputMismatchException when value,surfaceArea > Long.MAX_VALUE
 * */
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -47,7 +48,7 @@ public class Task17 extends Task{
             volume = block.getVolume();
             surface = block.getSurfaceArea();
         } catch (InputMismatchException e) {
-            System.out.println("Numbers too high");
+            System.out.println("Result is out of long size");
             return;
         }
         System.out.println("Volume: " + volume + "\nSurface area: " + surface);
@@ -77,8 +78,16 @@ public class Task17 extends Task{
             int width = getWidth();
             int length = getLength();
             int height = getHeight();
-            setVolume((long) width *length*height);
-            setSurfaceArea(((long) width *length+ (long) length *height+ (long) height *width)*2);
+
+            if ((double)width*length*height > (double)Long.MAX_VALUE)
+                throw new InputMismatchException("Result is out of int size");
+            if (((double)width*length+(double)length*height+(double)height*width)*2 > (double)Long.MAX_VALUE)
+                throw new InputMismatchException("Result is out of int size");
+
+            long volume = (long) width *length*height;
+            long surfaceArea = ((long) width *length+ (long) length *height+ (long) height *width)*2;
+            setVolume(volume);
+            setSurfaceArea(surfaceArea);
         }
 
         public void setWidth(int width) {
