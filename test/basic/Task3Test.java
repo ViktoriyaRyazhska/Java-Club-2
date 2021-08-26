@@ -1,11 +1,11 @@
 package basic;
 
-import com.softserve.academy.basic.Task2;
-import com.softserve.academy.basic.Task3;
-import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.*;
+import com.softserve.academy.basic.Task3;
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 public class Task3Test {
     private static final double delta = 0.0001;

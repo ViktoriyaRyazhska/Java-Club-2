@@ -2,6 +2,8 @@ package string;
 
 import com.softserve.academy.string.Task59;
 import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 import org.junit.Test;
 
 public class Task59Test {

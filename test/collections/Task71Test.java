@@ -4,6 +4,8 @@ import java.util.*;
 
 import com.softserve.academy.collections.Task3;
 import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 import org.junit.Test;
 
 public class Task71Test {

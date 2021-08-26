@@ -13,7 +13,9 @@ public class Task12 extends Input {
     private String stringValue;
     private Object anObject;
 
-    public Task12(){}
+    public Task12() {
+    }
+
     public Task12(int number, String stringValue, Object anObject) {
         this.number = number;
         this.stringValue = stringValue;
@@ -44,14 +46,12 @@ public class Task12 extends Input {
         this.anObject = anObject;
     }
 
-
-
     public static void main(String[] args) {
 
         System.out.println("");
         System.out.println("Classes task12 ");
         System.out.println("I just use encapsulate ");
-        System.out.println("I use encapsulate. test is finished ");
+        System.out.println("I use encapsulate. test is finished ( i dont have any method ");
 
         try {
             switch (br.readLine()) {
@@ -66,8 +66,7 @@ public class Task12 extends Input {
                     System.err.println("You transfer to menu " + ConsoleColors.RESET);
                     Task12.main(args);
             }
-        } catch (
-                IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

@@ -1,13 +1,15 @@
 package classes;
 
 import com.softserve.academy.classes.Task9;
-import static org.junit.Assert.*;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import java.io.IOException;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 
 public class Task9Test {
-    @Test public void testTrue() {
+    @Test
+    public void testTrue() {
         assertEquals(Task9.convert(true), "true");
     }
 

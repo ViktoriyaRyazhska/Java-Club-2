@@ -9,8 +9,6 @@ import java.io.IOException;
 
 public class Task25 extends Input {
 
-
-
     public static void main(String[] args) {
 
         int first;
@@ -30,8 +28,8 @@ public class Task25 extends Input {
             love = isLove(first,second);
             System.out.println(" Douse Timmy love Sarah ? " +  love);
 
-        } catch (IOException |
-                NumberFormatException e) {
+        } catch (IOException |NumberFormatException | ArithmeticException e) {
+            e.printStackTrace();
             System.out.println(ConsoleColors.RED + "You put wrong value try again" + ConsoleColors.RESET);
             Task25.main(args);
         }
@@ -58,7 +56,8 @@ public class Task25 extends Input {
     }
 
 
-    public static boolean isLove(final int flower1, final int flower2) {
+    public static boolean isLove(final int flower1, final int flower2)throws ArithmeticException {
+        if(flower1 <=0 || flower2 <=0){throw new ArithmeticException("Value can't be <= 0 "); }
      return flower1%2 == 0 && flower2%2 != 0 || flower1%2 != 0 && flower2%2 == 0;
     }
 

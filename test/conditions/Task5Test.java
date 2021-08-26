@@ -2,6 +2,8 @@ package conditions;
 
 import com.softserve.academy.conditions.Task5;
 import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 import org.junit.Test;
 
 public class Task5Test {

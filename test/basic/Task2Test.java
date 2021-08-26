@@ -1,10 +1,11 @@
 package basic;
 
 import com.softserve.academy.basic.Task2;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 
 public class Task2Test {
     @Test
@@ -15,9 +16,9 @@ public class Task2Test {
         assertEquals(0, Task2.multiply(0, 1000));
     }
 
-    @Test(expected = ArithmeticException.class)
+    @Test
     public void sampleTest1() throws ArithmeticException {
-        Task2.multiply(999999999, 999999999);
+        assertThrows(ArithmeticException.class,() -> Task2.multiply(999999999, 999999999));
     }
 
 }
