@@ -39,7 +39,7 @@ public class Task2 extends Task{
         try {
             if ((long)a*b > Integer.MAX_VALUE) throw new InputMismatchException();
         } catch (InputMismatchException e) {
-            e.printStackTrace();
+            System.out.println("Result is out of int size");
             return;
         }
         System.out.println("Result: " + Multiply.multiply(a, b));
@@ -47,7 +47,7 @@ public class Task2 extends Task{
 
     public static class Multiply {
         public static int multiply(int num1, int num2) {
-            if ((long)num1*num2 > Integer.MAX_VALUE) throw new InputMismatchException();
+            if ((long)num1*num2 > Integer.MAX_VALUE) throw new InputMismatchException("Result is out of int size");
             return num1*num2;
         }
     }
