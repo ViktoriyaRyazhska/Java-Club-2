@@ -101,7 +101,7 @@ public class ApplMain {
 			break;
 		}
 		case 20: {
-			// Task20.main(args);
+			 Task20.main(args);
 			break;
 		}
 		case 21: {
