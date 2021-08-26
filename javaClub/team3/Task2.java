@@ -20,7 +20,7 @@ public class Task2 extends Task{
         try {
             a = scanner.nextInt();
         } catch (InputMismatchException e) {
-            System.err.println("Incorrect input a");
+            System.err.println("Incorrect input");
             return;
         }
         System.out.println("Input second (b) number to multiply");
@@ -28,7 +28,7 @@ public class Task2 extends Task{
         try {
             b = scanner.nextInt();
         } catch (InputMismatchException e) {
-            System.err.println("Incorrect input b");
+            System.err.println("Incorrect input");
             return;
         }
         try {
