@@ -1,5 +1,10 @@
 package javaClub.team3;
 
+/* @Test
+ * call
+ *
+ * Exceptions:
+ */
 import java.util.Arrays;
 import java.util.Scanner;
 
