@@ -3,9 +3,15 @@
 * Your task is to write a function which returns the time since midnight in milliseconds.
 * https://www.codewars.com/kata/beginner-series-number-2-clock/
 * */
-
 package javaClub.team3;
-
+/* @Test
+ * call Past.past
+ *
+ * Exceptions:
+ * InputMismatchException when any value < 0
+ * InputMismatchException when h > 23
+ * InputMismatchException when m,s > 59
+ * */
 import java.util.InputMismatchException;
 import java.util.Scanner;
 

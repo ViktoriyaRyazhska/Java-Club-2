@@ -5,7 +5,12 @@
 * */
 
 package javaClub.team3;
-
+/* @Test
+ * call Multiply.multiply
+ *
+ * Exceptions:
+ * InputMismatchException when a*b result > Integer.MAX_VALUE
+ * */
 import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.InputMismatchException;

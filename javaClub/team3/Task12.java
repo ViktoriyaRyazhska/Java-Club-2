@@ -2,6 +2,12 @@ package javaClub.team3;
 /*
 * https://www.codewars.com/kata/5a03295680171ffd7b0000c7/
 * */
+/* @Test
+ * create EncapsulationDemo object with params
+ * call get`s
+ *
+ * no Exceptions
+ * */
 public class Task12 extends Task{
     @Override
     void execute() {
