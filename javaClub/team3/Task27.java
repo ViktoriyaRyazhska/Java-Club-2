@@ -24,6 +24,7 @@ public class Task27 extends Task{
             System.err.println("Incorrect input");
             return;
         }
+        System.out.println("Print how many passengers on bus");
         try {
             on = scanner.nextInt();
             if (on < 0) throw new InputMismatchException();
@@ -31,6 +32,7 @@ public class Task27 extends Task{
             System.err.println("Incorrect input");
             return;
         }
+        System.out.println("Print how many passengers wait for bus");
         try {
             wait = scanner.nextInt();
             if (wait < 0) throw new InputMismatchException();
@@ -38,8 +40,6 @@ public class Task27 extends Task{
             System.err.println("Incorrect input");
             return;
         }
-        System.out.println("Print how many passengers on bus");
-        System.out.println("Print how many passengers wait for bus");
         System.out.println(Bob.enough(cap, on, wait));
     }
     public static class Bob {
