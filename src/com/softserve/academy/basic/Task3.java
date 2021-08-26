@@ -6,12 +6,12 @@ import com.softserve.academy.Main;
 
 
 import java.io.IOException;
-
+import java.math.BigDecimal;
 
 
 public class Task3 extends Input {
     public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        //BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         double length;
         double width;
         double height;
