@@ -3,6 +3,7 @@ package javaClub.team3.Tests;
 import org.junit.jupiter.api.Test;
 
 import static javaClub.team3.Task8.*;
+import static javaClub.team3.Task8.century;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Task8Test {
@@ -13,5 +14,18 @@ public class Task8Test {
         assertEquals(17, century(1601));
         assertEquals(20, century(2000));
         assertEquals(1,  century(89));
+    }
+
+    @Test
+    void normalTest_Zero() {
+        assertEquals(0, century(0));
+    }
+
+    @Test
+    void normalTest_Minus() {
+        assertEquals(-1, century(-100));
+        assertEquals(-1, century(-55));
+        assertEquals(-2, century(-101));
+        assertEquals(-1, century(-1));
     }
 }

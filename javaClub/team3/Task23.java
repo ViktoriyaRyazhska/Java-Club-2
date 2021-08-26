@@ -5,7 +5,7 @@ import java.io.IOException;
 //https://www.codewars.com/kata/rock-paper-scissors/
 public class Task23 extends Task {
 	private String p1, p2;
-	private static String resoult;
+	private static String result;
 
 	public static String rps(String p1, String p2) {
 		if (p1.equals(p2))
@@ -13,26 +13,26 @@ public class Task23 extends Task {
 
 		if (p1.equals("scissors")) {
 			if (p2.equals("paper"))
-				setResoult(1);
+				setResult(1);
 			else
-				setResoult(2);
+				setResult(2);
 
 		} else if (p1.equals("paper")) {
 			if (p2.equals("rock"))
-				setResoult(1);
+				setResult(1);
 			else
-				setResoult(2);
+				setResult(2);
 		} else {
 			if (p2.equals("scissors"))
-				setResoult(1);
+				setResult(1);
 			else
-				setResoult(2);
+				setResult(2);
 		}
-		return resoult;
+		return result;
 	}
 
-public static void setResoult(int playerNumber) {
-		resoult = "Player " + playerNumber + " won!";
+public static void setResult(int playerNumber) {
+		result = "Player " + playerNumber + " won!";
 		
 	}
 
