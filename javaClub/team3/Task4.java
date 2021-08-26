@@ -4,6 +4,7 @@ package javaClub.team3;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Scanner;
 
 //Your function should take two arguments: the size of the wall in millimeters and the size of
 //a pixel in millimeters. It should return True if you can fit  an exact number of pixels on
@@ -14,6 +15,7 @@ public class Task4 extends Task{
 
     @Override
     void execute() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the size of the wall in millimeters and the size of a pixel in millimeters: ");
         try{
             String[] numbers = GetData();
@@ -40,6 +42,7 @@ public class Task4 extends Task{
         return wallLength%pixelSize == 0;
     }
     public String[] GetData(){
+        Scanner scanner = new Scanner(System.in);
         String input  = scanner.nextLine();
         String[] numbers = input.split(" ");
         return numbers;

@@ -2,9 +2,12 @@ package javaClub.team3;
 
 //https://www.codewars.com/kata/55b75fcf67e558d3750000a3
 
+import java.util.Scanner;
+
 public class Task17 extends Task{
     @Override
     void execute() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Print width, length, height values");
         int []values = new int[3];
         values[0] = scanner.nextInt();

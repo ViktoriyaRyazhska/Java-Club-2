@@ -1,11 +1,13 @@
 package javaClub.team3;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 //https://www.codewars.com/kata/reversed-sequence/
 public class Task37 extends Task{
     @Override
     void execute() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Print number to get array");
         Sequence sequence = new Sequence();
         int[] res = sequence.reverse(scanner.nextInt());

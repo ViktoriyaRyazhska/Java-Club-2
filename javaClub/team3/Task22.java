@@ -1,9 +1,12 @@
 package javaClub.team3;
 //https://www.codewars.com/kata/how-old-will-i-be-in-2099/
 
+import java.util.Scanner;
+
 public class Task22 extends Task{
     @Override
     void execute() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Print your birth year and year you want to know how old you will/were");
         AgeDiff ageDiff = new AgeDiff();
         int birth = scanner.nextInt();

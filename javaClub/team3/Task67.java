@@ -1,9 +1,12 @@
 package javaClub.team3;
 
+import java.util.Scanner;
+
 //https://www.codewars.com/kata/alternating-case-<-equals->-alternating-case/
 public class Task67 extends Task{
     @Override
     void execute() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Print string to Up/LowerCase");
         System.out.println(new StringUtils().toAlternativeString(scanner.nextLine()));
     }

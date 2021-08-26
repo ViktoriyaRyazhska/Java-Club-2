@@ -2,9 +2,12 @@ package javaClub.team3;
 
 //https://www.codewars.com/kata/will-there-be-enough-space/
 
+import java.util.Scanner;
+
 public class Task27 extends Task{
     @Override
     void execute() {
+        Scanner scanner = new Scanner(System.in);
         Bob bob = new Bob();
         System.out.println("Print cap, on and wait passengers values");
         int cap = scanner.nextInt();

@@ -8,9 +8,12 @@
 
 package javaClub.team3;
 
+import java.util.Scanner;
+
 public class Task11 extends Task{
     @Override
     void execute() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Input temp in kelvin");
         try {
             int k = scanner.nextInt();

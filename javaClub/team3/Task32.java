@@ -2,9 +2,12 @@ package javaClub.team3;
 
 //https://www.codewars.com/kata/string-repeat
 
+import java.util.Scanner;
+
 public class Task32 extends Task{
     @Override
     void execute() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Print repeats number and string to repeat");
         Solution solution = new Solution();
         System.out.println(solution.repeatStr(scanner.nextInt(), scanner.nextLine()));

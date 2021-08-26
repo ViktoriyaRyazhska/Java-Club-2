@@ -2,11 +2,13 @@ package javaClub.team3;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 //https://www.codewars.com/kata/57a93f93bb9944516d0000c1
 public class Task72 extends Task{
     @Override
     void execute() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Print key-word");
         String key = scanner.nextLine();
         System.out.println("Now print explanation to word");
