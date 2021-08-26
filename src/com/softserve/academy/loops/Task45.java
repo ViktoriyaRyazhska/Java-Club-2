@@ -66,14 +66,15 @@ public class Task45 extends Input {
 
     public static long[] gap(int g, long m, long n) throws ArithmeticException {
 
-        if (g >= 2 || m >= 2 || n <= 1100000) {
+        if (g < 2 || m < 2 || n > 1100000) {
             throw new ArithmeticException("gap >= 2 ,start of numerical line >=2,finish of numerical line >=2  (won't go beyond 1100000) ");
-        } else {
-            List<Long> listPrimeNumbs = allPrimeNumbsBetween(m, n);
-            for (int i = 0; i < listPrimeNumbs.size() - 1; i++) {
-                if (listPrimeNumbs.get(i + 1) - listPrimeNumbs.get(i) == g) {
-                    return new long[]{listPrimeNumbs.get(i), listPrimeNumbs.get(i + 1)};
-                }
+        }
+
+        List<Long> listPrimeNumbs = allPrimeNumbsBetween(m, n);
+
+        for (int i = 0; i < listPrimeNumbs.size() - 1; i++) {
+            if (listPrimeNumbs.get(i + 1) - listPrimeNumbs.get(i) == g) {
+                return new long[]{listPrimeNumbs.get(i), listPrimeNumbs.get(i + 1)};
             }
         }
         return null;

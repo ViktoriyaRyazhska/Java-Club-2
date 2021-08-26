@@ -31,7 +31,8 @@ public class Task65 extends Input {
             System.out.println(correct(text));
 
 
-        } catch (IOException | NumberFormatException e) {
+        } catch (IOException | NumberFormatException |NullPointerException e) {
+            e.printStackTrace();
             System.out.println(ConsoleColors.RED + "You put wrong value try again" + ConsoleColors.RESET);
             Task65.main(args);
         }
@@ -62,6 +63,7 @@ public class Task65 extends Input {
 
 
     public static String correct(String string) {
+        if (string == null){throw new NullPointerException();}
         return string
                 .replace("5", "S")
                 .replace("0", "O")

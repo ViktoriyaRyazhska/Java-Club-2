@@ -52,6 +52,7 @@ public class Task70 extends Input {
 
     public static List createList(int number) {
         if(number <1) {throw new ArithmeticException("Number have to be bigger than one");}
+        if((Integer)number == null){throw new NumberFormatException();}
 
         List list = new ArrayList<>();
 

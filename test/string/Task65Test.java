@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class Task65Test {
 
@@ -35,5 +36,10 @@ public class Task65Test {
             assertEquals("URSULA K. LE GUIN - THE FARTHEST SHORE", Task65.correct(Task65.correct("UR5ULA K. LE GU1N - THE FARTHE5T 5H0RE")));
             assertEquals("URSULA K. LE GUIN - TALES FROM EARTHSEA", Task65.correct(Task65.correct("UR5ULA K. LE GU1N - TALE5 FR0M EARTH5EA")));
         }
+        @Test
+    public void notNullTest (){
+            assertThrows(NullPointerException.class,() -> Task65.correct(null));
+        }
+
 
 }
