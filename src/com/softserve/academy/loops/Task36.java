@@ -46,7 +46,8 @@ public class Task36 extends Input {
         }
 
 
-        public static int countSheeps(Boolean[] arrayOfSheeps) {
+        public static int countSheeps(Boolean[] arrayOfSheeps)throws NullPointerException {
+            if (arrayOfSheeps == null){throw new NullPointerException("Array is null");}
             int counter = 0;
             for (Boolean b : arrayOfSheeps) {
                 if (b != null && b) {

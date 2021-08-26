@@ -21,13 +21,10 @@ public class Task37 extends Input {
         try {
             System.out.println("put number");
             index = Integer.parseInt(br.readLine());
-            if(index>0) {
-                System.out.println(Arrays.toString(reverse(index)));
-            }else {
-                System.out.println(ConsoleColors.RED + "You put wrong value try again" + ConsoleColors.RESET);
-                Task37.main(args);
-            }
-        } catch (IOException | NumberFormatException e) {
+            System.out.println(Arrays.toString(reverse(index)));
+
+        } catch (IOException | NumberFormatException | ArithmeticException e) {
+            e.printStackTrace();
             System.out.println(ConsoleColors.RED + "You put wrong value try again" + ConsoleColors.RESET);
             Task37.main(args);
         }
@@ -55,6 +52,7 @@ public class Task37 extends Input {
     }
 
     public static int[] reverse(int n) {
+        if(n<=0){throw new ArithmeticException("Value can't be < 0 ");}
         int[] array = new int[n];
 
         for (int i = 0; i < array.length; i++) {
