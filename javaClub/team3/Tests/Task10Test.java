@@ -1,10 +1,9 @@
 package javaClub.team3.Tests;
 
-import org.junit.jupiter.api.Test;
-
 import static javaClub.team3.Task10.datingRange;
-import static javaClub.team3.Task5.greet;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
 
 class Task10Test {
 

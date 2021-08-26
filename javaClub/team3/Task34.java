@@ -1,7 +1,5 @@
 package javaClub.team3;
 
-import java.io.IOException;
-
 public class Task34 extends Task{
     @Override
     void execute() {
@@ -27,7 +25,7 @@ public class Task34 extends Task{
         return num;
     }
 
-    public int getAverage(int[] marks){
+    public static int getAverage(int[] marks){
         int sum = 0;
         for(int i =0; i<marks.length; i++){
             sum+=marks[i];
