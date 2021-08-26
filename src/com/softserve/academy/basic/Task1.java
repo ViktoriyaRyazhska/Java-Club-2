@@ -5,6 +5,7 @@ import com.softserve.academy.Input;
 import com.softserve.academy.Main;
 
 import java.io.IOException;
+import java.math.BigInteger;
 
 
 public class Task1 extends Input  {
@@ -21,7 +22,8 @@ public class Task1 extends Input  {
             numbDouble = (doubleInteger(Integer.parseInt(br.readLine())));
             System.out.println("Double Integer is " + numbDouble);
 
-        } catch (IOException | NumberFormatException e) {
+        } catch (IOException | NumberFormatException | ArithmeticException e) {
+            e.printStackTrace();
             System.out.println(ConsoleColors.RED + "You don't put wrong number try again" + ConsoleColors.RESET);
             Task1.main(args);
         }
@@ -48,8 +50,9 @@ public class Task1 extends Input  {
 
     }
 
-    public static int doubleInteger(int i) {
-        return i * 2;
+    public static int doubleInteger(int i) throws ArithmeticException {
+        BigInteger br = BigInteger.valueOf(i).multiply(BigInteger.valueOf(2));
+        return br.intValueExact();
     }
 
 }
