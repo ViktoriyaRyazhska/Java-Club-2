@@ -17,7 +17,7 @@ public class Main {
         taskMap.put(3, new Task3());
         taskMap.put(4, new Task4());
         taskMap.put(5, new Task5());
-//        taskMap.put(6, new Task6());
+        taskMap.put(6, new Task6());
         taskMap.put(7, new Task7());
         taskMap.put(8, new Task8());
         taskMap.put(9, new Task9());
@@ -75,7 +75,7 @@ public class Main {
 //        taskMap.put(56, new Task56());
         taskMap.put(57, new Task57());
         taskMap.put(58, new Task58());
-//        taskMap.put(59, new Task59());
+        taskMap.put(59, new Task59());
         taskMap.put(60, new Task60());
 //        taskMap.put(61, new Task61());
         taskMap.put(62, new Task11()); //this is correct!
