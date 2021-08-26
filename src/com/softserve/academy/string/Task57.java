@@ -40,12 +40,13 @@ public class Task57 extends Input {
                     Task59.main(args);
             }
         } catch (
-                IOException e) {
+                IOException | NullPointerException e) {
             e.printStackTrace();
         }
     }
 
     public static String noSpace(final String x) {
+        if (x == null) throw new NullPointerException();
         return x.replaceAll(" ", "");
     }
 }

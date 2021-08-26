@@ -47,12 +47,14 @@ public class Task8 extends Input {
                     Task8.main(args);
             }
         } catch (
-                IOException e) {
+                IOException | ArithmeticException | NullPointerException e) {
             e.printStackTrace();
         }
     }
 
     public static boolean isDivisible(long n, long x, long y) {
+        if ((Long) n == null || (Long) x == null || (Long) y == null) throw new NullPointerException();
+        if (x == 0 || y == 0) throw new ArithmeticException();
         return (n%x==0 && n%y==0);
     }
 }

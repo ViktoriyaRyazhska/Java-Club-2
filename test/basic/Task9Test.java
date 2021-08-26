@@ -19,4 +19,9 @@ public class Task9Test {
         assertEquals(-100, Task9.makeNegative(-100));
         assertEquals(-95, Task9.makeNegative(-95));
     }
+
+    @Test
+    public void nullArgumentTest() {
+        assertThrows(NullPointerException.class, () -> Task9.makeNegative((Integer) null));
+    }
 }

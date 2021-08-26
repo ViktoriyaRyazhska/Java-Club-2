@@ -2,6 +2,8 @@ package com.softserve.academy.conditions;
 
 public class Task5 {
     public static String switchItUp(int number) {
+        if ((Integer) number == null) throw new NullPointerException();
+        if (number < 0 || number > 9) throw  new IllegalArgumentException();
         switch (number) {
             case 9:
                 return "Nine";

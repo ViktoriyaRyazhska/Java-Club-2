@@ -39,13 +39,16 @@ public class Task67 extends Input {
                     System.err.println("You transfer to menu " + ConsoleColors.RESET);
                     Task67.main(args);
             }
-        } catch (IOException e) {
+        } catch (
+                IOException | NullPointerException e) {
             e.printStackTrace();
         }
     }
 
     public static String toAlternativeString(String string) {
-        // your code here!
+        if (string == null) {
+            throw new NullPointerException();
+        }
         String answer = "";
         for(char i : string.toCharArray()) {
             if (Character.isUpperCase(i)) {

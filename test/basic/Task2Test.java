@@ -4,7 +4,7 @@ import com.softserve.academy.basic.Task2;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.Assert.*;
 
 public class Task2Test {
     @Test
