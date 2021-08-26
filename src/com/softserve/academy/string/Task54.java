@@ -12,8 +12,8 @@ public class Task54 extends Input {
         int a;
 
         System.out.println("");
-        System.out.println("String 54 ");
-        System.out.println("Opposite number");
+        System.out.println("String 55 ");
+        System.out.println("Replace all dots");
         System.out.println("I can given you a opposite number");
         System.out.println("for example: 1 ---> -1  ");
 
@@ -49,13 +49,11 @@ public class Task54 extends Input {
             Main.main(args);
         }
     }
+            public static int opposite ( int number) throws NullPointerException {
+                if ((Integer) number == null) {
+                    throw new NullPointerException();
+                }
+                return -number;
+            }
 
-
-    public static int opposite(int number) throws NullPointerException {
-        if ((Integer) number == null) {
-            throw new NullPointerException();
         }
-        return -number;
-    }
-
-}
