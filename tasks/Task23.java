@@ -3,18 +3,26 @@ package java_core;
 import java.util.Scanner;
 
 public class Task23 {
-    Scanner scanner = new Scanner(System.in);
-    loop:
-            while (true) {
-        String playerOne = scanner.nextLine().trim().toLowerCase();
-        String playerTwo = scanner.nextLine().trim().toLowerCase();
-        if ((playerOne.equals("scissors") || playerOne.equals("paper") || playerOne.equals("rock")) &&
-                (playerTwo.equals("scissors") || playerTwo.equals("paper") || playerTwo.equals("rock")))
-        {
-            System.out.println(java_core.Kata.rps(playerOne, playerTwo));
-            break loop;
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        loop:
+        while (true) {
+            String playerOne = scanner.nextLine().trim().toLowerCase();
+            String playerTwo = scanner.nextLine().trim().toLowerCase();
+            if ((playerOne.equals("scissors") || playerOne.equals("paper") || playerOne.equals("rock")) &&
+                    (playerTwo.equals("scissors") || playerTwo.equals("paper") || playerTwo.equals("rock")))
+            {
+                System.out.println(java_core.Kata.rps(playerOne, playerTwo));
+                break loop;
+            }
+            System.out.println("Enter correct values: scissors/paper/rock");
         }
-        System.out.println("Enter correct values: scissors/paper/rock");
+
+
+
+
+
     }
 
 }
