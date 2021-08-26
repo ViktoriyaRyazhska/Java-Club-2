@@ -1,8 +1,11 @@
 package javaClub.team3;
 
+import java.util.Scanner;
+
 public class Task14 extends Task{
     @Override
     void execute() {
+        Scanner scanner = new Scanner(System.in);
         try{
             System.out.println("Enter the top of the first fraction:");
             int top = scanner.nextInt();

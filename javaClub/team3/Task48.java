@@ -2,7 +2,12 @@ package javaClub.team3;
 
 import java.util.Arrays;
 //https://www.codewars.com/kata/rotations-and-reflections-i/
-public class Task48{
+public class Task48 extends Task{
+
+	@Override
+	void execute() {
+		System.out.println("Nothing to output!");
+	}
 	
 	public int[] arr;
 	final static Task48 IDENTITY = new Task48(new int [] {1, 2, 3, 4});
@@ -83,5 +88,4 @@ public class Task48{
 	        : r.equals(REFLECT_REVERSE_DIAGONAL) ? "reflection in reverse-diagonal line"
 	        :                                      "unknown Task48 value";
 	 }
-
 }

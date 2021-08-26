@@ -35,6 +35,9 @@ public class Task15 extends Task {
         int x2 = 0;
         int y1 = 0;
         int y2 = 0;
+
+        
+
         while (!action.equals("q") && !action.equals("Q")) {
             int width = 0;
             int height = 0;
