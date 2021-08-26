@@ -44,8 +44,8 @@ public class Main {
         taskMap.put(28, new Task28());
         taskMap.put(29, new Task29());
         taskMap.put(30, new Task30());
-
-//        taskMap.put(31, new Task31());
+        taskMap.put(31, new Task31());
+        
         taskMap.put(32, new Task32());
         taskMap.put(33, new Task33());
         taskMap.put(34, new Task34());
@@ -55,19 +55,19 @@ public class Main {
         taskMap.put(38, new Task38());
         taskMap.put(39, new Task39());
         taskMap.put(40, new Task40());
-
 //        taskMap.put(41, new Task41());
         taskMap.put(42, new Task42());
         taskMap.put(43, new Task43());
         taskMap.put(44, new Task44());
         taskMap.put(45, new Task45());
 //        taskMap.put(46, new Task46());
+        
         taskMap.put(47, new Task47());
-//        taskMap.put(48, new Task48());
+        taskMap.put(48, new Task48());
         taskMap.put(49, new Task49());
         taskMap.put(50, new Task50());
 
-//        taskMap.put(51, new Task51());
+        taskMap.put(51, new Task51());
         taskMap.put(52, new Task52());
         taskMap.put(53, new Task53());
         taskMap.put(54, new Task54());
@@ -77,8 +77,7 @@ public class Main {
         taskMap.put(58, new Task58());
         taskMap.put(59, new Task59());
         taskMap.put(60, new Task60());
-
-//        taskMap.put(61, new Task61());
+        taskMap.put(61, new Task61());
         taskMap.put(62, new Task11()); //this is correct!
         taskMap.put(63, new Task63());
 //        taskMap.put(64, new Task64());
@@ -89,7 +88,7 @@ public class Main {
       
 //        taskMap.put(69, new Task69());
         taskMap.put(70, new Task70());
-//        taskMap.put(71, new Task71());
+        taskMap.put(71, new Task71());
         taskMap.put(72, new Task72());
 
         while (true) {
