@@ -15,8 +15,8 @@ public class Task36 extends Task{
     void execute() {
         System.out.println("Forget about this task"); //hard to do correct user input
     }
-    public class Counter {
-        public int countSheeps(Boolean[] arrayOfSheeps) {
+    public static class Counter {
+        public static int countSheeps(Boolean[] arrayOfSheeps) {
             if (arrayOfSheeps.length == 0) return 0;
             int counter = 0;
             for (Boolean arrayOfSheep : arrayOfSheeps) {
