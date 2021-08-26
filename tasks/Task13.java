@@ -16,9 +16,14 @@ public class Task13 {
         return value + n;
     }
 
-    public static int AddHundred(){
-        Scanner scanner = new Scanner(System.in);
+    public static int AddHundred(int i){
         final Task13 INST = new Task13();
+        return INST.plus100(i);
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
         System.out.println("Enter your integer number:");
         int i;
         do {
@@ -31,10 +36,6 @@ public class Task13 {
                 System.out.println("Wrong input data type...");
             }
         } while (true);
-        return INST.plus100(i);
-    }
-
-    public static void main(String[] args) {
-        System.out.println(AddHundred());
+        System.out.println(AddHundred(i));
     }
 }
