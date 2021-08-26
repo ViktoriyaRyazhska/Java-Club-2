@@ -7,6 +7,7 @@ public class Task12 extends Task{
     void execute() {
         System.out.println("Nothing to output");
     }
+
 }
 
 class EncapsulationDemo{
