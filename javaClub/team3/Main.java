@@ -28,7 +28,7 @@ public class Main {
 //       taskMap.put(13, new Task13());
         taskMap.put(14, new Task14());
         taskMap.put(15, new Task15());
-//        taskMap.put(16, new Task16());
+        taskMap.put(16, new Task16());
         taskMap.put(17, new Task17());
         taskMap.put(18, new Task18());
         taskMap.put(19, new Task19());
@@ -50,7 +50,7 @@ public class Main {
         taskMap.put(33, new Task33());
         taskMap.put(34, new Task34());
         taskMap.put(35, new Task35());
-//        taskMap.put(36, new Task36());
+        taskMap.put(36, new Task36());
         taskMap.put(37, new Task37());
         taskMap.put(38, new Task38());
         taskMap.put(39, new Task39());
@@ -72,7 +72,7 @@ public class Main {
         taskMap.put(53, new Task53());
         taskMap.put(54, new Task54());
         taskMap.put(55, new Task55());
-//        taskMap.put(56, new Task56());
+        taskMap.put(56, new Task56());
         taskMap.put(57, new Task57());
         taskMap.put(58, new Task58());
 //        taskMap.put(59, new Task59());
