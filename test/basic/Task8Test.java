@@ -1,8 +1,11 @@
 package basic;
 
 import com.softserve.academy.basic.Task8;
-import static org.junit.Assert.*;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 
 public class Task8Test {
     @Test

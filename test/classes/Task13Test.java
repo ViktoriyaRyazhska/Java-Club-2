@@ -2,6 +2,8 @@ package classes;
 
 import com.softserve.academy.classes.Task24;
 import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 import org.junit.Test;
 
 public class Task13Test {
