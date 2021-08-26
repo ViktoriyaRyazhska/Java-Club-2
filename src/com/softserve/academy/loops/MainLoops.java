@@ -19,6 +19,15 @@ public class MainLoops extends Input {
                 case "6":
                     Task37.main(args);
                     break;
+                case "7":
+                    Task7.main(args);
+                    break;
+                case "8":
+                    Task8.main(args);
+                    break;
+                case "9":
+                    Task9.main(args);
+                    break;
                 case "14":
                     Task45.main(args);
                     break;
@@ -42,6 +51,9 @@ public class MainLoops extends Input {
         System.out.println(ConsoleColors.GREEN + "4" + ConsoleColors.RESET + " return a new array with each value doubled ");
         System.out.println(ConsoleColors.GREEN + "5" + ConsoleColors.RESET + " Counting sheep... ");
         System.out.println(ConsoleColors.GREEN + "6" + ConsoleColors.RESET + " Reversed sequence ");
+        System.out.println(ConsoleColors.GREEN + "7" + ConsoleColors.RESET + " You receive an array with your peers' test scores. Now calculate the average and compare your score! ");
+        System.out.println(ConsoleColors.GREEN + "8" + ConsoleColors.RESET + " Given a non-empty array of integers, return the result of multiplying the values together in order. ");
+        System.out.println(ConsoleColors.GREEN + "9" + ConsoleColors.RESET + " Get sum of positives in array ");
         System.out.println(ConsoleColors.GREEN + "14" + ConsoleColors.RESET + " Gap in Prime ");
 
     }

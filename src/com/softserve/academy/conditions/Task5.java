@@ -3,14 +3,13 @@ package com.softserve.academy.conditions;
 import com.softserve.academy.ConsoleColors;
 import com.softserve.academy.Input;
 import com.softserve.academy.Main;
-import com.softserve.academy.string.Task57;
 
 import java.io.IOException;
 
 public class Task5 extends Input {
     public static void main(String[] args) {
 
-        Integer line;
+        int line;
 
         System.out.println("Task 29:  When provided with a number between 0-9, return it in words. ");
 
