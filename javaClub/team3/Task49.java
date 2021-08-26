@@ -1,9 +1,12 @@
 package javaClub.team3;
 
+import java.util.Scanner;
+
 public class Task49 extends Task{
     @Override
     void execute() {
         try{
+            Scanner scanner = new Scanner(System.in);
             System.out.println("Enter the string to encode: ");
             String sourse = scanner.nextLine();
             while(sourse == null){

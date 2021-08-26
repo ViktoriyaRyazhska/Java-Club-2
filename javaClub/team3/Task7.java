@@ -3,24 +3,56 @@
 * Your task is to write a function which returns the time since midnight in milliseconds.
 * https://www.codewars.com/kata/beginner-series-number-2-clock/
 * */
-
 package javaClub.team3;
+/* @Test
+ * call Past.past
+ *
+ * Exceptions:
+ * InputMismatchException when any value < 0
+ * InputMismatchException when h > 23
+ * InputMismatchException when m,s > 59
+ * */
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
 public class Task7 extends Task{
     @Override
     void execute() {
-        System.out.println("Input h, m, s values");
+        Scanner scanner = new Scanner(System.in);
+        int h, m, s;
+        System.out.println("Input hours");
         try {
-            int h = scanner.nextInt();
-            int m = scanner.nextInt();
-            int s = scanner.nextInt();
-            System.out.println("Milliseconds: " + past(h, m, s));
-        } catch (Exception e) {
-            e.printStackTrace();
+            h = scanner.nextInt();
+            if (h < 0 || h > 23) throw new InputMismatchException();
+        } catch (InputMismatchException e) {
+            System.err.println("Incorrect input");
+            return;
         }
+        System.out.println("Input minutes");
+        try {
+            m = scanner.nextInt();
+            if (m < 0 || m > 59) throw new InputMismatchException();
+        } catch (InputMismatchException e) {
+            System.err.println("Incorrect input");
+            return;
+        }
+        System.out.println("Input hours");
+        try {
+            s = scanner.nextInt();
+            if (s < 0 || s > 59) throw new InputMismatchException();
+        } catch (InputMismatchException e) {
+            System.err.println("Incorrect input");
+            return;
+        }
+        System.out.println("Result: " + Past.past(h, m, s));
     }
 
-    public static int past(int h, int m, int s) {
-        return ((((h*60)+m)*60)+s)*1000;
+    public static class Past {
+        public static long past(int h, int m, int s) {
+            if (h < 0 || h > 23) throw new InputMismatchException();
+            if (m < 0 || m > 59) throw new InputMismatchException();
+            if (s < 0 || s > 59) throw new InputMismatchException();
+            return ((((h* 60L)+m)*60)+s)*1000;
+        }
     }
 }
