@@ -39,8 +39,7 @@ public class Task67 extends Input {
                     System.err.println("You transfer to menu " + ConsoleColors.RESET);
                     Task67.main(args);
             }
-        } catch (
-                IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
