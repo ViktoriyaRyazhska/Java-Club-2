@@ -25,7 +25,7 @@ public class Task28Test {
         outputBefore(148);
         assertEquals(2, Task28.sequence(148));
         outputAfter();
-         */
+        */
     }
     @Test
     void negativeTest_bounds() {

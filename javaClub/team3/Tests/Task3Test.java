@@ -4,8 +4,8 @@ import org.junit.jupiter.api.Test;
 
 import java.util.InputMismatchException;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static javaClub.team3.Task3.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class Task3Test {
@@ -29,3 +29,16 @@ public class Task3Test {
                 () -> System.err.println(getVolumeOfCuboid(-5, 5, 1) + " is result, but no result expect!"));
     }
 }
+/*
+        assertThrows(InputMismatchException.class,
+                () -> System.err.println( + " is result, but no result expect!"));
+*//*
+    void outputBefore() {
+        System.out.println("Input params: ");
+    }
+    void outputAfter() {
+        System.out.println("OK!");
+    }
+*//*
+
+*/
