@@ -11,4 +11,9 @@ public class Task7Test {
         assertEquals(1, Task7.opposite(-1));
         assertEquals(0, Task7.opposite(0));
     }
+
+    @Test
+    public void nullArgumentTest() {
+        assertThrows(NullPointerException.class, () -> Task7.opposite((Integer) null));
+    }
 }

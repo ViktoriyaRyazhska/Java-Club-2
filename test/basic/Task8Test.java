@@ -25,4 +25,15 @@ public class Task8Test {
         assertEquals(15, Task8.century(1401));
         assertEquals(21, Task8.century(2001));
     }
+
+    @Test
+    public void invalidYearTest() {
+        assertThrows(IllegalArgumentException.class, () -> Task8.century(-5));
+    }
+
+    @Test
+    public void nullArgumentTest() {
+        Integer a = null;
+        assertThrows(NullPointerException.class, () -> Task8.century(a));
+    }
 }

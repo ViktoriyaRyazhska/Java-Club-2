@@ -5,6 +5,7 @@ import com.softserve.academy.Input;
 import com.softserve.academy.Main;
 
 import java.io.IOException;
+import java.util.function.Predicate;
 
 
 public class Task24 extends Input {
@@ -52,16 +53,46 @@ public class Task24 extends Input {
                     Task24.main(args);
             }
         } catch (
-                IOException e) {
+                IOException | NullPointerException | ArithmeticException | IllegalArgumentException e) {
             e.printStackTrace();
         }
     }
 
     public static int basicMath(String op, int v1, int v2) {
-        if(op.equals("+")) return v1 + v2;
-        if(op.equals("/")) return v1 / v2;
-        if(op.equals("*")) return v1 * v2;
-        if(op.equals("-")) return v1 - v2;
-        return 0;
+        if (op == null || (Integer) v1 == null || (Integer) v2 == null) {
+            throw new NullPointerException();
+        }
+
+        if (op.equals("*") || op.equals("+") || op.equals("-") || op.equals("/")) {
+            long result;
+
+            Predicate<Long> isOverflowed = x -> x < Integer.MIN_VALUE || x > Integer.MAX_VALUE;
+
+            if (op.equals("+")) {
+                result = (long) v1 + (long) v2;
+                if (isOverflowed.test(result)) throw new ArithmeticException();
+                return (int) result;
+            }
+
+            if (op.equals("/")) {
+                if (v2 == 0) throw new ArithmeticException();
+                result = (long) v1 / (long) v2;
+                if (isOverflowed.test(result)) throw new ArithmeticException();
+                return (int) result;
+            }
+
+            if (op.equals("*")) {
+                result = (long) v1 * (long) v2;
+                if (isOverflowed.test(result)) throw new ArithmeticException();
+                return (int) result;
+            }
+
+            result = (long) v1 - (long) v2;
+            if (isOverflowed.test(result)) throw new ArithmeticException();
+            return (int) result;
+        }
+        else {
+            throw new IllegalArgumentException();
+        }
     }
 }

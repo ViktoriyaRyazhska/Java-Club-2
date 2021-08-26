@@ -13,4 +13,9 @@ public class Task57Test {
         assertEquals("jfBmgklf8hg88lbe8", Task57.noSpace("jfBm  gk lf8hg  88lbe8 "));
         assertEquals("8jaam", Task57.noSpace("8j aam"));
     }
+
+    @Test
+    public void nullArugmentTest() {
+        assertThrows(NullPointerException.class, () -> Task57.noSpace(null));
+    }
 }

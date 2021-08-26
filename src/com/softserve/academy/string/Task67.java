@@ -40,13 +40,15 @@ public class Task67 extends Input {
                     Task67.main(args);
             }
         } catch (
-                IOException e) {
+                IOException | NullPointerException e) {
             e.printStackTrace();
         }
     }
 
     public static String toAlternativeString(String string) {
-        // your code here!
+        if (string == null) {
+            throw new NullPointerException();
+        }
         String answer = "";
         for(char i : string.toCharArray()) {
             if (Character.isUpperCase(i)) {

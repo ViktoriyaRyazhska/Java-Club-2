@@ -41,12 +41,13 @@ public class Task7 extends Input {
                     Task7.main(args);
             }
         } catch (
-                IOException e) {
+                IOException | NullPointerException e) {
             e.printStackTrace();
         }
     }
 
     public static int opposite(int number) {
+        if ((Integer) number == null) throw new NullPointerException();
         return -number;
     }
 }

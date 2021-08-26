@@ -14,4 +14,9 @@ public class Task9Test {
     @Test public void testFalse(){
         assertEquals(Task9.convert(false), "false");
     }
+
+    @Test
+    public void nullArgumentTest() {
+        assertThrows(NullPointerException.class, () -> Task9.convert((Boolean) null));
+    }
 }

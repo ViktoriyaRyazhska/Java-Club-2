@@ -11,4 +11,14 @@ public class Task6Test {
         assertEquals("yellow", Task6.updateLight("green"));
         assertEquals("red", Task6.updateLight("yellow"));
     }
+
+    @Test
+    public void wrongColorTest() {
+        assertThrows(IllegalArgumentException.class, () -> Task6.updateLight("g"));
+    }
+
+    @Test
+    public void nullArgumentTest() {
+        assertThrows(NullPointerException.class, () -> Task6.updateLight(null));
+    }
 }

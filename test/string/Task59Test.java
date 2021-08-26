@@ -11,4 +11,14 @@ public class Task59Test {
         assertEquals("Position of alphabet: 26", Task59.position('z'));
         assertEquals("Position of alphabet: 5", Task59.position('e'));
     }
+
+    @Test
+    public void nullArgumentTest() {
+        assertThrows(NullPointerException.class, () -> Task59.position((Character) null));
+    }
+
+    @Test
+    public void wrongCharTest() {
+        assertThrows(IllegalArgumentException.class, () -> Task59.position('A'));
+    }
 }

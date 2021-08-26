@@ -41,12 +41,13 @@ public class Task9 extends Input {
                     Task9.main(args);
             }
         } catch (
-                IOException e) {
+                IOException | NullPointerException e) {
             e.printStackTrace();
         }
     }
 
     public static int makeNegative(final int x) {
+        if ((Integer) x == null) throw new NullPointerException();
         if(x<=0) return x;
         return -x; // Your code here.
     }

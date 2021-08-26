@@ -44,12 +44,14 @@ public class Task8 extends Input {
                     Task8.main(args);
             }
         } catch (
-                IOException e) {
+                IOException | NullPointerException | IllegalArgumentException e) {
             e.printStackTrace();
         }
     }
 
     public static int century(int number) {
+        if ((Integer)number == null) throw  new NullPointerException();
+        if (number <= 0) throw new IllegalArgumentException();
         return number % 100 == 0? number / 100 : (number / 100) + 1;
     }
 }

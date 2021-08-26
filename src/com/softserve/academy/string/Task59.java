@@ -43,13 +43,14 @@ public class Task59 extends Input {
                     Task59.main(args);
             }
         } catch (
-                IOException e) {
+                IOException | IllegalArgumentException e) {
             e.printStackTrace();
         }
     }
 
 
     public static String position(char alphabet) {
+        if (alphabet < 97 || alphabet > 122) throw  new IllegalArgumentException();
         return "Position of alphabet: " + (alphabet - 96);
     }
 }

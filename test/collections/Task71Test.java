@@ -15,10 +15,19 @@ public class Task71Test {
     }
 
     @Test
-    public void secondTest()
-    {
+    public void secondTest() {
         List<Integer> listOfNumbers = new LinkedList<>(Arrays.asList( 1, 2, 2, 2, 4, 3, 4 ));
         List<Integer> expectedResult = new LinkedList<>(Arrays.asList( 1, 3 ));
         assertEquals(Arrays.toString(expectedResult.toArray()), Arrays.toString(Task3.filterOddNumber(listOfNumbers).toArray()));
+    }
+
+    @Test
+    public void emptyListTest() {
+        assertThrows(IllegalArgumentException.class, () -> Task3.filterOddNumber(new LinkedList<Integer>()));
+    }
+
+    @Test
+    public void nullArgumentTest() {
+        assertThrows(NullPointerException.class, () -> Task3.filterOddNumber(null));
     }
 }
