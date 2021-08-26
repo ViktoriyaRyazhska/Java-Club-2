@@ -33,8 +33,8 @@ public class Task4 extends Input {
             }
 
 
-        } catch (IOException |
-                NumberFormatException e) {
+        } catch (IOException | NumberFormatException | ArithmeticException e) {
+            e.printStackTrace();
             System.out.println(ConsoleColors.RED + "You put wrong value try again" + ConsoleColors.RESET);
             Task4.main(args);
         }
@@ -61,6 +61,7 @@ public class Task4 extends Input {
     }
 
     public static boolean isDivisible(int wallLength, int pixelSize) {
+        if (wallLength <= 0 || pixelSize <=0 ) { throw new ArithmeticException("Value can't be <= 0 ");}
         return wallLength%pixelSize==0;
     }
 }
