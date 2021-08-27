@@ -1,8 +1,8 @@
 # Part1. Java Core. Team 4
 
-Slobodyanyuk Bogdan #1 // (Tasks: 1, 4, 7, 10, etc.)  
+// Slobodyanyuk Bogdan #1 // (Tasks: 1, 4, 7, 10, etc.)  
 // Androshchuk Iryna  
-Stanasiuk Oleg #2 // (Tasks: 2, 5, 8, 11, etc.)  
+// Stanasiuk Oleg #2 // (Tasks: 2, 5, 8, 11, etc.)  
 Voronko Eugene #3 // (Tasks: 3, 6, 9, 12, etc.) 
 
 int usersAmount = 3;  
