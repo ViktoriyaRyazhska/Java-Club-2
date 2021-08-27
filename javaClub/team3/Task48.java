@@ -10,14 +10,14 @@ public class Task48 extends Task{
 	}
 	
 	public int[] arr;
-	final static Task48 IDENTITY = new Task48(new int [] {1, 2, 3, 4});
-	final static Task48 ROTATE_90_ANTICLOCKWISE = new Task48(new int [] {2, 4, 1, 3});
-	final static Task48 ROTATE_180 = new Task48(new int [] {4, 3, 2, 1});
-	final static Task48 ROTATE_90_CLOCKWISE = new Task48(new int [] {3, 1, 4, 2});
-	final static Task48 REFLECT_VERTICAL = new Task48(new int [] {2, 1, 4, 3});
-	final static Task48 REFLECT_FORWARD_DIAGONAL = new Task48(new int [] {4, 2, 3, 1});
-	final static Task48 REFLECT_HORIZONTAL = new Task48(new int [] {3, 4, 1, 2});
-	final static Task48 REFLECT_REVERSE_DIAGONAL = new Task48(new int [] {1, 3, 2, 4});
+	public final static Task48 IDENTITY = new Task48(new int [] {1, 2, 3, 4});
+	public final static Task48 ROTATE_90_ANTICLOCKWISE = new Task48(new int [] {2, 4, 1, 3});
+	public final static Task48 ROTATE_180 = new Task48(new int [] {4, 3, 2, 1});
+	public final static Task48 ROTATE_90_CLOCKWISE = new Task48(new int [] {3, 1, 4, 2});
+	public final static Task48 REFLECT_VERTICAL = new Task48(new int [] {2, 1, 4, 3});
+	public final static Task48 REFLECT_FORWARD_DIAGONAL = new Task48(new int [] {4, 2, 3, 1});
+	public final static Task48 REFLECT_HORIZONTAL = new Task48(new int [] {3, 4, 1, 2});
+	public final static Task48 REFLECT_REVERSE_DIAGONAL = new Task48(new int [] {1, 3, 2, 4});
 	
 	
 	public Task48() {
@@ -28,7 +28,7 @@ public class Task48 extends Task{
 		this.arr = arr;
 	}
 	
-	Task48 inv(){
+	public Task48 inv(){
 		
 		if (this.equals(ROTATE_90_ANTICLOCKWISE)) return ROTATE_90_CLOCKWISE;
 		if (this.equals(ROTATE_90_CLOCKWISE)) return ROTATE_90_ANTICLOCKWISE;
@@ -50,7 +50,7 @@ public class Task48 extends Task{
 		
 	}
 	
-	Task48 then(Task48 r){
+	public Task48 then(Task48 r){
 		if (r.equals(IDENTITY)) return this;
 		if (this.equals(IDENTITY)) return r;
 		
@@ -66,12 +66,12 @@ public class Task48 extends Task{
 	}
 	
 
-	 boolean is_rotation(){		
+	 public boolean is_rotation(){
 		return this.equals(ROTATE_180) || this.equals(ROTATE_90_ANTICLOCKWISE)||
 			this.equals(ROTATE_90_CLOCKWISE) || this.equals(IDENTITY); 
 	}
 	 
-	 boolean is_reflection(){		
+	 public boolean is_reflection(){
 			return this.equals(REFLECT_VERTICAL) || this.equals(REFLECT_FORWARD_DIAGONAL)||
 				this.equals(REFLECT_HORIZONTAL) || this.equals(REFLECT_REVERSE_DIAGONAL); 
 		}

@@ -3,37 +3,44 @@ package javaClub.team3.Tests;
 import javaClub.team3.Task41;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+import java.util.InputMismatchException;
+
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class Task41Test {
     @Test
-    public void exampleTest1() {
+    void exampleTest() {
+        outputBefore(new String[]{ "tail", "body", "head" });
         assertArrayEquals(new String[]{ "head", "body", "tail" },
                 Task41.fixTheMeerkat(new String[]{ "tail", "body", "head" }));
+        outputAfter();
     }
 
     @Test
-    public void exampleTest2() {
-        assertArrayEquals(new String[]{ "heads", "body", "tails" },
-                Task41.fixTheMeerkat(new String[]{ "tails", "body", "heads" }));
+    void negativeTest_empty() {
+        outputBefore(new String[]{"", "", ""});
+        assertThrows(InputMismatchException.class,
+                () -> System.err.println(Arrays.toString(Task41.fixTheMeerkat(new String[]{"", "", ""})) + " is result, but no result expect!"));
+        outputAfter();
+        outputBefore(new String[]{"", "body", "head"});
+        assertThrows(InputMismatchException.class,
+                () -> System.err.println(Arrays.toString(Task41.fixTheMeerkat(new String[]{"", "body", "head"})) + " is result, but no result expect!"));
+        outputAfter();
+        outputBefore(new String[]{"tail", "", "head"});
+        assertThrows(InputMismatchException.class,
+                () -> System.err.println(Arrays.toString(Task41.fixTheMeerkat(new String[]{"tail", "", "head"})) + " is result, but no result expect!"));
+        outputAfter();
+        outputBefore(new String[]{"tail", "body", ""});
+        assertThrows(InputMismatchException.class,
+                () -> System.err.println(Arrays.toString(Task41.fixTheMeerkat(new String[]{"tail", "body", ""})) + " is result, but no result expect!"));
+        outputAfter();
     }
-
-
-    @Test
-    public void exampleTest3() {
-        assertArrayEquals(new String[]{ "top", "middle", "bottom" },
-                Task41.fixTheMeerkat(new String[]{ "bottom", "middle", "top" }));
+    void outputBefore(String []arr) {
+        System.out.println("Input params: " + Arrays.toString(arr));
     }
-
-    @Test
-    public void exampleTest4() {
-        assertArrayEquals(new String[]{ "upper legs", "torso", "lower legs" },
-                Task41.fixTheMeerkat(new String[]{ "lower legs", "torso", "upper legs" }));
-    }
-
-    @Test
-    public void exampleTest5() {
-        assertArrayEquals(new String[]{ "sky", "rainbow", "ground" },
-                Task41.fixTheMeerkat(new String[]{ "ground", "rainbow", "sky" }));
+    void outputAfter() {
+        System.out.println("OK!");
     }
 }
