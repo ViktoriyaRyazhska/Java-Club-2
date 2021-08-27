@@ -49,7 +49,7 @@ public class Task26 {
 
 			} while (true);
 			System.out.println("Result: " + Task26.boolToWord(vBoolean));
-			System.out.print("\tDo you want execute again? (Y/N): ");
+			System.out.print("\tDo you want execute test again? (Y/N): ");
 			do {
 				try {
 					inputString = sc.nextLine();
@@ -68,12 +68,12 @@ public class Task26 {
 
 			if (inputString.equals("N")) {
 				check = false;
-				System.out.print("\tApplication terminated!");
+				System.out.println("\tTask terminated!");
 			}
 
 		} while (check);
 
-		sc.close();
+		//sc.close();
 
 	}
 
