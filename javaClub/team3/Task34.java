@@ -1,8 +1,12 @@
 package javaClub.team3;
 
+import java.io.IOException;
+import java.util.Scanner;
+
 public class Task34 extends Task{
     @Override
     void execute() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the length of an array: ");
         try {
             int length = whileCheck();
@@ -17,6 +21,7 @@ public class Task34 extends Task{
         }
     }
     public int whileCheck(){
+        Scanner scanner = new Scanner(System.in);
         int num = scanner.nextInt();
         while(num <=0){
             System.out.println("Something is wrong. Enter the number again: ");
