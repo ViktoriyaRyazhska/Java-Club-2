@@ -19,8 +19,8 @@ public class Task12 extends Task{
         private String stringValue;
         private Object anObject;
 
-        EncapsulationDemo(){}
-        EncapsulationDemo(int number, String string, Object anObject) {
+        public EncapsulationDemo(){}
+        public EncapsulationDemo(int number, String string, Object anObject) {
             setNumber(number);
             setStringValue(string);
             setAnObject(anObject);
