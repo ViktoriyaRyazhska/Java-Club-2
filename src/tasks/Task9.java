@@ -11,21 +11,27 @@ Zero (0) is not checked for any specific sign. Negative zeros make no mathematic
  */
 
 public class Task9 {
+
+    public static int makeNegative(int i) {
+
+        if (i <= 0) {
+            return i;
+        } else return -1 * i;
+
+    }
+
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter integer");
 
-        if(scan.hasNextInt()){
+        Integer i=0;
+        if (scan.hasNextInt()) {
 
-        Integer i = scan.nextInt();
-
-        if(i<=0){
-            System.out.println(i);
+            i = scan.nextInt();
+            System.out.println(Task9.makeNegative(i));
         }
-        else
-        System.out.println("-" + i);
+        else {System.out.println("Wrong input! Try again!");}
+
     }
-        else System.out.println("Wrong input! Try again!");
-        
-}
 }
