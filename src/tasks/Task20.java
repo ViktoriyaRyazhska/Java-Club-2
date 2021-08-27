@@ -23,17 +23,18 @@ public class Task20 {
                     System.out.println(convert(bool));
                     break;
                 } else {
-                    throw new Exception();
+                    throw new Exception("Entered non-boolean variable. Please enter true or false");
                 }
             } catch (Exception e) {
-                System.out.println("Entered non-boolean variable. Please enter true or false");
+                System.out.println(e.getMessage());
                 System.out.print("Enter a boolean value: ");
             }
         } while (true);
 
     }
     public static String convert(boolean b){
-        if(b == true) {
+
+        if(b) {
             return "true";
         } else {
             return "false";
