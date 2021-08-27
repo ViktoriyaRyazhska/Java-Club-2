@@ -11,7 +11,6 @@ Maksym Kuzbyt
 Bohush Sviatoslav  
 Yanio Yura  
 Solomchak Ivan  
-Yanio Yura  
 
 ### Team 3
 Mykhalchenko Viacheslav  
