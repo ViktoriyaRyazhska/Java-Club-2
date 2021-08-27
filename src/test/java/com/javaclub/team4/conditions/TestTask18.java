@@ -7,8 +7,9 @@ import org.junit.Test;
 public class TestTask18 {
 
 	@Test
-	public void testRunTask() {
-		fail("Not yet implemented");
+	public void tests() {
+		assertEquals(-1, Task18.opposite(1));
+		assertEquals(0, Task18.opposite(0));
+		assertEquals(25, Task18.opposite(-25));
 	}
-
 }

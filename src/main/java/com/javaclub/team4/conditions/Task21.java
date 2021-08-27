@@ -4,9 +4,8 @@
 
 package com.javaclub.team4.conditions;
 
-import java.io.IOException;
-
 import com.javaclub.team4.Task;
+import java.io.IOException;
 
 /*
 It's bonus time in the big city! The fatcats are rubbing their paws in anticipation...
@@ -27,32 +26,40 @@ public class Task21 extends Task {
 	@Override
 	public void runTask() {
 
+		System.out.println("\nThis is Task21 and it's bonus time in the big city!\n"
+				+ "The fatcats are rubbing their paws in anticipation…\n"
+				+ "But who is going to make the most money?\n");
+
 		int salary;
 		boolean bonus = false;
+		
+		System.out.println("Please enter how many \u00A3 does fatcat get as his salary:");
+		while (true) {
+			try {
+				salary = Integer.parseInt(br.readLine());
+				System.out.println(new StringBuilder().append("And enter \"y\" or \"n\" if it gets a bonus or not:"));
+				String bonusInput = br.readLine();
 
-		System.out.print("It's bonus time in the big city! The fatcats are rubbing their paws in anticipation…\n"
-				+ "But who is going to make the most money?\n"
-				+ "Please enter how many \u00A3 does fatcat get as salary:\n");
-
-		try {
-			salary = Integer.parseInt(br.readLine());
-
-			System.out.println(new StringBuilder().append("And enter \"y\" or \"n\" if it gets a bonus or not:"));
-			String bonusInput = br.readLine();
-
-			if (bonusInput.equalsIgnoreCase("y")) {
-				bonus = true;
-				System.out.println(
-						"Yaaay! Catso got his premial " + bonusTime(salary, bonus) + " payout with bonus!!! :3");
-			} else if (bonusInput.equalsIgnoreCase("n")) {
-				System.out.println("No bonus today. Only " + bonusTime(salary, bonus) + " as usual :C");
-			} else {
-				System.out.println("Looks like you've made a wrong entry & left catso without the bonus :(\n"
-						+ "But we anyways will get his " + bonusTime(salary, bonus));
+				if (bonusInput.equalsIgnoreCase("y")) {
+					bonus = true;
+					System.out.println(
+							"Yaaay! Catso got his premium " + bonusTime(salary, bonus) + " payout with bonus!!! :3");
+					break;
+				} else if (bonusInput.equalsIgnoreCase("n")) {
+					System.out.println("No bonus this time. Only " + bonusTime(salary, bonus) + " as usual :C");
+					break;
+				} else {
+					System.err.println("Looks like you've made a wrong entry & left catso without the bonus :(\n"
+							+ "But he anyways gets his " + bonusTime(salary, bonus));
+					break;
+				}
+			} catch (NumberFormatException | IOException e) {
+				System.err.println("It seems that your input is invalid. Try again with integer value form 0 to "
+						+ Integer.MAX_VALUE + ".");
 			}
-		} catch (NumberFormatException | IOException e) {
-			System.out.println("It seems that your input is invalid. Try again.");
 		}
+
+		System.out.println("\nExiting to Main menu.\n");
 	}
 
 	public static String bonusTime(final int salary, final boolean bonus) {

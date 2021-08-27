@@ -4,9 +4,8 @@
 
 package com.javaclub.team4.basicprogram;
 
-import java.io.IOException;
-
 import com.javaclub.team4.Task;
+import java.io.IOException;
 
 /*
  * Given a non-negative integer n, write a function to_binary/ToBinary which returns that number in a binary format.
@@ -17,17 +16,27 @@ import com.javaclub.team4.Task;
  */
 
 public class Task6 extends Task {
+
 	private int n = 0;
 
 	@Override
 	public void runTask() {
+
+		System.out.println("\nThis is Task6. It converts an integer to binary.\n");
+
 		System.out.println("Please enter a non-negative integer to transform it into binary format:");
-		try {
-			n = Integer.parseInt(br.readLine());
-		} catch (NumberFormatException | IOException e) {
-			System.out.println("It seems that the number you entered is not an integer. Try again.");
+		while (true) {
+			try {
+				n = Integer.parseInt(br.readLine());
+				break;
+			} catch (NumberFormatException | IOException e) {
+				System.out.println("It seems that the number you entered is not an integer. Try again:");
+			}
 		}
+
 		System.out.println(n + " in binary is " + toBinary(n));
+
+		System.out.println("\nExiting to Main menu.\n");
 	}
 
 	public static int toBinary(int n) {

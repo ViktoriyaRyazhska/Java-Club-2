@@ -4,9 +4,8 @@
 
 package com.javaclub.team4.conditions;
 
-import java.io.IOException;
-
 import com.javaclub.team4.Task;
+import java.io.IOException;
 
 /*
  * Very simple, given a number, find its opposite.
@@ -20,20 +19,29 @@ public class Task18 extends Task {
 
 	@Override
 	public void runTask() {
-		
+
+		System.out.println("\nThis is Task18. It returns a reverse result of your input.\n");
+
 		int input;
 
 		System.out.println("Please enter a number to transform it to opposite one:");
-
-		try {
-			input = Integer.parseInt(br.readLine());
-			System.out.println("Opposite of " + input + " is " + opposite(input) + ".");
-		} catch (NumberFormatException | IOException e) {
-			System.out.println("It seems that the number you entered is not valid. Try again.");
+		while (true) {
+			try {
+				input = Integer.parseInt(br.readLine());
+				break;
+			} catch (NumberFormatException | IOException e) {
+				System.out.println("It seems that your input is invalid. Try an integerbetween " + Integer.MIN_VALUE
+						+ " and " + Integer.MAX_VALUE + ".");
+			}
 		}
+
+		System.out.println("Opposite of " + input + " is " + opposite(input) + ".");
+
+		System.out.println("\nExiting to Main menu.\n");
 	}
 
 	public static int opposite(int number) {
+
 		return -number;
 	}
 }

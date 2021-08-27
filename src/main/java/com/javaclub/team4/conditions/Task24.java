@@ -4,9 +4,8 @@
 
 package com.javaclub.team4.conditions;
 
-import java.io.IOException;
-
 import com.javaclub.team4.Task;
+import java.io.IOException;
 
 /*
 Your task is to create a function that does four basic mathematical operations.
@@ -30,26 +29,32 @@ public class Task24 extends Task {
 	@Override
 	public void runTask() {
 
-		System.out.println(
-				"This program is a basic calculator with addition, subtraction, multiplication, or division operations made with two numbers.\n"
-						+ "Please enter the first number:");
-		try {
-			v1 = Integer.parseInt(br.readLine());
-			System.out.println("Now the second one:");
-			v2 = Integer.parseInt(br.readLine());
+		System.out.println("\nThis is Task24 and it’s a basic calculator with addition,"
+				+ "subtraction, multiplication, or division operations with two numbers.\n");
 
-			System.out.println("And the operation you would like to perform, in format of +, -, *, or /:");
-			op = br.readLine();
-			System.out.println("Reult is: " + basicMath(op, v1, v2));
-		} catch (NumberFormatException e) {
-			System.out.println("Only integers are allowed.");
-		} catch (IllegalArgumentException e) {
-			System.out.println("Illegal operation: " + op);
-		} catch (IOException e) {
-			System.out.println("It seems your input is invalid.");
-		} catch (ArithmeticException e) {
-			System.out.println("Division by zero is allowed. But maybe in some other universe (^_^)");
+		System.out.println("Please enter the first number:");
+		while (true) {
+			try {
+				v1 = Integer.parseInt(br.readLine());
+				System.out.println("Now the second one:");
+				v2 = Integer.parseInt(br.readLine());
+				System.out.println("And the operation you would like to perform, in format of +, -, *, or /:");
+				op = br.readLine();
+				System.out.println("Reult is: " + basicMath(op, v1, v2));
+				break;
+			} catch (NumberFormatException e) {
+				System.err.println("Only integers are allowed. Try numbers betwen " + Integer.MIN_VALUE + " and " + Integer.MAX_VALUE + ":");
+			} catch (IllegalArgumentException e) {
+				System.err.println("Illegal operation: " + op + ". try +, -, * or / operator:");
+			} catch (IOException e) {
+				System.err.println("It seems your input is invalid.");
+			} catch (ArithmeticException e) {
+				System.err.println("Division by zero is allowed. But maybe in some other universe (^_^)");
+				break;
+			}
 		}
+
+		System.out.println("\nExiting to Main menu.\n");
 	}
 
 	public static Integer basicMath(String op, int v1, int v2) throws IllegalArgumentException, ArithmeticException {

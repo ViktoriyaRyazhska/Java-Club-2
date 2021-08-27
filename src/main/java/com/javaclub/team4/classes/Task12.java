@@ -5,7 +5,6 @@
 package com.javaclub.team4.classes;
 
 import com.javaclub.team4.Task;
-
 import lombok.*;
 
 /*
@@ -40,5 +39,9 @@ public class Task12 extends Task {
 	@Override
 	public void runTask() {
 
+		System.out.println(
+				"This is Task12 and it just tests if lombok annotation library has been used. I used it! I honestly did!");
+
+		System.out.println("\nExiting to Main menu.\n");
 	}
 }

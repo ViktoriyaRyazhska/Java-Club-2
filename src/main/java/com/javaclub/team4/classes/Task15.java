@@ -1,11 +1,10 @@
 /*
  * https://www.codewars.com/kata/simple-drawing-board
  */
+
 package com.javaclub.team4.classes;
 
 import com.javaclub.team4.Task;
-
-//import com.javaclub.team4.Task;
 
 /*
 	You are going to write a simple console-style drawing board program.
@@ -67,6 +66,9 @@ public class Task15 extends Task {
 //	private int width;
 	private char[][] canvas;
 
+	public Task15() {
+	}
+
 	public Task15(int height, int width) {
 		canvas = new char[height + 2][width + 2];
 		for (int i = 0; i < height; i++) {
@@ -90,7 +92,7 @@ public class Task15 extends Task {
 
 	@Override
 	public void runTask() {
-		
+
 	}
 
 	public static void main(String[] args) {

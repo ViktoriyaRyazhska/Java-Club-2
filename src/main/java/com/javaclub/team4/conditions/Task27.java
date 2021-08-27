@@ -4,9 +4,8 @@
 
 package com.javaclub.team4.conditions;
 
-import java.io.IOException;
-
 import com.javaclub.team4.Task;
+import java.io.IOException;
 
 /*
 The Story:
@@ -32,35 +31,47 @@ public class Task27 extends Task {
 	@Override
 	public void runTask() {
 
-		int salary;
-		boolean bonus = false;
+		System.out.println("\nThis Task27 is about Bob who is working as a bus driver.\n"
+				+ "However, he has become extremely popular amongst the city's residents.\n"
+				+ "With so many passengers wanting to get aboard his bus, "
+				+ "he sometimes has to face the problem of not enough space left on the bus!\n");
 
-		System.out.print("It's bonus time in the big city! The fatcats are rubbing their paws in anticipation…\n"
-				+ "But who is going to make the most money?\n"
-				+ "Please enter how many \u00A3 does fatcat get as salary:\n");
+		int cap = 0;
+		int on = 0;
+		int wait = 0;
 
-		try {
-			salary = Integer.parseInt(br.readLine());
+		System.out.println("For how many passengers do you think there is room in the bus:");
+		while (true) {
+			try {
+				cap = Integer.parseInt(br.readLine());
+				System.out.println("How many of them are occupied:");
+				on = Integer.parseInt(br.readLine());
+				System.out.println("And how many people are waing on the next bus stop:");
+				wait = Integer.parseInt(br.readLine());
+				if (enough(cap, on, wait) > 0) {
+					System.out.println(enough(cap, on, wait) + " passengers are going to wait for the next bus.");
+					break;
+				} else {
+					System.out.println("All fit into the Bob's bus! Hooray!");
+					break;
+				}
+			} catch (ArithmeticException e) {
+				System.err.println(e.getMessage());
 
-			System.out.println(new StringBuilder().append("And enter \"y\" or \"n\" if it gets a bonus or not:"));
-			String bonusInput = br.readLine();
-
-			if (bonusInput.equalsIgnoreCase("y")) {
-				bonus = true;
-				System.out.println(
-						"Yaaay! Catso got his premial " + bonusTime(salary, bonus) + " payout with bonus!!! :3");
-			} else if (bonusInput.equalsIgnoreCase("n")) {
-				System.out.println("No bonus today. Only " + bonusTime(salary, bonus) + " as usual :C");
-			} else {
-				System.out.println("Looks like you've made a wrong entry & left catso without the bonus :(\n"
-						+ "But we anyways will get his " + bonusTime(salary, bonus));
+			} catch (NumberFormatException | IOException e) {
+				System.err.println("It seems that your input is invalid. Try integer numbers betwen "
+						+ Integer.MIN_VALUE + " and " + Integer.MAX_VALUE + ":");
 			}
-		} catch (NumberFormatException | IOException e) {
-			System.out.println("It seems that your input is invalid. Try again.");
 		}
+
+		System.out.println("\nExiting to Main menu.\n");
 	}
 
-	public static String bonusTime(final int salary, final boolean bonus) {
-		return "\u00A3" + salary * (bonus ? 10 : 1);
+	public static int enough(int cap, int on, int wait) throws ArithmeticException {
+
+		if (on > cap) {
+			throw new ArithmeticException("You can't have more passengers than there are seats.");
+		}
+		return Math.max(0, on + wait - cap);
 	}
 }
