@@ -43,15 +43,29 @@ public class Task3 {
 			}
 		} while (true);
 		String answer = "Volueme of cuboid is : ";
-		System.out.println(answer + getVolumeOfCuboid(length, width, height));
-		scanner.close();
+		try {
+                    System.out.println(answer + getVolumeOfCuboid(length, width, height));
+                    } 
+		catch (IllegalArgumentException e) {
+                // TODO: handle exception
+                    System.out.print(e.getMessage());
+                    }
+		    scanner.close();
 
-	}
+	         }
 
 	public static double getVolumeOfCuboid(final double length, final double width, final double height) {
 		
-			double volume = length * width * height;
-			return Math.abs(volume);
+	        if(length < 0) {
+                               throw  new IllegalArgumentException ("Error! Lentgh must be non-negative double");
+                                }
+                if(width < 0) {
+                               throw  new IllegalArgumentException ("Error! Width must be non-negative double");
+                                }
+                if(height < 0) {
+                               throw  new IllegalArgumentException ("Error! Height must be non-negative double");
+                                }
+                return length * width * height;
 		
 	}
 

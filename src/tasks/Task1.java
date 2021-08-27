@@ -1,6 +1,10 @@
 package tasks;
 
 import java.util.Scanner;
+/*
+https://www.codewars.com/kata/you-cant-code-under-pressure-number-1/
+You need to double the integer and return it.
+ */
 
 public class Task1 {
     public static void main(String[] args) {
@@ -17,6 +21,11 @@ public class Task1 {
                 System.out.println("Wront input data type...");
             }
         } while (true);
-        System.out.println(2 * i);
+        System.out.println(Task1.doubleInt(i));
+    }
+
+    public static int doubleInt( int i){
+        i=i*2;
+        return i;
     }
 }
