@@ -43,10 +43,16 @@ public class Task3 {
 			}
 		} while (true);
 		String answer = "Volueme of cuboid is : ";
-		System.out.println(answer + getVolumeOfCuboid(length, width, height));
-		scanner.close();
+		try {
+                    System.out.println(answer + getVolumeOfCuboid(length, width, height));
+                    } 
+		catch (IllegalArgumentException e) {
+                // TODO: handle exception
+                    System.out.print(e.getMessage());
+                    }
+		    scanner.close();
 
-	}
+	         }
 
 	public static double getVolumeOfCuboid(final double length, final double width, final double height) {
 		
