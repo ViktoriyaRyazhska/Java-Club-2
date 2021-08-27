@@ -1,13 +1,13 @@
 package basic;
 
 import com.softserve.academy.basic.Task10;
-import com.softserve.academy.conditions.Task25;
+
 import org.junit.Test;
 
-import java.io.IOException;
+
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThrows;
+
 
 
 public class Task10Test {
