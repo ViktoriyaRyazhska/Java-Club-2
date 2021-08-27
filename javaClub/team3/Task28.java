@@ -1,13 +1,14 @@
 package javaClub.team3;
 
 import java.io.IOException;
+import java.util.InputMismatchException;
 
 //https://www.codewars.com/kata/the-modulo-3-sequence/
 public class Task28 extends Task {
 
-	public static int sequence(int n) throws Exception {
+	public static int sequence(int n)  {
 		
-		if (n < 1 || n > Integer.MAX_VALUE) throw new Exception("The number is out of diapasone");
+		if (n < 1 || n > Integer.MAX_VALUE) throw new InputMismatchException("The number is out of diapasone");
 		
 		if (n % 8 == 2 || n % 8 == 3 || n % 8 == 0)	return 1;
 
@@ -15,7 +16,7 @@ public class Task28 extends Task {
 
 		if (n % 8 == 1 || n % 8 == 5) return 0;
 		
-		throw new Exception("Unknown number value");
+		throw new InputMismatchException("Unknown number value");
 	}
 
 	@Override

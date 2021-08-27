@@ -2,8 +2,11 @@ package javaClub.team3.Tests;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import java.util.InputMismatchException;
+
 import static javaClub.team3.Task3.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class Task3Test {
     @Test
@@ -13,4 +16,29 @@ public class Task3Test {
         assertEquals(6, getVolumeOfCuboid(1, 2, 3));
         assertEquals(1000, getVolumeOfCuboid(10, 10, 10));
     }
+
+    @Test
+    void negativeTest_Zero() {
+        assertThrows(InputMismatchException.class,
+                () -> System.err.println(getVolumeOfCuboid(0, 0, 0) + " is result, but no result expect!"));
+    }
+
+    @Test
+    void negativeTest_minus() {
+        assertThrows(InputMismatchException.class,
+                () -> System.err.println(getVolumeOfCuboid(-5, 5, 1) + " is result, but no result expect!"));
+    }
 }
+/*
+        assertThrows(InputMismatchException.class,
+                () -> System.err.println( + " is result, but no result expect!"));
+*//*
+    void outputBefore() {
+        System.out.println("Input params: ");
+    }
+    void outputAfter() {
+        System.out.println("OK!");
+    }
+*//*
+
+*/

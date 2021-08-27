@@ -1,8 +1,11 @@
 package javaClub.team3;
 
+import java.util.Scanner;
+
 public class Task19 extends Task {
     @Override
     void execute() {
+        Scanner scanner = new Scanner(System.in);
         try{
             int n=0,a=0,b=0;
             System.out.println("Enter the first number: ");
@@ -17,6 +20,7 @@ public class Task19 extends Task {
         }
     }
     public void EnterNumber(long a){
+        Scanner scanner = new Scanner(System.in);
         a = scanner.nextLong();
         while(a < 0){
             System.out.println("Something is wrong/ Enter the number again:");
