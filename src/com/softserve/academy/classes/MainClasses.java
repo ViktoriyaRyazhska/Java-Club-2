@@ -1,25 +1,33 @@
 package com.softserve.academy.classes;
 
 import com.softserve.academy.ConsoleColors;
+import com.softserve.academy.Input;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
-public class MainClasses {
+
+public class MainClasses extends Input {
     public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         text();
         try {
             switch (br.readLine()) {
                 case "1":
                     Task12.main(args);
+<<<<<<< HEAD
+=======
+                    break;
+                case "2":
+                    Task13.main(args);
+                    break;
+                case "7":
+                    Task7.main(args);
+>>>>>>> Team5
                     break;
                 case "8":
                     Task8.main(args);
                     break;
                 case "13":
-                    Task13.main(args);
+                    Task24.main(args);
                     break;
                 case "12":
                     Task23.main(args);
@@ -40,10 +48,17 @@ public class MainClasses {
     private static void text() {
 
         System.out.println(ConsoleColors.GREEN + "Please enter TASK number" + ConsoleColors.RESET);
+        System.out.println(ConsoleColors.GREEN + "1" + ConsoleColors.RESET + "  Encapsulation");
+        System.out.println(ConsoleColors.GREEN + "2" + ConsoleColors.RESET + " FIXME: Static electrickery");
         System.out.println(ConsoleColors.GREEN + "7" + ConsoleColors.RESET + " Get opposite number");
         System.out.println(ConsoleColors.GREEN + "8" + ConsoleColors.RESET + " Check if n is divisible by x and y");
+<<<<<<< HEAD
         System.out.println(ConsoleColors.GREEN + "12" + ConsoleColors.RESET + " Rock, Scissors, Paper!");
+=======
+>>>>>>> Team5
         System.out.println(ConsoleColors.GREEN + "13" + ConsoleColors.RESET + " Basic calculator");
+
+
 
     }
 

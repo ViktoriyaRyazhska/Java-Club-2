@@ -1,8 +1,11 @@
 package basic;
 
 import com.softserve.academy.basic.Task8;
-import static org.junit.Assert.*;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 
 public class Task8Test {
     @Test
@@ -24,5 +27,16 @@ public class Task8Test {
         assertEquals(17, Task8.century(1601));
         assertEquals(15, Task8.century(1401));
         assertEquals(21, Task8.century(2001));
+    }
+
+    @Test
+    public void invalidYearTest() {
+        assertThrows(IllegalArgumentException.class, () -> Task8.century(-5));
+    }
+
+    @Test
+    public void nullArgumentTest() {
+        Integer a = null;
+        assertThrows(NullPointerException.class, () -> Task8.century(a));
     }
 }

@@ -1,19 +1,21 @@
 package com.softserve.academy.classes;
 
 import com.softserve.academy.ConsoleColors;
+import com.softserve.academy.Input;
 import com.softserve.academy.Main;
 import com.softserve.academy.basic.Task3;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
-public class Task12 {
+
+public class Task12 extends Input {
     private int number = 0;
     private String stringValue;
     private Object anObject;
 
-    public Task12(){}
+    public Task12() {
+    }
+
     public Task12(int number, String stringValue, Object anObject) {
         this.number = number;
         this.stringValue = stringValue;
@@ -44,16 +46,12 @@ public class Task12 {
         this.anObject = anObject;
     }
 
-
-
     public static void main(String[] args) {
-
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         System.out.println("");
         System.out.println("Classes task12 ");
         System.out.println("I just use encapsulate ");
-        System.out.println("I use encapsulate. test is finished ");
+        System.out.println("I use encapsulate. test is finished ( i dont have any method ");
 
         try {
             switch (br.readLine()) {
@@ -61,15 +59,14 @@ public class Task12 {
                     Main.main(args);
                     break;
                 case "2":
-                    Task3.main(args);
+                    Task12.main(args);
                     break;
                 default:
                     System.err.println(ConsoleColors.RED + "You need ro put 1 or 2 ");
                     System.err.println("You transfer to menu " + ConsoleColors.RESET);
                     Task12.main(args);
             }
-        } catch (
-                IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

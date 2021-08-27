@@ -1,28 +1,32 @@
 package com.softserve.academy.conditions;
 
 import com.softserve.academy.ConsoleColors;
-import com.softserve.academy.basic.DoubleInteger;
-import com.softserve.academy.classes.MainClasses;
-import com.softserve.academy.collections.MainCollection;
+import com.softserve.academy.Input;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
-public class MainConditions {
+
+public class MainConditions extends Input {
     public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         text();
         try {
             switch (br.readLine()) {
-                case "25":
+                case "1":
                     Task25.main(args);
                     break;
-                case "26":
+                case "2":
                     Task26.main(args);
                     break;
+<<<<<<< HEAD
                 case "27":
                     Task27.main(args);
+=======
+                case "5":
+                    Task5.main(args);
+                    break;
+                case "6":
+                    Task6.main(args);
+>>>>>>> Team5
                     break;
                 default:
                     System.err.println(ConsoleColors.RED +"You need to put number with 1 to * ");
@@ -41,9 +45,16 @@ public class MainConditions {
     private static void text() {
 
         System.out.println(ConsoleColors.GREEN + "Please enter TASK number" + ConsoleColors.RESET);
+<<<<<<< HEAD
         System.out.println(ConsoleColors.GREEN + "25" + ConsoleColors.RESET + "     Timmy love Sarah ");
         System.out.println(ConsoleColors.GREEN + "26" + ConsoleColors.RESET + "     Convert boolean values to strings 'Yes' or 'No ");
         System.out.println(ConsoleColors.GREEN + "27" + ConsoleColors.RESET + "     Bus Driver ");
+=======
+        System.out.println(ConsoleColors.GREEN + "1" + ConsoleColors.RESET + "     Timmy love Sarah ");
+        System.out.println(ConsoleColors.GREEN + "2" + ConsoleColors.RESET + "     Convert boolean values to strings 'Yes' or 'No ");
+        System.out.println(ConsoleColors.GREEN + "5" + ConsoleColors.RESET + "     When provided with a number between 0-9, return it in words");
+        System.out.println(ConsoleColors.GREEN + "6" + ConsoleColors.RESET + "     Get the next color of traffic light ");
+>>>>>>> Team5
 
     }
 }

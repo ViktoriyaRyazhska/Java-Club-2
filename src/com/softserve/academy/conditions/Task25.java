@@ -1,19 +1,16 @@
 package com.softserve.academy.conditions;
 
 import com.softserve.academy.ConsoleColors;
+import com.softserve.academy.Input;
 import com.softserve.academy.Main;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-
-public class Task25 {
 
 
+public class Task25 extends Input {
 
     public static void main(String[] args) {
 
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int first;
         int second;
         boolean love ;
@@ -31,8 +28,8 @@ public class Task25 {
             love = isLove(first,second);
             System.out.println(" Douse Timmy love Sarah ? " +  love);
 
-        } catch (IOException |
-                NumberFormatException e) {
+        } catch (IOException |NumberFormatException | ArithmeticException e) {
+            e.printStackTrace();
             System.out.println(ConsoleColors.RED + "You put wrong value try again" + ConsoleColors.RESET);
             Task25.main(args);
         }
@@ -59,7 +56,8 @@ public class Task25 {
     }
 
 
-    public static boolean isLove(final int flower1, final int flower2) {
+    public static boolean isLove(final int flower1, final int flower2)throws ArithmeticException {
+        if(flower1 <=0 || flower2 <=0){throw new ArithmeticException("Value can't be <= 0 "); }
      return flower1%2 == 0 && flower2%2 != 0 || flower1%2 != 0 && flower2%2 == 0;
     }
 

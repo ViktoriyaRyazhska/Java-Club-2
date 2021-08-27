@@ -1,15 +1,14 @@
 package com.softserve.academy.string;
 
 import com.softserve.academy.ConsoleColors;
+import com.softserve.academy.Input;
 import com.softserve.academy.Main;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
-public class Task59 {
+public class Task59 extends Input {
     public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
         Character symbol;
 
         System.out.println("\nTask 59: get position in alphabet. ");
@@ -44,13 +43,14 @@ public class Task59 {
                     Task59.main(args);
             }
         } catch (
-                IOException e) {
+                IOException | IllegalArgumentException e) {
             e.printStackTrace();
         }
     }
 
 
     public static String position(char alphabet) {
+        if (alphabet < 97 || alphabet > 122) throw  new IllegalArgumentException();
         return "Position of alphabet: " + (alphabet - 96);
     }
 }

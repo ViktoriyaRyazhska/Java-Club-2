@@ -1,18 +1,17 @@
 package com.softserve.academy.string;
 
 import com.softserve.academy.ConsoleColors;
+import com.softserve.academy.Input;
 import com.softserve.academy.Main;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
-public class Task57 {
+public class Task57 extends Input {
     public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
         String line;
 
-        System.out.println("\nTask 57: remove spaces from string ");
+        System.out.println("Task 57: remove spaces from string ");
 
         try {
             System.out.print("Enter string: ");
@@ -41,12 +40,13 @@ public class Task57 {
                     Task59.main(args);
             }
         } catch (
-                IOException e) {
+                IOException | NullPointerException e) {
             e.printStackTrace();
         }
     }
 
     public static String noSpace(final String x) {
+        if (x == null) throw new NullPointerException();
         return x.replaceAll(" ", "");
     }
 }

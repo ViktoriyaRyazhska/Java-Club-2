@@ -1,15 +1,15 @@
 package com.softserve.academy.basic;
 
 import com.softserve.academy.ConsoleColors;
+import com.softserve.academy.Input;
 import com.softserve.academy.Main;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 
-public class Task9 {
+import java.io.IOException;
+
+
+public class Task9 extends Input {
     public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int number;
 
         System.out.println("\nTask 9: get negative number. ");
@@ -41,12 +41,13 @@ public class Task9 {
                     Task9.main(args);
             }
         } catch (
-                IOException e) {
+                IOException | NullPointerException e) {
             e.printStackTrace();
         }
     }
 
     public static int makeNegative(final int x) {
+        if ((Integer) x == null) throw new NullPointerException();
         if(x<=0) return x;
         return -x; // Your code here.
     }

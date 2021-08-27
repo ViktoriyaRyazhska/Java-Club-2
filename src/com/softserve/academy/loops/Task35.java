@@ -1,17 +1,18 @@
 package com.softserve.academy.loops;
 
 import com.softserve.academy.ConsoleColors;
+import com.softserve.academy.Input;
 import com.softserve.academy.Main;
-import java.io.BufferedReader;
+
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.math.BigInteger;
 import java.util.Arrays;
 
-public class Task35 {
+public class Task35 extends Input {
 
     public static void main(String[] args) {
 
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
         int index;
         int[] array;
         String arrayString ;
@@ -31,16 +32,13 @@ public class Task35 {
                 array[i] = Integer.parseInt(br.readLine());
             }
             arrayString = (Arrays.toString(map(array)));
-            if(arrayString != null){
-                System.out.println("Double array");
-                System.out.println(arrayString);
-            }else {
-                System.out.println(ConsoleColors.RED + "You put wrong value try again" + ConsoleColors.RESET);
-                Task35.main(args);
-            }
+            System.out.println("Double array");
+            System.out.println(arrayString);
 
 
-        } catch (IOException | NumberFormatException e) {
+
+        } catch (IOException | NumberFormatException | NullPointerException |ArithmeticException e) {
+            e.printStackTrace();
             System.out.println(ConsoleColors.RED + "You put wrong value try again" + ConsoleColors.RESET);
             Task35.main(args);
         }
@@ -68,13 +66,16 @@ public class Task35 {
 
 
 
-    public static int[] map(int[] arr) {
-        int [] dablArray = new int [arr.length];
+    public static int[] map(int[] arr) throws NullPointerException , ArithmeticException{
+        if (arr == null){throw new NullPointerException(" array is null ");}
+        BigInteger br;
+        int [] doubleArray = new int [arr.length];
         for (int i = 0 ; i<arr.length; i++){
 
-            dablArray[i]=arr[i]*2;
+            br = BigInteger.valueOf(arr[i]).multiply(BigInteger.valueOf(2));
+            doubleArray[i]= br.intValueExact();
 
         }
-        return dablArray;
+        return doubleArray;
     }
 }

@@ -1,15 +1,15 @@
 package com.softserve.academy.loops;
 import com.softserve.academy.ConsoleColors;
+import com.softserve.academy.Input;
 import com.softserve.academy.Main;
-import java.io.BufferedReader;
+
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class Task36 {
+public class Task36 extends Input {
 
         public static void main(String[] args) {
-            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
             Boolean[] boll = {true, true, true, false,
                     true, true, true, true,
                     true, false, true, false,
@@ -46,7 +46,8 @@ public class Task36 {
         }
 
 
-        public static int countSheeps(Boolean[] arrayOfSheeps) {
+        public static int countSheeps(Boolean[] arrayOfSheeps)throws NullPointerException {
+            if (arrayOfSheeps == null){throw new NullPointerException("Array is null");}
             int counter = 0;
             for (Boolean b : arrayOfSheeps) {
                 if (b != null && b) {

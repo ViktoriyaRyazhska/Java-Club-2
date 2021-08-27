@@ -1,16 +1,16 @@
 package com.softserve.academy.basic;
 
 import com.softserve.academy.ConsoleColors;
+import com.softserve.academy.Input;
 import com.softserve.academy.Main;
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.math.BigInteger;
 
 
-public class Task2 {
+public class Task2 extends Input {
     public static void main(String[] args) {
 
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
         int numberOne;
         int numberTwo;
         int result;
@@ -28,9 +28,9 @@ public class Task2 {
             result = multiply(numberOne,numberTwo);
             System.out.println("multiplying  is " +  result);
 
-        } catch (IOException |
-                NumberFormatException e) {
-            System.out.println(ConsoleColors.RED + "You don't put wrong number try again" + ConsoleColors.RESET);
+        } catch (IOException |NumberFormatException | ArithmeticException e) {
+            e.printStackTrace();
+            System.out.println(ConsoleColors.RED + "You put wrong number try again" + ConsoleColors.RESET);
             Task2.main(args);
         }
 
@@ -47,7 +47,7 @@ public class Task2 {
                 default:
                     System.err.println(ConsoleColors.RED + "You need to put 1 or 2 ");
                     System.err.println("You transfer to menu " + ConsoleColors.RESET);
-                    DoubleInteger.main(args);
+                    Task2.main(args);
             }
         } catch (
                 IOException e) {
@@ -55,8 +55,9 @@ public class Task2 {
         }
     }
 
-        public static int multiply ( int num1, int num2){
-            return num1 * num2;
+        public static int multiply ( int num1, int num2)throws ArithmeticException {
+            BigInteger br = BigInteger.valueOf(num1).multiply(BigInteger.valueOf(num2));
+            return br.intValueExact();
         }
 
 }

@@ -2,6 +2,8 @@ package string;
 
 import com.softserve.academy.string.Task67;
 import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 import org.junit.Test;
 
 public class Task67Test {
@@ -23,5 +25,10 @@ public class Task67Test {
         assertEquals("altERnaTIng cAsE", Task67.toAlternativeString("ALTerNAtiNG CaSe"));
         assertEquals("ALTerNAtiNG CaSe <=> altERnaTIng cAsE", Task67.toAlternativeString("altERnaTIng cAsE <=> ALTerNAtiNG CaSe"));
         assertEquals("altERnaTIng cAsE <=> ALTerNAtiNG CaSe", Task67.toAlternativeString("ALTerNAtiNG CaSe <=> altERnaTIng cAsE"));
+    }
+
+    @Test
+    public void testNullArgument() {
+        assertThrows(NullPointerException.class, () -> Task67.toAlternativeString(null));
     }
 }

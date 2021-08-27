@@ -1,8 +1,11 @@
 package basic;
 
 import com.softserve.academy.basic.Task9;
-import static org.junit.Assert.*;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 
 public class Task9Test {
 
@@ -18,5 +21,10 @@ public class Task9Test {
         assertEquals(-5, Task9.makeNegative(-5));
         assertEquals(-100, Task9.makeNegative(-100));
         assertEquals(-95, Task9.makeNegative(-95));
+    }
+
+    @Test
+    public void nullArgumentTest() {
+        assertThrows(NullPointerException.class, () -> Task9.makeNegative((Integer) null));
     }
 }

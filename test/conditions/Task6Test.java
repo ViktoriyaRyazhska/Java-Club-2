@@ -2,6 +2,8 @@ package conditions;
 
 import com.softserve.academy.conditions.Task6;
 import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 import org.junit.Test;
 
 public class Task6Test {
@@ -10,5 +12,15 @@ public class Task6Test {
         assertEquals("green", Task6.updateLight("red"));
         assertEquals("yellow", Task6.updateLight("green"));
         assertEquals("red", Task6.updateLight("yellow"));
+    }
+
+    @Test
+    public void wrongColorTest() {
+        assertThrows(IllegalArgumentException.class, () -> Task6.updateLight("g"));
+    }
+
+    @Test
+    public void nullArgumentTest() {
+        assertThrows(NullPointerException.class, () -> Task6.updateLight(null));
     }
 }

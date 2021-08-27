@@ -1,14 +1,14 @@
 package com.softserve.academy.opp;
 
 import com.softserve.academy.ConsoleColors;
+import com.softserve.academy.Input;
 import com.softserve.academy.Main;
 
 import java.util.*;
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
-public class Task3 {
+
+public class Task3 extends Input {
     private static Map<Character, String> dictionary;
 
     static {
@@ -38,7 +38,7 @@ public class Task3 {
     }
 
     public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
         String line;
 
         System.out.println("\nTask 49: translate to L3375p34k ");

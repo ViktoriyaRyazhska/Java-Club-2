@@ -9,13 +9,11 @@ import com.softserve.academy.loops.MainLoops;
 import com.softserve.academy.opp.MainOPP;
 import com.softserve.academy.string.MainString;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
-public class Main {
+
+public class Main extends Input{
     public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         text();
         try {
             switch (br.readLine()) {

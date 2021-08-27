@@ -2,6 +2,8 @@ package string;
 
 import com.softserve.academy.string.Task57;
 import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 import org.junit.Test;
 
 public class Task57Test {
@@ -12,5 +14,10 @@ public class Task57Test {
         assertEquals("8aaaaaddddr", Task57.noSpace("8aaaaa dddd r     "));
         assertEquals("jfBmgklf8hg88lbe8", Task57.noSpace("jfBm  gk lf8hg  88lbe8 "));
         assertEquals("8jaam", Task57.noSpace("8j aam"));
+    }
+
+    @Test
+    public void nullArugmentTest() {
+        assertThrows(NullPointerException.class, () -> Task57.noSpace(null));
     }
 }

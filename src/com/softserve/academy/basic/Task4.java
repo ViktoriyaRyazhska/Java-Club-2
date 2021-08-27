@@ -1,16 +1,16 @@
 package com.softserve.academy.basic;
 
 import com.softserve.academy.ConsoleColors;
+import com.softserve.academy.Input;
 import com.softserve.academy.Main;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 
-public class Task4 {
+import java.io.IOException;
+
+
+public class Task4 extends Input {
 
     public static void main(String[] args) {
 
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int numberOne;
         int numberTwo;
         boolean result;
@@ -33,8 +33,8 @@ public class Task4 {
             }
 
 
-        } catch (IOException |
-                NumberFormatException e) {
+        } catch (IOException | NumberFormatException | ArithmeticException e) {
+            e.printStackTrace();
             System.out.println(ConsoleColors.RED + "You put wrong value try again" + ConsoleColors.RESET);
             Task4.main(args);
         }
@@ -61,6 +61,7 @@ public class Task4 {
     }
 
     public static boolean isDivisible(int wallLength, int pixelSize) {
+        if (wallLength <= 0 || pixelSize <=0 ) { throw new ArithmeticException("Value can't be <= 0 ");}
         return wallLength%pixelSize==0;
     }
 }

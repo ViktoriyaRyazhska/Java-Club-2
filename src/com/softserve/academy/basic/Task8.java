@@ -1,15 +1,15 @@
 package com.softserve.academy.basic;
 
 import com.softserve.academy.ConsoleColors;
+import com.softserve.academy.Input;
 import com.softserve.academy.Main;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 
-public class Task8 {
+import java.io.IOException;
+
+
+public class Task8 extends Input {
     public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int year;
 
         System.out.println("\nTask 8: get century from year. ");
@@ -44,12 +44,14 @@ public class Task8 {
                     Task8.main(args);
             }
         } catch (
-                IOException e) {
+                IOException | NullPointerException | IllegalArgumentException e) {
             e.printStackTrace();
         }
     }
 
     public static int century(int number) {
+        if ((Integer)number == null) throw  new NullPointerException();
+        if (number <= 0) throw new IllegalArgumentException();
         return number % 100 == 0? number / 100 : (number / 100) + 1;
     }
 }
