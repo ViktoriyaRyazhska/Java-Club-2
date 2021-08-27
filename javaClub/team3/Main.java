@@ -81,12 +81,14 @@ public class Main {
 //        taskMap.put(61, new Task61());
         taskMap.put(62, new Task11()); //this is correct!
         taskMap.put(63, new Task63());
-//        taskMap.put(64, new Task64());
+        taskMap.put(64, new Task64());
         taskMap.put(65, new Task65());
         taskMap.put(66, new Task66());
         taskMap.put(67, new Task67());
         taskMap.put(68, new Task68());
         taskMap.put(69, new Task69());
+
+
         taskMap.put(70, new Task70());
       
         taskMap.put(71, new Task71());
