@@ -1,15 +1,23 @@
 # Java-Club-2
 
-## Part 2. TAQC  
-### Team 1  
-Krasitskyi Taras  
-
 ## Part 2. Web  
-### Team 2  
+### Team 1  
 Danihevych Oleksandr  
 Skolodza Pavlo  
 Yevhen Voronko  
 Maksym Kuzbyt  
+
+### Team 2  
+Bohush Sviatoslav  
+Yanio Yura  
+Solomchak Ivan  
+Yanio Yura  
+
+### Team 3
+Mykhalchenko Viacheslav  
+Shauerman Hanna  
+Sannytski Dmytro  
+Kychma Nazar  
 
 
 ## Part 1. Java Core  
