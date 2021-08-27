@@ -12,7 +12,7 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         Map<Integer, Task> taskMap = new LinkedHashMap<>();
 
-//        taskMap.put(1, new Task1());
+        taskMap.put(1, new Task1());
         taskMap.put(2, new Task2());
         taskMap.put(3, new Task3());
         taskMap.put(4, new Task4());
@@ -39,7 +39,7 @@ public class Main {
         taskMap.put(23, new Task23());
         taskMap.put(24, new Task24());
         taskMap.put(25, new Task25());
-//        taskMap.put(26, new Task26());
+        taskMap.put(26, new Task26());
         taskMap.put(27, new Task27());
         taskMap.put(28, new Task28());
         taskMap.put(29, new Task29());
@@ -82,7 +82,7 @@ public class Main {
         taskMap.put(63, new Task63());
 //        taskMap.put(64, new Task64());
         taskMap.put(65, new Task65());
-//        taskMap.put(66, new Task66());
+        taskMap.put(66, new Task66());
         taskMap.put(67, new Task67());
         taskMap.put(68, new Task68());
       
