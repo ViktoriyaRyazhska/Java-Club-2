@@ -24,6 +24,9 @@ public class MainConditions {
                 case "27":
                     Task27.main(args);
                     break;
+                case "31":
+                    Task31.main(args);
+                    break;
                 default:
                     System.err.println(ConsoleColors.RED +"You need to put number with 1 to * ");
                     System.err.println("You transfer to menu "+ ConsoleColors.RESET);
@@ -44,6 +47,7 @@ public class MainConditions {
         System.out.println(ConsoleColors.GREEN + "25" + ConsoleColors.RESET + "     Timmy love Sarah ");
         System.out.println(ConsoleColors.GREEN + "26" + ConsoleColors.RESET + "     Convert boolean values to strings 'Yes' or 'No ");
         System.out.println(ConsoleColors.GREEN + "27" + ConsoleColors.RESET + "     Bus Driver ");
+        System.out.println(ConsoleColors.GREEN + "31" + ConsoleColors.RESET + "     Car Rental ");
 
     }
 }
