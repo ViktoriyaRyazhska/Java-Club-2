@@ -24,37 +24,38 @@ public class Task14 extends Task{
             e.printStackTrace();
         }
     }
-}
-class Fraction
-{
-    private final long top;
-    private final long bottom;
 
-    public Fraction(long numerator, long denominator) {
-        top = numerator;
-        bottom = denominator;
-    }
+    public static class Fraction
+    {
+        private final long top;
+        private final long bottom;
 
-    @Override
-    public String toString() {
-        return top + "/" + bottom;
-    }
-
-    public Fraction add(Fraction f2) {
-        long top= this.top * f2.bottom + this.bottom * f2.top;
-        long bottom= this.bottom * f2.bottom;
-        Fraction newOne = new Fraction(top, bottom);
-        return newOne.Reduction();
-    }
-
-    public Fraction Reduction() {
-        long gcd =0;
-        for (long i=1; i<= this.bottom && i<= this.top; i++) {
-            if (this.top%i ==0 && this.bottom  % i ==0 ){
-                gcd = i;
-            }
+        public Fraction(long numerator, long denominator) {
+            top = numerator;
+            bottom = denominator;
         }
-        Fraction newOne = new Fraction(this.top/gcd, this.bottom/gcd);
-        return newOne;
+
+        @Override
+        public String toString() {
+            return top + "/" + bottom;
+        }
+
+        public Fraction add(Fraction f2) {
+            long top= this.top * f2.bottom + this.bottom * f2.top;
+            long bottom= this.bottom * f2.bottom;
+            Fraction newOne = new Fraction(top, bottom);
+            return newOne.Reduction();
+        }
+
+        public Fraction Reduction() {
+            long gcd =0;
+            for (long i=1; i<= this.bottom && i<= this.top; i++) {
+                if (this.top%i ==0 && this.bottom  % i ==0 ){
+                    gcd = i;
+                }
+            }
+            Fraction newOne = new Fraction(this.top/gcd, this.bottom/gcd);
+            return newOne;
+        }
     }
 }
