@@ -8,8 +8,8 @@ public class Task64Test {
 	
 	 @Test
 	    public void testSomething() {
-	         assertEquals(1, strCount("Hello", 'o'));
-	         assertEquals(2, strCount("Hello", 'l'));
-	         assertEquals(0, strCount("",'z'));
+	         assertEquals(1, CodeWars.strCount("Hello", 'o'));
+	         assertEquals(2, CodeWars.strCount("Hello", 'l'));
+	         assertEquals(0, CodeWars.strCount("",'z'));
 	    }
 }

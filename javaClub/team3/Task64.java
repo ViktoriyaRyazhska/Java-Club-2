@@ -1,11 +1,13 @@
 package javaClub.team3;
 
 import java.util.InputMismatchException;
+import java.util.Scanner;
 
 public class Task64 extends Task{
     @Override
     void execute() {
         try{
+            Scanner scanner = new Scanner(System.in);
             System.out.println("Enter the string:");
             String str = scanner.nextLine();
             System.out.println("Enter the letter:");
