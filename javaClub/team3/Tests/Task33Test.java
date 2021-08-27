@@ -6,20 +6,19 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 import java.util.InputMismatchException;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class Task33Test {
     @Test
     void normalTest() {
         outputBefore(1);
-        assertEquals(Arrays.toString(new int[]{1,15,15}), Arrays.toString(Task33.humanYearsCatYearsDogYears(1)));
+        assertArrayEquals(new int[]{1,15,15}, Task33.humanYearsCatYearsDogYears(1));
         outputAfter();
         outputBefore(2);
-        assertEquals(Arrays.toString(new int[]{2,24,24}), Arrays.toString(Task33.humanYearsCatYearsDogYears(2)));
+        assertArrayEquals(new int[]{2,24,24}, Task33.humanYearsCatYearsDogYears(2));
         outputAfter();
         outputBefore(10);
-        assertEquals(Arrays.toString(new int[]{10,56,64}), Arrays.toString(Task33.humanYearsCatYearsDogYears(10)));
+        assertArrayEquals(new int[]{10,56,64},Task33.humanYearsCatYearsDogYears(10));
         outputAfter();
     }
 

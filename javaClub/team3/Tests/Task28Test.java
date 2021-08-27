@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public class Task28Test {
     @Test
     void normalTest() {
-        /*
+
         outputBefore(1);
         assertEquals(0, Task28.sequence(1));
         outputAfter();
@@ -25,7 +25,7 @@ public class Task28Test {
         outputBefore(148);
         assertEquals(2, Task28.sequence(148));
         outputAfter();
-        */
+
     }
     @Test
     void negativeTest_bounds() {
