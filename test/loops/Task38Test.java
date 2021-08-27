@@ -2,6 +2,8 @@ package loops;
 
 import com.softserve.academy.loops.Task7;
 import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 import org.junit.Test;
 
 public class Task38Test {

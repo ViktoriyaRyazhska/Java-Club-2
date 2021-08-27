@@ -11,6 +11,15 @@ public class MainLoops extends Input {
         text();
         try {
             switch (br.readLine()) {
+                case "1":
+                    Task32.main(args);
+                    break;
+                case "2":
+                    Task33.main(args);
+                    break;
+                case "3":
+                    Task34.main(args);
+                    break;
                 case "4":
                     Task35.main(args);
                     break;
@@ -48,6 +57,9 @@ public class MainLoops extends Input {
     private static void text() {
 
         System.out.println(ConsoleColors.GREEN + "Please enter TASK number" + ConsoleColors.RESET);
+        System.out.println(ConsoleColors.GREEN + "1" + ConsoleColors.RESET + " Repeat the string ");
+        System.out.println(ConsoleColors.GREEN + "2" + ConsoleColors.RESET + " Human - Pet Years ");
+        System.out.println(ConsoleColors.GREEN + "3" + ConsoleColors.RESET + " The Average Mark");
         System.out.println(ConsoleColors.GREEN + "4" + ConsoleColors.RESET + " return a new array with each value doubled ");
         System.out.println(ConsoleColors.GREEN + "5" + ConsoleColors.RESET + " Counting sheep... ");
         System.out.println(ConsoleColors.GREEN + "6" + ConsoleColors.RESET + " Reversed sequence ");

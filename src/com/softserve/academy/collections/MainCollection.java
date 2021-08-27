@@ -19,6 +19,9 @@ public class MainCollection extends Input {
                 case "3":
                     Task3.main(args);
                     break;
+                case "72":
+                    Task72.main(args);
+                    break;
                 default:
                     System.err.println(ConsoleColors.RED +"You need to put number with 1 to * ");
                     System.err.println("You transfer to menu "+ ConsoleColors.RESET);
@@ -38,5 +41,6 @@ public class MainCollection extends Input {
         System.out.println(ConsoleColors.GREEN + "Please enter TASK number" + ConsoleColors.RESET);
         System.out.println(ConsoleColors.GREEN + "1" + ConsoleColors.RESET + " Unfinished Loop - Bug Fixing");
         System.out.println(ConsoleColors.GREEN + "3" + ConsoleColors.RESET + " Remove even numbers from the list and return a list that contains the odd numbers.");
+        System.out.println(ConsoleColors.GREEN + "4" + ConsoleColors.RESET + " Interactive Dictionary");
     }
 }

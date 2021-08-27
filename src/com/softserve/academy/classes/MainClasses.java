@@ -23,6 +23,12 @@ public class MainClasses extends Input {
                 case "8":
                     Task8.main(args);
                     break;
+                case "11":
+                    Task22.main(args);
+                    break;
+                case "12":
+                    Task23.main(args);
+                    break;
                 case "13":
                     Task24.main(args);
                     break;
@@ -46,7 +52,10 @@ public class MainClasses extends Input {
         System.out.println(ConsoleColors.GREEN + "2" + ConsoleColors.RESET + " FIXME: Static electrickery");
         System.out.println(ConsoleColors.GREEN + "7" + ConsoleColors.RESET + " Get opposite number");
         System.out.println(ConsoleColors.GREEN + "8" + ConsoleColors.RESET + " Check if n is divisible by x and y");
+        System.out.println(ConsoleColors.GREEN + "11" + ConsoleColors.RESET + " How old will I be in...");
+        System.out.println(ConsoleColors.GREEN + "12" + ConsoleColors.RESET + " (scissors / rock / paper)");
         System.out.println(ConsoleColors.GREEN + "13" + ConsoleColors.RESET + " Basic calculator");
+
 
 
 

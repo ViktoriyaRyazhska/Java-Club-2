@@ -17,11 +17,17 @@ public class MainConditions extends Input {
                 case "2":
                     Task26.main(args);
                     break;
+                case "3":
+                    Task27.main(args);
+                    break;
                 case "5":
                     Task5.main(args);
                     break;
                 case "6":
                     Task6.main(args);
+                    break;
+                case "7":
+                    Task31.main(args);
                     break;
                 default:
                     System.err.println(ConsoleColors.RED +"You need to put number with 1 to * ");
@@ -42,8 +48,10 @@ public class MainConditions extends Input {
         System.out.println(ConsoleColors.GREEN + "Please enter TASK number" + ConsoleColors.RESET);
         System.out.println(ConsoleColors.GREEN + "1" + ConsoleColors.RESET + "     Timmy love Sarah ");
         System.out.println(ConsoleColors.GREEN + "2" + ConsoleColors.RESET + "     Convert boolean values to strings 'Yes' or 'No ");
+        System.out.println(ConsoleColors.GREEN + "3" + ConsoleColors.RESET + "     Bus Driver");
         System.out.println(ConsoleColors.GREEN + "5" + ConsoleColors.RESET + "     When provided with a number between 0-9, return it in words");
         System.out.println(ConsoleColors.GREEN + "6" + ConsoleColors.RESET + "     Get the next color of traffic light ");
+        System.out.println(ConsoleColors.GREEN + "7" + ConsoleColors.RESET + "     Car Rental");
 
     }
 }
