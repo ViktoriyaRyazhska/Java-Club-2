@@ -23,9 +23,8 @@ public class Task2Test {
 	}
 
 	@Test
-	void negativeTest() throws InputMismatchException {
-		assertThrows(InputMismatchException.class, () -> {
-			Multiply.multiply(1000000000, 1000000000);
-		});
+	void negativeTest() {
+		assertThrows(InputMismatchException.class,
+				() -> System.err.println(Multiply.multiply(1000000000, 1000000000) + " is result, but no result expect!"));
 	}
 }
