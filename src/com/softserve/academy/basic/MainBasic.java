@@ -34,6 +34,9 @@ public class MainBasic {
                     case "9":
                         Task9.main(args);
                         break;
+                    case "10":
+                        Task10.main(args);
+                        break;
                     default:
                         System.err.println(ConsoleColors.RED +"You need to put number with 1 to * ");
                         System.err.println("You transfer to menu "+ ConsoleColors.RESET);
@@ -58,6 +61,7 @@ public class MainBasic {
             System.out.println(ConsoleColors.GREEN + "7" + ConsoleColors.RESET + "  Clock");
             System.out.println(ConsoleColors.GREEN + "8" + ConsoleColors.RESET + "  Get century from year");
             System.out.println(ConsoleColors.GREEN + "9" + ConsoleColors.RESET + "  Get negative number");
+            System.out.println(ConsoleColors.GREEN + "10" + ConsoleColors.RESET + "  Dating age");
         }
 
     }
