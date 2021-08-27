@@ -1,5 +1,8 @@
 # Java-Club-2
 
+## Part 2. TAQC  
+Krasitskyi Taras  
+
 ## Part 2. Web  
 ### Team 1  
 Danihevych Oleksandr  
