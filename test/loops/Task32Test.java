@@ -1,4 +1,4 @@
-package conditions;
+package loops;
 
 import com.softserve.academy.loops.Task32;
 import org.junit.Assert;
