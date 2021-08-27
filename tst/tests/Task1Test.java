@@ -3,6 +3,7 @@ package tests;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 import tasks.Task1;
+import tasks.Task5;
 
 public class Task1Test {
     @Test
