@@ -56,8 +56,16 @@ public class Task3 {
 
 	public static double getVolumeOfCuboid(final double length, final double width, final double height) {
 		
-			double volume = length * width * height;
-			return Math.abs(volume);
+	        if(length < 0) {
+                               throw  new IllegalArgumentException ("Error! Lentgh must be non-negative double");
+                                }
+                if(width < 0) {
+                               throw  new IllegalArgumentException ("Error! Width must be non-negative double");
+                                }
+                if(height < 0) {
+                               throw  new IllegalArgumentException ("Error! Height must be non-negative double");
+                                }
+                return length * width * height;
 		
 	}
 
