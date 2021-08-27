@@ -1,10 +1,10 @@
 package tasks;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Task4 {
     public static void main(String[] args) {
-
         int num1, num2;
 
         System.out.print("\tTask 4.\n\t\t\n" +
@@ -21,31 +21,39 @@ public class Task4 {
         do {
             try {
                 num1 = Integer.parseInt(sc.nextLine());
-                break;
+                if (num1 < 1) {
+                    throw new Exception("Value must be integer and > 0!");
+                } else {
+                    break;
+                }
             } catch (Exception e) {
-                System.out.println("Entered non-integer value!!!");
+                System.out.println(e.getMessage());
                 System.out.print("Input valid integer value:");
 
             }
         } while (true);
-
         System.out.print("Input size of the pixel in millimeters:");
-
         do {
             try {
                 num2 = Integer.parseInt(sc.nextLine());
-                break;
+                if (num2 < 1) {
+                    throw new Exception("Value must be integer and > 0!");
+                } else {
+                    break;
+                }
             } catch (Exception e) {
-                System.out.println("Entered non-integer value!!!");
+                System.out.println(e.getMessage());
                 System.out.print("Input valid integer value:");
             }
         } while (true);
 
         System.out.println("Result: " + isDivisible(num1, num2));
-        sc.close();
+
     }
     public static boolean isDivisible(int wallLength, int pixelSize) {
+        if (wallLength < 1 && pixelSize < 1) {
+            throw new IllegalArgumentException("Both input values should be positive");
+        }
         return wallLength % pixelSize == 0;
     }
-
 }

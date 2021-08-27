@@ -69,7 +69,7 @@ public class ApplMain {
 		}
 
 		case 12: {
-			// Task12.main(args);
+			 Task12.main(args);
 			break;
 		}
 		case 13: {
