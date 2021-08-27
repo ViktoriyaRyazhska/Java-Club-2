@@ -101,14 +101,16 @@ public class Task72 {
     public static class Dictionary{
         Map<String, String> map = new HashMap<>();
 
-        public void add_word(String word, String description){
-           // if(word.equals("") || description.equals(""))throw new Exception("Illegal input");
+        public boolean add_word(String word, String description){
+           if(word.equals("") || description.equals(""))throw new IllegalArgumentException("Illegal input");
+           if(this.map.containsKey(word))return true;
             this.map.put(word, description);
+            return true;
         }
 
 
          public String look(String word){
-            //if (word.equals("")) throw new IOException("Illegal input");
+            if (word.equals("")) throw new IllegalArgumentException("Illegal input");
             if(this.map.containsKey(word))
                     return this.map.get(word);
             return "Can`t find entry for " + word;
