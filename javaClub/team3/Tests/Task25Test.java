@@ -1,18 +1,20 @@
 package javaClub.team3.Tests;
 
+import javaClub.team3.Task25;
 import org.junit.jupiter.api.Test;
 
 import static javaClub.team3.Task25.isLove;
 import static org.junit.jupiter.api.Assertions.*;
 
-class Task25Test {
+public class Task25Test {
+    Task25 test = new Task25();
 
     @Test
-    void isLoveSameNum() {
-        assertEquals(false, isLove(3,3));
+    void isLoveTrue() {
+        assertEquals(true, isLove(1,2));
     }
     @Test
-    void isLoveDifferentNum() {
-        assertEquals(true, isLove(3,4));
+    void isLoveFalse() {
+        assertEquals(false, isLove(4,2));
     }
 }

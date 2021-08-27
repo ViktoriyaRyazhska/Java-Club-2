@@ -1,22 +1,20 @@
 package javaClub.team3.Tests;
 
+import javaClub.team3.Task35;
 import org.junit.jupiter.api.Test;
 
-import static javaClub.team3.Task35.map;
 import static org.junit.jupiter.api.Assertions.*;
 
-class Task35Test {
+public class Task35Test {
+
+    int[] arr1 = {1,2,3,4};
+    int[] arr2 = {2,4,6,8};
+    int[] arr3 = {23,39,74, 104};
+    int[] arr4 = {46,78,148, 208};
 
     @Test
-    void mapTest1() {
-        int[] given = new int[] { 1, 2, 3 };
-        int[] result = new int[] { 2, 4, 6 };
-        assertArrayEquals(result, map(given));
-    }
-    @Test
-    void mapTest2() {
-        int[] given = new int[] { 6, 8, 10 };
-        int[] result = new int[] { 12, 16, 20 };
-        assertArrayEquals(result, map(given));
+    void mapTestCorrect() {
+        assertArrayEquals(arr4, Task35.map(arr3));
+        assertArrayEquals(arr2, Task35.map(arr1));
     }
 }
