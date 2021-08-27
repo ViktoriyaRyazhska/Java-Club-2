@@ -29,6 +29,9 @@ public class Task43Test {
         outputBefore(10001);
         assertEquals(10000, Task43.nearestSq(10001));
         outputAfter();
+        outputBefore(0);
+        assertEquals(0, Task43.nearestSq(0));
+        outputAfter();
     }
 
     @Test
@@ -36,10 +39,6 @@ public class Task43Test {
         outputBefore(-5);
         assertThrows(InputMismatchException.class,
                 () -> System.err.println(Task43.nearestSq(-5) + " is result, but no result expect!"));
-        outputAfter();
-        outputBefore(0);
-        assertThrows(InputMismatchException.class,
-                () -> System.err.println(Task43.nearestSq(0) + " is result, but no result expect!"));
         outputAfter();
     }
     void outputBefore(int par) {
