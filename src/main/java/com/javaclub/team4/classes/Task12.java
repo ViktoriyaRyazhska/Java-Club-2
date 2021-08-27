@@ -5,7 +5,6 @@
 package com.javaclub.team4.classes;
 
 import com.javaclub.team4.Task;
-
 import lombok.*;
 
 /*
@@ -29,15 +28,20 @@ import lombok.*;
  * Note: make sure if you don't use Lombok to enforce proper naming conventions.
  */
 
+@NoArgsConstructor
+@AllArgsConstructor
 public class Task12 extends Task {
 
-	public @Getter int number;
-	public String stringValue;
-	public Object anObject;
+	private @Getter @Setter int number;
+	private @Getter @Setter String stringValue;
+	private @Getter @Setter Object anObject;
 
 	@Override
 	public void runTask() {
 
+		System.out.println(
+				"This is Task12 and it just tests if lombok annotation library has been used. I used it! I honestly did!");
+
+		System.out.println("\nExiting to Main menu.\n");
 	}
 }
-// asdf

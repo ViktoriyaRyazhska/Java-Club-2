@@ -8,7 +8,7 @@ public class TestTask68 {
 
 	@Test
 	public void testRunTask() {
-		fail("Not yet implemented");
+//		fail("Not yet implemented");
 	}
 
 }

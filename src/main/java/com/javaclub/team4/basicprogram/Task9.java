@@ -4,9 +4,8 @@
 
 package com.javaclub.team4.basicprogram;
 
-import java.io.IOException;
-
 import com.javaclub.team4.Task;
+import java.io.IOException;
 
 /* 
  * In this simple assignment you are given a number and have to make it negative.
@@ -20,14 +19,21 @@ public class Task9 extends Task {
 	@Override
 	public void runTask() {
 
+		System.out.println("\nThis is Task9. It should return a negative result of your input.\n");
+
 		System.out.println("Please enter a number to transform it to negative one:");
-		
-		try {
-			n = Integer.parseInt(br.readLine());
-			System.out.println(makeNegative(n) + " is the result.");
-		} catch (NumberFormatException | IOException e) {
-			System.out.println("It seems that the number you entered is not valid. Try again.");
+		while (true) {
+			try {
+				n = Integer.parseInt(br.readLine());
+				break;
+			} catch (NumberFormatException | IOException e) {
+				System.out.println("It seems that the number you entered is not valid. Try again:");
+			}
 		}
+
+		System.out.println(makeNegative(n) + " is the result.");
+
+		System.out.println("\nExiting to Main menu.\n");
 	}
 
 	public static int makeNegative(final int x) {
