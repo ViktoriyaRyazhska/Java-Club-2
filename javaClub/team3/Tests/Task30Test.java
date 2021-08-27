@@ -1,26 +1,38 @@
 package javaClub.team3.Tests;
 
+import javaClub.team3.Task30;
 import org.junit.jupiter.api.Test;
 
-import static javaClub.team3.Task30.updateLight;
+import java.util.InputMismatchException;
+
+import static javaClub.team3.Task3.getVolumeOfCuboid;
 import static org.junit.jupiter.api.Assertions.*;
 
-class Task30Test {
+public class Task30Test {
+    Task30 test = new Task30();
 
     @Test
-    void updateLightGreen() {
-        assertEquals("yellow",updateLight("green"));
-    }
-    @Test
-    void updateLighYellow() {
-        assertEquals("red",updateLight("yellow"));
+    void updateLightYellow() {
+        assertEquals("yellow", Task30.updateLight("green"));
     }
     @Test
     void updateLightRed() {
-        assertEquals("green",updateLight("red"));
+        assertEquals("red", Task30.updateLight("yellow"));
     }
     @Test
-    void updateLightWrong() {
-        assertEquals("Wrong input!",updateLight("blue"));
+    void updateLightGreen() {
+        assertEquals("green", Task30.updateLight("red"));
+    }
+
+    @Test
+    void negativeTest_Incorrect() {
+        assertThrows(InputMismatchException.class,
+                () -> System.err.println(Task30.updateLight("Blue") + " is result, but no result expect!"));
+    }
+
+    @Test
+    void negativeTest_Empty() {
+        assertThrows(InputMismatchException.class,
+                () -> System.err.println(Task30.updateLight("") + " is result, but no result expect!"));
     }
 }

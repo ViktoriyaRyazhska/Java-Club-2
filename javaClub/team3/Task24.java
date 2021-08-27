@@ -1,5 +1,6 @@
 package javaClub.team3;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Task24 extends Task{
@@ -15,7 +16,7 @@ public class Task24 extends Task{
             System.out.println("Enter the second value: ");
             int val2 = scanner.nextInt();
             System.out.println(basicMath(op, val1, val2));
-        } catch (Exception e) {
+        } catch (InputMismatchException e) {
             e.printStackTrace();
         }
     }

@@ -1,5 +1,6 @@
 package javaClub.team3;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Task29 extends Task {
@@ -14,7 +15,7 @@ public class Task29 extends Task {
                 num = scanner.nextInt();
             }
             System.out.println(switchItUp(num));
-        } catch (Exception e) {
+        } catch (InputMismatchException e) {
             e.printStackTrace();
         }
     }

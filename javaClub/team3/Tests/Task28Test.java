@@ -35,7 +35,7 @@ public class Task28Test {
         outputAfter();
         outputBefore(-10);
         assertThrows(InputMismatchException.class,
-                () -> System.err.println(Task28.sequence(0) + " is result, but no result expect!"));
+                () -> System.err.println(Task28.sequence(-10) + " is result, but no result expect!"));
         outputAfter();
         /*
         outputBefore((long)Math.pow(10, 19));

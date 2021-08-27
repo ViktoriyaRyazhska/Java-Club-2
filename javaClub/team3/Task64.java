@@ -13,8 +13,7 @@ public class Task64 extends Task{
             System.out.println("Enter the letter:");
             char letter = scanner.next().charAt(0);
 
-            CodeWars code= new CodeWars();
-            System.out.println("Number of the letter in string is "+code.strCount(str, letter));
+            System.out.println("Number of the letter in string is "+ CodeWars.strCount(str, letter));
         } catch (InputMismatchException e) {
             e.printStackTrace();
         }

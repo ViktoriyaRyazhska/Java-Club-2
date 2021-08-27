@@ -1,5 +1,6 @@
 package javaClub.team3;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Task14 extends Task{
@@ -20,7 +21,7 @@ public class Task14 extends Task{
             Fraction secondOne = new Fraction(top, bottom);
 
             System.out.println(firstOne.add(secondOne).toString());
-        } catch (Exception e) {
+        } catch (InputMismatchException e) {
             e.printStackTrace();
         }
     }

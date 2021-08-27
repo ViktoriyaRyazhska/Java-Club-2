@@ -3,7 +3,10 @@ package javaClub.team3.Tests;
 import org.junit.jupiter.api.Test;
 import javaClub.team3.Task20.*;
 
+import java.util.InputMismatchException;
+
 import static javaClub.team3.Task20.convert;
+import static javaClub.team3.Task3.getVolumeOfCuboid;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Task20Test {

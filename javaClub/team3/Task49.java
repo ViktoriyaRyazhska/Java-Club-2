@@ -32,8 +32,8 @@ public class Task49 extends Task{
             }
             String result = "";
             char[] arr = source.toCharArray();
-            for (int i = 0; i < arr.length; i++) {
-                result =result.concat(encode(arr[i]));
+            for (char c : arr) {
+                result = result.concat(encode(c));
             }
             return result;
         }
