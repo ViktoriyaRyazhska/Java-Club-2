@@ -21,8 +21,6 @@ public class ApplMain {
 
 					break;
 				} catch (Exception e) {
-
-
 					System.out.print("Input integer number betwen 1 and 72: ");
 				}
 
@@ -164,7 +162,7 @@ public class ApplMain {
 				break;
 			}
 			case 34: {
-				// Task34.main(args);
+				Task34.main(args);
 				break;
 			}
 			case 35: {
