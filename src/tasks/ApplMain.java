@@ -1,12 +1,13 @@
 package tasks;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class ApplMain {
-	public static void main(String[] args) {
-
+	
+	public static void main(String[] args) throws IOException {
 		int numTask = 0;
 		String inputAnswer = "";
 		boolean check = true;
@@ -147,7 +148,7 @@ public class ApplMain {
 				break;
 			}
 			case 30: {
-				// Task30.main(args);
+				Task30.main(args);
 				break;
 			}
 			case 31: {
@@ -217,7 +218,7 @@ public class ApplMain {
 
 		} while (check);
 
-		// br.close();
+		 br.close();
 
 
 	}

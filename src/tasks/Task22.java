@@ -25,23 +25,29 @@ import java.util.Scanner;
 public class Task22 {
 
 	public static String CalculateAge(int birth, int yearTo) {
-		if (birth == yearTo) {
-			return "You were born this very year!";
-		}
-		if (yearTo < birth) {
-			if ((birth - yearTo) > 1) {
-				return "You will be born in " + (birth - yearTo) + " years.";
-			} else {
-				return "You will be born in " + (birth - yearTo) + " year.";
-			}
+
+		if (birth < 1 || yearTo < 1) {
+			throw new IllegalArgumentException("Error. Illegal Argument. Years must be > 1.");
+
 		} else {
-			if ((yearTo - birth) > 1) {
-				return "You are " + (yearTo - birth) + " years old.";
-			} else {
-				return "You are " + (yearTo - birth) + " year old.";
 
+			if (birth == yearTo) {
+				return "You were born this very year!";
 			}
+			if (yearTo < birth) {
+				if ((birth - yearTo) > 1) {
+					return "You will be born in " + (birth - yearTo) + " years.";
+				} else {
+					return "You will be born in " + (birth - yearTo) + " year.";
+				}
+			} else {
+				if ((yearTo - birth) > 1) {
+					return "You are " + (yearTo - birth) + " years old.";
+				} else {
+					return "You are " + (yearTo - birth) + " year old.";
 
+				}
+			}
 		}
 
 	}
@@ -60,37 +66,63 @@ public class Task22 {
 						+ " \t\t* \"...\" are to be replaced by the number, followed and proceeded by a single\r\n"
 						+ " \t\t* space. Mind that you need to account for both \"year\" and \"years\", depending\r\n"
 						+ " \t\t* on the result.\n");
-		System.out.print("Input Birth Year: ");
+
 		Scanner sc = new Scanner(System.in);
 		int birthYear = 0;
 		int yearTo = 0;
+		String inputAnswer = " ";
+		boolean check = true;
 		do {
-			try {
-				birthYear = Integer.parseInt(sc.nextLine());
-				if (birthYear < 0) {
-					throw new Exception();
+			System.out.print("Input Birth Year: ");
+			do {
+				try {
+					birthYear = Integer.parseInt(sc.nextLine());
+					break;
+				} catch (Exception badYear) {
+					System.out.println("Year must be non-negative integer. Try again: ");
 				}
-				break;
-			} catch (Exception badYear) {
-				System.out.println("Year must be non-negative integer. Try again: ");
-			}
-		} while (true);
+			} while (true);
 
-		System.out.print("Input Year: ");
-		do {
-			try {
-				yearTo = Integer.parseInt(sc.nextLine());
-				if (yearTo < 0) {
-					throw new Exception();
+			System.out.print("Input Year: ");
+			do {
+				try {
+					yearTo = Integer.parseInt(sc.nextLine());
+
+					break;
+				} catch (Exception badYear) {
+					System.out.println("Year must be non-negative integer. Try again: ");
 				}
-				break;
-			} catch (Exception badYear) {
-				System.out.println("Year must be non-negative integer. Try again: ");
+			} while (true);
+			try {
+				System.out.println(CalculateAge(birthYear, yearTo));
+			} catch (IllegalArgumentException e) {
+				// TODO: handle exception
+				System.out.println(e.getMessage());
 			}
-		} while (true);
+			System.out.print("\tDo you want execute task again? (Y/N): ");
+			do {
+				try {
+					inputAnswer = sc.nextLine();
+					if (inputAnswer.equals("Y") || inputAnswer.equals("N")) {
+						check = true;
+					} else {
+						throw new RuntimeException("Error. Bad answer!  ");
+					}
 
-		System.out.println(CalculateAge(birthYear, yearTo));
-		sc.close();
+					break;
+				} catch (Exception badAnswer) {
+					System.out.print("\t" + badAnswer.getMessage() + "Input \'Y\' or \'N\': ");
+				}
+
+			} while (true);
+
+			if (inputAnswer.equals("N")) {
+				check = false;
+				System.out.println("\tTask terminated!");
+			}
+
+		} while (check);
+		// sc.close();
 	}
 
 }
