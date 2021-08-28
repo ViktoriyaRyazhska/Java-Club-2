@@ -6,3 +6,4 @@ Danihevych Oleksandr
 Skolodza Pavlo  
 Yevhen Voronko  
 Maksym Kuzbyt  
+Kuzo Yurii
