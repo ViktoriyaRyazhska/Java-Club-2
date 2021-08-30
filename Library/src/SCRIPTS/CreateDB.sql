@@ -21,19 +21,18 @@ CREATE TABLE IF NOT EXISTS UserRole (
       FOREIGN KEY (RoleId) REFERENCES Role (id)
 );
 
-CREATE TABLE IF NOT EXISTS Book (
-      id INTEGER Not Null AUTO_INCREMENT PRIMARY KEY,
-      title VARCHAR(128) not null,
-      description VARCHAR(512),
-      year INTEGER not null,
-      copies INTEGER not null DEFAULT 0,
-      available INTEGER not null DEFAULT 0
-);
-
 CREATE TABLE IF NOT EXISTS Author (
     id INTEGER Not Null AUTO_INCREMENT PRIMARY KEY,
-    firstName VARCHAR(32) not null,
-    lastName VARCHAR(32) not null
+    Name VARCHAR(64) not null
+);
+
+CREATE TABLE IF NOT EXISTS Book (
+    id INTEGER Not Null AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(128) not null,
+    description VARCHAR(512),
+    year INTEGER not null,
+    copies INTEGER not null DEFAULT 0,
+    available INTEGER not null DEFAULT 0
 );
 
 CREATE TABLE IF NOT EXISTS BookAuthor (
