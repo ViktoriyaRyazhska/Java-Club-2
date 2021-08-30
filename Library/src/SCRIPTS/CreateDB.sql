@@ -1,9 +1,11 @@
-CREATE TABLE Role (
+CREATE DATABASE IF NOT EXISTS library;
+
+CREATE TABLE IF NOT EXISTS Role (
       id INTEGER Not Null AUTO_INCREMENT PRIMARY KEY,
       name CHAR(30) not null
 );
 
-Create TABLE User (
+Create TABLE IF NOT EXISTS User (
       id INTEGER Not Null AUTO_INCREMENT PRIMARY KEY,
       firstName CHAR(30) not null,
       lastName CHAR(30) not null,
@@ -12,14 +14,14 @@ Create TABLE User (
       birth DATE not null
 );
 
-CREATE TABLE UserRole (
+CREATE TABLE IF NOT EXISTS UserRole (
       UserID INTEGER,
       RoleID INTEGER,
       FOREIGN KEY (UserId) REFERENCES User (id),
       FOREIGN KEY (RoleId) REFERENCES Role (id)
 );
 
-CREATE TABLE Book (
+CREATE TABLE IF NOT EXISTS Book (
       id INTEGER Not Null AUTO_INCREMENT PRIMARY KEY,
       title CHAR(30) not null,
       description TEXT,
@@ -28,20 +30,20 @@ CREATE TABLE Book (
       available INTEGER not null
 );
 
-CREATE TABLE Author (
+CREATE TABLE IF NOT EXISTS Author (
     id INTEGER Not Null AUTO_INCREMENT PRIMARY KEY,
     firstName CHAR(30) not null,
     lastName CHAR(30) not null
 );
 
-CREATE TABLE BookAuthor (
+CREATE TABLE IF NOT EXISTS BookAuthor (
         BookId INTEGER,
         AuthorId INTEGER,
         FOREIGN KEY (BookId) REFERENCES Book (id),
         FOREIGN KEY (AuthorId) REFERENCES Author (id)
 );
 
-CREATE TABLE HISTORY (
+CREATE TABLE IF NOT EXISTS HISTORY (
      UserID INTEGER,
      BookID INTEGER,
      dateBorrowed DATETIME DEFAULT CURRENT_TIMESTAMP,
