@@ -2,15 +2,15 @@ CREATE DATABASE IF NOT EXISTS library;
 
 CREATE TABLE IF NOT EXISTS Role (
       id INTEGER Not Null AUTO_INCREMENT PRIMARY KEY,
-      name CHAR(30) not null
+      name VARCHAR(32) not null
 );
 
 Create TABLE IF NOT EXISTS User (
       id INTEGER Not Null AUTO_INCREMENT PRIMARY KEY,
-      firstName CHAR(30) not null,
-      lastName CHAR(30) not null,
-      email CHAR(30) not null unique,
-      password CHAR(30) not null,
+      firstName VARCHAR(32) not null,
+      lastName VARCHAR(32) not null,
+      email VARCHAR(64) not null unique,
+      password VARCHAR(64) not null,
       birth DATE not null
 );
 
@@ -23,17 +23,17 @@ CREATE TABLE IF NOT EXISTS UserRole (
 
 CREATE TABLE IF NOT EXISTS Book (
       id INTEGER Not Null AUTO_INCREMENT PRIMARY KEY,
-      title CHAR(30) not null,
-      description TEXT,
+      title VARCHAR(128) not null,
+      description VARCHAR(512),
       year INTEGER not null,
-      copies INTEGER not null,
-      available INTEGER not null
+      copies INTEGER not null DEFAULT 0,
+      available INTEGER not null DEFAULT 0
 );
 
 CREATE TABLE IF NOT EXISTS Author (
     id INTEGER Not Null AUTO_INCREMENT PRIMARY KEY,
-    firstName CHAR(30) not null,
-    lastName CHAR(30) not null
+    firstName VARCHAR(32) not null,
+    lastName VARCHAR(32) not null
 );
 
 CREATE TABLE IF NOT EXISTS BookAuthor (
@@ -46,9 +46,10 @@ CREATE TABLE IF NOT EXISTS BookAuthor (
 CREATE TABLE IF NOT EXISTS HISTORY (
      UserID INTEGER,
      BookID INTEGER,
-     dateBorrowed DATETIME DEFAULT CURRENT_TIMESTAMP,
-     dateReturned DATETIME DEFAULT null ON UPDATE CURRENT_TIMESTAMP,
+     dateBorrowed DATETIME,
+     dateReturned DATETIME,
      deadLine DATETIME,
+     approved BOOLEAN not null DEFAULT FALSE,
      FOREIGN KEY (UserID) REFERENCES User (id),
      FOREIGN KEY (BookID) REFERENCES Book (id)
 );
