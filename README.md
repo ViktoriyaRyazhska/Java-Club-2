@@ -9,19 +9,21 @@ Danihevych Oleksandr
 Skolodza Pavlo  
 Yevhen Voronko  
 Maksym Kuzbyt  
+Kuzo Yurii  
 
 ### Team 2  
 Bohush Sviatoslav  
 Yanio Yura  
 Solomchak Ivan  
+Kondra Artur  
+Kupets Dmytro  
 
 ### Team 3
 Mykhalchenko Viacheslav  
 Shauerman Hanna  
 Sannytski Dmytro  
-Kychma Nazar
-Diakiv Marta
-
+Kychma Nazar  
+Diakiv Marta  
 
 ## Part 1. Java Core  
 ### Team 1  
