@@ -21,6 +21,9 @@ VALUES ('John');
 INSERT INTO author (Name)
 VALUES ('Homer S');
 
+INSERT INTO bookauthor
+VALUES (1,1), (2,2), (3,3), (4,4), (4,5);
+
 /*
 INSERT INTO bookauthor
 VALUES (1,1);
