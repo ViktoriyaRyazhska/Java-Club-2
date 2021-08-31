@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS Book (
     description VARCHAR(512),
     year INTEGER not null,
     copies INTEGER not null DEFAULT 0,
-    available INTEGER not null DEFAULT 0
+    available INTEGER not null DEFAULT copies
 );
 
 CREATE TABLE IF NOT EXISTS BookAuthor (
