@@ -19,7 +19,8 @@ Solomchak Ivan
 Mykhalchenko Viacheslav  
 Shauerman Hanna  
 Sannytski Dmytro  
-Kychma Nazar  
+Kychma Nazar
+Diakiv Marta
 
 
 ## Part 1. Java Core  
