@@ -46,7 +46,7 @@ public class Task16 extends Task{
             System.err.println("Incorrect input");
             return;
         }
-
+        scanner = new Scanner(System.in);
         System.out.println("Fighter2:");
         System.out.println("Print name");
         try {
@@ -72,7 +72,7 @@ public class Task16 extends Task{
             System.err.println("Incorrect input");
             return;
         }
-
+        scanner = new Scanner(System.in);
         System.out.println("Print first attacker`s name");
         try {
             firstAttacker = scanner.nextLine();
