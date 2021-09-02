@@ -1,13 +1,10 @@
 UPDATE book
-SET year = 2001
+SET publicationDate = '2021-01-01'
 WHERE title = 'Some name';
 
 UPDATE book
-SET copies = 3, description = 'some description'
-WHERE id = 4;
+    INNER JOIN autor_has_book ON book.idbook = autor_has_book.book_idbook
+    INNER JOIN autor on autor_has_book.autor_idautor = autor.idautor
+SET title = 'Some title', description = 'some description'
+WHERE autor.firstName = 'John' AND autor.lastName = 'Stone';
 
-UPDATE book
-    INNER JOIN bookauthor ON book.id = bookauthor.BookId
-    INNER JOIN author on author.id = bookauthor.AuthorId
-SET book.description = 'some description'
-    WHERE author.Name = 'John Stone';
