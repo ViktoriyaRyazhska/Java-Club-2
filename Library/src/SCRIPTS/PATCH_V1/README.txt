@@ -5,3 +5,7 @@ startup sequence
 2. User_Patch.sql
 3. RemovesUnusable_Patch.sql
 4. OrderRequests_Patch.sql
+
+UPDATED
+5. PK_increment_Patch.sql
+6. requests_fix_Patch.sql
