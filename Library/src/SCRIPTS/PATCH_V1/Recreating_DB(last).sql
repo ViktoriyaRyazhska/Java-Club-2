@@ -10,19 +10,19 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema library
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema library
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
-USE `mydb` ;
+CREATE SCHEMA IF NOT EXISTS `library` DEFAULT CHARACTER SET utf8 ;
+USE `library` ;
 
 -- -----------------------------------------------------
--- Table `mydb`.`autor`
+-- Table `library`.`autor`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`autor` (
+CREATE TABLE IF NOT EXISTS `library`.`autor` (
                                               `idautor` INT NOT NULL,
                                               `firstName` VARCHAR(45) NOT NULL,
                                               `lastName` VARCHAR(45) NOT NULL,
@@ -32,9 +32,9 @@ CREATE TABLE IF NOT EXISTS `mydb`.`autor` (
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`genre`
+-- Table `library`.`genre`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`genre` (
+CREATE TABLE IF NOT EXISTS `library`.`genre` (
                                               `idgenre` INT NOT NULL,
                                               `title` VARCHAR(45) NOT NULL,
                                               PRIMARY KEY (`idgenre`),
@@ -44,9 +44,9 @@ CREATE TABLE IF NOT EXISTS `mydb`.`genre` (
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`book`
+-- Table `library`.`book`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`book` (
+CREATE TABLE IF NOT EXISTS `library`.`book` (
                                              `idbook` INT NOT NULL,
                                              `title` VARCHAR(255) NULL DEFAULT NULL,
                                              `description` VARCHAR(255) NULL DEFAULT NULL,
@@ -59,15 +59,15 @@ CREATE TABLE IF NOT EXISTS `mydb`.`book` (
                                              INDEX `fk_book_genre1_idx` (`genre_idgenre` ASC) VISIBLE,
                                              CONSTRAINT `fk_book_genre1`
                                                  FOREIGN KEY (`genre_idgenre`)
-                                                     REFERENCES `mydb`.`genre` (`idgenre`))
+                                                     REFERENCES `library`.`genre` (`idgenre`))
     ENGINE = InnoDB
     DEFAULT CHARACTER SET = utf8mb3;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`autor_has_book`
+-- Table `library`.`autor_has_book`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`autor_has_book` (
+CREATE TABLE IF NOT EXISTS `library`.`autor_has_book` (
                                                        `autor_idautor` INT NOT NULL,
                                                        `book_idbook` INT NOT NULL,
                                                        `co_autor` TINYINT NULL DEFAULT NULL,
@@ -76,18 +76,18 @@ CREATE TABLE IF NOT EXISTS `mydb`.`autor_has_book` (
                                                        INDEX `fk_autor_has_book_autor_idx` (`autor_idautor` ASC) VISIBLE,
                                                        CONSTRAINT `fk_autor_has_book_autor`
                                                            FOREIGN KEY (`autor_idautor`)
-                                                               REFERENCES `mydb`.`autor` (`idautor`),
+                                                               REFERENCES `library`.`autor` (`idautor`),
                                                        CONSTRAINT `fk_autor_has_book_book1`
                                                            FOREIGN KEY (`book_idbook`)
-                                                               REFERENCES `mydb`.`book` (`idbook`))
+                                                               REFERENCES `library`.`book` (`idbook`))
     ENGINE = InnoDB
     DEFAULT CHARACTER SET = utf8mb3;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`book_status`
+-- Table `library`.`book_status`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`book_status` (
+CREATE TABLE IF NOT EXISTS `library`.`book_status` (
                                                     `idbook_status` INT NOT NULL,
                                                     `title` VARCHAR(45) NULL DEFAULT NULL,
                                                     PRIMARY KEY (`idbook_status`))
@@ -96,9 +96,9 @@ CREATE TABLE IF NOT EXISTS `mydb`.`book_status` (
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`book_copy`
+-- Table `library`.`book_copy`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`book_copy` (
+CREATE TABLE IF NOT EXISTS `library`.`book_copy` (
                                                   `idbook_copy` INT NOT NULL,
                                                   `book_idbook` INT NOT NULL,
                                                   `book_status_idbook_status` INT NOT NULL,
@@ -108,18 +108,18 @@ CREATE TABLE IF NOT EXISTS `mydb`.`book_copy` (
                                                   INDEX `fk_book_copy_book_status1_idx` (`book_status_idbook_status` ASC) VISIBLE,
                                                   CONSTRAINT `fk_book_copy_book1`
                                                       FOREIGN KEY (`book_idbook`)
-                                                          REFERENCES `mydb`.`book` (`idbook`),
+                                                          REFERENCES `library`.`book` (`idbook`),
                                                   CONSTRAINT `fk_book_copy_book_status1`
                                                       FOREIGN KEY (`book_status_idbook_status`)
-                                                          REFERENCES `mydb`.`book_status` (`idbook_status`))
+                                                          REFERENCES `library`.`book_status` (`idbook_status`))
     ENGINE = InnoDB
     DEFAULT CHARACTER SET = utf8mb3;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`order_status`
+-- Table `library`.`order_status`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`order_status` (
+CREATE TABLE IF NOT EXISTS `library`.`order_status` (
                                                      `idorder_status` INT NOT NULL,
                                                      `title` VARCHAR(45) NULL,
                                                      PRIMARY KEY (`idorder_status`))
@@ -127,9 +127,9 @@ CREATE TABLE IF NOT EXISTS `mydb`.`order_status` (
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`role`
+-- Table `library`.`role`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`role` (
+CREATE TABLE IF NOT EXISTS `library`.`role` (
                                              `idrole` INT NOT NULL,
                                              `description` VARCHAR(45) NOT NULL,
                                              PRIMARY KEY (`idrole`),
@@ -139,9 +139,9 @@ CREATE TABLE IF NOT EXISTS `mydb`.`role` (
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`user`
+-- Table `library`.`user`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`user` (
+CREATE TABLE IF NOT EXISTS `library`.`user` (
                                              `idUser` INT NOT NULL,
                                              `firstName` VARCHAR(45) NULL DEFAULT NULL,
                                              `lastName` VARCHAR(45) NOT NULL,
@@ -157,15 +157,15 @@ CREATE TABLE IF NOT EXISTS `mydb`.`user` (
                                              INDEX `fk_person_role1_idx` (`role_idrole` ASC) VISIBLE,
                                              CONSTRAINT `fk_person_role1`
                                                  FOREIGN KEY (`role_idrole`)
-                                                     REFERENCES `mydb`.`role` (`idrole`))
+                                                     REFERENCES `library`.`role` (`idrole`))
     ENGINE = InnoDB
     DEFAULT CHARACTER SET = utf8mb3;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`book_order`
+-- Table `library`.`book_order`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`book_order` (
+CREATE TABLE IF NOT EXISTS `library`.`book_order` (
                                                    `idbookBorrow` INT NOT NULL,
                                                    `CREATED_AT` TIMESTAMP NULL DEFAULT NULL,
                                                    `UPDATATED_AT` TIMESTAMP NULL DEFAULT NULL,
@@ -183,15 +183,15 @@ CREATE TABLE IF NOT EXISTS `mydb`.`book_order` (
                                                    INDEX `fk_book_order_user1_idx` (`user_idUser` ASC, `user_lastName` ASC) VISIBLE,
                                                    CONSTRAINT `fk_bookBorrow_book_copy1`
                                                        FOREIGN KEY (`book_copy_idbook_copy`)
-                                                           REFERENCES `mydb`.`book_copy` (`idbook_copy`),
+                                                           REFERENCES `library`.`book_copy` (`idbook_copy`),
                                                    CONSTRAINT `fk_book_order_order_status1`
                                                        FOREIGN KEY (`order_status_idorder_status`)
-                                                           REFERENCES `mydb`.`order_status` (`idorder_status`)
+                                                           REFERENCES `library`.`order_status` (`idorder_status`)
                                                            ON DELETE NO ACTION
                                                            ON UPDATE NO ACTION,
                                                    CONSTRAINT `fk_book_order_user1`
                                                        FOREIGN KEY (`user_idUser` , `user_lastName`)
-                                                           REFERENCES `mydb`.`user` (`idUser` , `lastName`)
+                                                           REFERENCES `library`.`user` (`idUser` , `lastName`)
                                                            ON DELETE NO ACTION
                                                            ON UPDATE NO ACTION)
     ENGINE = InnoDB
