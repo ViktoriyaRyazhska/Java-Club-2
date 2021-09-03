@@ -56,7 +56,11 @@ ALTER TABLE user
 
 ALTER TABLE book_order
     DROP FOREIGN KEY book_order_ibfk_1;
+ALTER TABLE requests
+    DROP FOREIGN KEY requests_ibfk_2;
 ALTER TABLE user
     MODIFY id INT NOT NULL AUTO_INCREMENT;
 ALTER TABLE book_order
+    ADD FOREIGN KEY (user_id) REFERENCES user (id);
+ALTER TABLE requests
     ADD FOREIGN KEY (user_id) REFERENCES user (id);
