@@ -9,3 +9,7 @@ startup sequence
 UPDATED
 5. PK_increment_Patch.sql
 6. requests_fix_Patch.sql
+
+UPDATED
+7. book_fix_Patch.sql
+8. book_copy_fix_Patch.sql
