@@ -64,5 +64,3 @@ ALTER TABLE book_order
     ADD FOREIGN KEY (user_id) REFERENCES user (id);
 ALTER TABLE requests
     ADD FOREIGN KEY (user_id) REFERENCES user (id);
-ALTER TABLE requests
-    ADD FOREIGN KEY (user_id) REFERENCES user (id);
