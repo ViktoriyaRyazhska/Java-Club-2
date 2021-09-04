@@ -1,0 +1,2 @@
+ALTER TABLE book_copy
+    MODIFY COLUMN book_status_id INT NOT NULL DEFAULT 1;

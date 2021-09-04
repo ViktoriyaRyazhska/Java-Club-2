@@ -51,4 +51,4 @@ CREATE TABLE IF NOT EXISTS HISTORY (
      approved BOOLEAN not null DEFAULT FALSE,
      FOREIGN KEY (UserID) REFERENCES User (id),
      FOREIGN KEY (BookID) REFERENCES Book (id)
-);
+); 

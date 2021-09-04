@@ -16,6 +16,4 @@ public class Task1Test {
         assertEquals(144, Task1.Java.doubleInteger(72));
         assertEquals(2222, Task1.Java.doubleInteger(1111));
     }
-
-
 }
