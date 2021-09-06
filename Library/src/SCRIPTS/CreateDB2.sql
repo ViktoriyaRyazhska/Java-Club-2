@@ -123,6 +123,24 @@ CREATE TABLE IF NOT EXISTS `library`.`order_status` (
                                                      PRIMARY KEY (`idorder_status`))
     ENGINE = InnoDB;
 
+-- -----------------------------------------------------
+-- Table `library`.`autor_has_book`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `library`.`autor_has_book` (
+                                                       `autor_idautor` INT NOT NULL,
+                                                       `book_idbook` INT NOT NULL,
+                                                       `co_autor` TINYINT NULL DEFAULT NULL,
+                                                       PRIMARY KEY (`autor_idautor`, `book_idbook`),
+                                                       INDEX `fk_autor_has_book_book1_idx` (`book_idbook` ASC) VISIBLE,
+                                                       INDEX `fk_autor_has_book_autor_idx` (`autor_idautor` ASC) VISIBLE,
+                                                       CONSTRAINT `fk_autor_has_book_autor`
+                                                           FOREIGN KEY (`autor_idautor`)
+                                                               REFERENCES `library`.`autor` (`idautor`),
+                                                       CONSTRAINT `fk_autor_has_book_book1`
+                                                           FOREIGN KEY (`book_idbook`)
+                                                               REFERENCES `library`.`book` (`idbook`))
+    ENGINE = InnoDB
+    DEFAULT CHARACTER SET = utf8mb3;
 
 -- -----------------------------------------------------
 -- Table `library`.`role`
