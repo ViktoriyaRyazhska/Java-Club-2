@@ -9,6 +9,7 @@ import java.sql.Timestamp;
 
 @Entity
 public class user_table {
+
     @Id @GeneratedValue
     @Column(name = "id")
     private int id;
