@@ -20,13 +20,13 @@ public class Book_table {
     @Column(name = "description", nullable = false)
     private String description;
 
-    @Column(name = "is_deleted")
+    @Column(name = "is_deleted", nullable = false, columnDefinition = "BOOLEAN DEFAULT FALSE")
     private Boolean isDeleted;
 
     @Column(name = "publicationYear", nullable = false)
     private Integer year;
 
-    @Column(name = "CREATED_AT")
+    @Column(name = "CREATED_AT", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP", nullable = false)
     private Timestamp createdAt;
 
     @Column(name = "UPDATED_AT")

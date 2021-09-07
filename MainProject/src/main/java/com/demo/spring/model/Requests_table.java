@@ -10,10 +10,10 @@ public class Requests_table {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "isOpen")
+    @Column(name = "isOpen", columnDefinition = "BOOLEAN DEFAULT FALSE")
     private boolean isOpen;
 
-    @Column(name = "CREATED_AT")
+    @Column(name = "CREATED_AT", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private Timestamp CREATED_AT;
 
     @Column(name = "CLOSED_AT")
