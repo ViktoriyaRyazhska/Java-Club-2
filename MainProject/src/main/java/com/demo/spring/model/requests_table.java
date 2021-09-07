@@ -20,9 +20,9 @@ public class requests_table {
     @Column(name = "CLOSED_AT")
     private Timestamp CLOSED_AT;
 
-    @Column(name = "book_copy_id")
-    private int book_copy_id;
+//    @OneToOne @JoinColumn (name = "book_copy_id", referencedColumnName = "id")
+//    private book_copy_table book_copy_id;
 
-    @Column(name = "user_id")
-    private int user_id;
+//    @OneToOne @JoinColumn (name = "user_id", referencedColumnName = "id")
+//    private user_table user_id;
 }
