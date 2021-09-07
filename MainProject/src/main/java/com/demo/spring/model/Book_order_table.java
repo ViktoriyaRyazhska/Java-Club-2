@@ -1,13 +1,11 @@
 package com.demo.spring.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Timestamp;
 
 @Entity
-public class book_order_table {
+@Table(name="book_order_table")
+public class Book_order_table {
     @Id
     @GeneratedValue
     @Column(name = "id")

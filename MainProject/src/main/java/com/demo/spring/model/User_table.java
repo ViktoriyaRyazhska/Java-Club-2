@@ -1,6 +1,6 @@
 package com.demo.spring.model;
 
-import org.hibernate.annotations.Table;
+import com.demo.spring.enums.Role;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
@@ -8,7 +8,8 @@ import java.sql.Date;
 import java.sql.Timestamp;
 
 @Entity
-public class user_table {
+@Table(name="user_table")
+public class User_table {
 
     @Id @GeneratedValue
     @Column(name = "id")
