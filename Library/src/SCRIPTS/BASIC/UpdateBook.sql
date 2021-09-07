@@ -1,3 +1,4 @@
+
 UPDATE book
 SET publicationDate = '2021-01-01'
 WHERE title = 'Some name';
