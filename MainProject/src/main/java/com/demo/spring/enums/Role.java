@@ -1,3 +1,3 @@
-package com.demo.spring.model;
+package com.demo.spring.enums;
 
 public enum Role {reader, manager}
