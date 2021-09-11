@@ -6,7 +6,7 @@
     <session-factory>
         <!-- DB connection -->
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/library?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC&amp;useSSL=false</property>
         <property name="hibernate.connection.username">root</property>
             <!-- TODO: YOUR PASSWORD HERE -->
         <property name="hibernate.connection.password"></property>
