@@ -1,6 +1,6 @@
 package com.library.model.enums;
 
-public enum Roles {
+public enum Role {
     Reader,
     Manager
 }

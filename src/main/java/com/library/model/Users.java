@@ -1,96 +1,122 @@
 package com.library.model;
 
-import com.library.model.enums.Roles;
-import org.hibernate.annotations.Type;
+import com.library.model.enums.Role;
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
-import java.sql.Date;
-import java.sql.Timestamp;
+import java.time.LocalDate;
 
+@Table(name = "users")
 @Entity
-@Table(name = "Users")
 public class Users {
-    @Id @GeneratedValue
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false)
+    private Integer id;
 
-    @Column(nullable = false)
-    @Enumerated(EnumType.STRING)
-    private Roles role;
+    @Lob
+    @Column(name = "role", nullable = false, columnDefinition = "VARCHAR(45) DEFAULT 'Reader'")
+    private Role role;
 
-    @Column(nullable = false)
+    @Column(name = "firstName", nullable = false, length = 45)
+    @NotEmpty(message="Please Enter your first name")
     private String firstName;
 
-    @Column(nullable = false)
-    private String secondName;
+    @Column(name = "lastName", nullable = false, length = 45)
+    @NotEmpty(message="Please Enter your last name")
+    private String lastName;
 
-    @Column
-    private Date birthdate;
+    @Convert(disableConversion = true)
+    @Column(name = "birthdate")
+    private LocalDate birthdate;
 
-    @Column(nullable = false)
+    @Column(name = "email", nullable = false, length = 128)
+    @Email(message = "{user.email.invalid}")
+    @NotEmpty(message="Please Enter your email")
     private String email;
 
-    @Column(nullable = false)
+    @Column(name = "password", nullable = false, length = 256)
+    @NotEmpty(message="Please Enter your password")
     private String password;
 
-    @Column(nullable = false, columnDefinition = "BOOLEAN DEFAULT FALSE")
-    private boolean isDeleted;
+    @Column(name = "is_deleted", columnDefinition = "BOOLEAN DEFAULT FALSE")
+    private Boolean isDeleted;
 
-    public int getId() {
-        return id;
+    public Boolean getIsDeleted() {
+        return isDeleted;
     }
-    public void setId(int id) {
-        this.id = id;
+
+    public void setIsDeleted(Boolean isDeleted) {
+        this.isDeleted = isDeleted;
     }
-    public Roles getRole() {
-        return role;
-    }
-    public void setRole(Roles role) {
-        this.role = role;
-    }
-    public String getFirstName() {
-        return firstName;
-    }
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-    public String getSecondName() {
-        return secondName;
-    }
-    public void setSecondName(String secondName) {
-        this.secondName = secondName;
-    }
-    public Date getBirthdate() {
-        return birthdate;
-    }
-    public void setBirthdate(Date birthdate) {
-        this.birthdate = birthdate;
-    }
-    public String getEmail() {
-        return email;
-    }
-    public void setEmail(String email) {
-        this.email = email;
-    }
+
     public String getPassword() {
         return password;
     }
+
     public void setPassword(String password) {
         this.password = password;
     }
-    public boolean isDeleted() {
-        return isDeleted;
-    }
-    public void setDeleted(boolean deleted) {
-        isDeleted = deleted;
+
+    public String getEmail() {
+        return email;
     }
 
-    public Users(String firstName, String secondName, String email, String password) {
-        this.firstName = firstName;
-        this.secondName = secondName;
+    public void setEmail(String email) {
         this.email = email;
-        this.password = password;
     }
 
-    public Users() {
+    public LocalDate getBirthdate() {
+        return birthdate;
+    }
+
+    public void setBirthdate(LocalDate birthdate) {
+        this.birthdate = birthdate;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "Users{" +
+                "id=" + id +
+                ", role=" + role +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", birthdate=" + birthdate +
+                ", email='" + email + '\'' +
+                ", isDeleted=" + isDeleted +
+                '}';
     }
 }

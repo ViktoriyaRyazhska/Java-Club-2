@@ -1,6 +1,6 @@
 package com.library.model.enums;
 
-public enum Statuses {
+public enum Status {
     available,
     unavailable,
     deleted,
