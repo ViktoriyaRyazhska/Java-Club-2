@@ -7,7 +7,7 @@ Krasitskyi Taras
 ### Team 1  
 Danihevych Oleksandr  
 Skolodza Pavlo  
-Yevhen Voronko  
+Yevhen Voronko //sorry, guys :( good luck with Library project  
 Maksym Kuzbyt  
 Kuzo Yurii  
 
