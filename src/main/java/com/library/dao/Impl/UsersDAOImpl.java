@@ -1,30 +1,21 @@
 package com.library.dao.Impl;
 
 import com.library.dao.UsersDAO;
-import com.library.model.Books;
 import com.library.model.Users;
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import javax.persistence.Query;
 import javax.persistence.TypedQuery;
-import javax.sql.rowset.serial.SQLInputImpl;
-import java.sql.SQLInput;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@Repository("usersDao")
+@Repository
 public class UsersDAOImpl implements UsersDAO {
     //TODO
-    private final SessionFactory sessionFactory;
-
-    public UsersDAOImpl(SessionFactory sessionFactory) {
-        this.sessionFactory = sessionFactory;
-    }
+    @Autowired
+    SessionFactory sessionFactory;
 
     @Override
     public void create(Users user) {

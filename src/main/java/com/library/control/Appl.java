@@ -1,15 +1,18 @@
 package com.library.control;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
-import org.hibernate.cfg.Configuration;
+import com.library.config.AppInitializer;
+import com.library.controller.UsersController;
+import com.library.model.Users;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 
 public class Appl {
-
     public static void main(String[] args) {
 
+        Users user = new Users("Artur", "Conan", "ac@ro.rn", "arturconan");
+        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        UsersController usersController = (UsersController) context.getBean("usersController");
+        System.out.println(usersController.readAll());
     }
 }
