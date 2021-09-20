@@ -13,6 +13,7 @@ public class Appl {
         Users user = new Users("Artur", "Conan", "ac@ro.rn", "arturconan");
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         UsersController usersController = (UsersController) context.getBean("usersController");
+//        UsersController usersController = new UsersController();
         System.out.println(usersController.readAll());
     }
 }

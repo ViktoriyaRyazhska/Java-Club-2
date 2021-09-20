@@ -2,94 +2,131 @@ package com.library.dao.Impl;
 
 import com.library.dao.UsersDAO;
 import com.library.model.Users;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.TypedQuery;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Transactional
 @Repository
 public class UsersDAOImpl implements UsersDAO {
     //TODO
-    @Autowired
+    final
     SessionFactory sessionFactory;
 
-    @Override
-    public void create(Users user) {
-        sessionFactory.getCurrentSession().save(user);
+    public UsersDAOImpl(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
     }
 
+    //Crud
+    @Override
+    public void create(Users user) {
+        Session session = sessionFactory.getCurrentSession();
+        session.saveOrUpdate(user);
+    }
+
+    //cRud
+    @Transactional(readOnly = true)
     @Override
     public Users read(Users user) {
+        Session session = sessionFactory.getCurrentSession();
 
         Map<String, Boolean> params = new HashMap<>();
         if (user.getId() != null) { //id
             params.put("id", true);
-        }
-        if (user.getRole() != null) { //role
-            params.put("role", true);
-        }
-        if (user.getFirstName() != null) { //firstName
-            params.put("firstName", true);
-        }
-        if (user.getLastName() != null) { //lastName
-            params.put("lastName", true);
-        }
-        if (user.getBirthdate() != null) { //birthdate
-            params.put("birthdate", true);
-        }
+        } else params.put("id", false);
         if (user.getEmail() != null) { //email
             params.put("email", true);
-        }
-        @SuppressWarnings("unchecked")
-        TypedQuery<Users> query = sessionFactory.getCurrentSession().createQuery("from Users " +
-                "where " +
-                (params.get("id") ? ("id="+user.getId()+" and ") : "") +
-                (params.get("role") ? ("role="+ user.getRole()+" and ") : "") +
-                (params.get("firstName") ? ("firstName="+ user.getFirstName()+" and ") : "") +
-                (params.get("lastName") ? ("lastName="+ user.getLastName()+" and ") : "") +
-                (params.get("birthdate") ? ("birthdate="+ user.getBirthdate()+" and ") : "") +
-                (params.get("email") ? ("email="+ user.getEmail()+" and ") : ""));
-        return query.getSingleResult();
+        } else params.put("email", false);
+        Users res = session.get(Users.class,
+                (params.get("id")) ? user.getId() :
+                        (params.get("email")) ? user.getEmail() : "null");
+        return res;
     }
 
+
+    @Transactional(readOnly = true)
+    @Override
+    public List<Users> readByParam(Users user) {
+        Session session = sessionFactory.getCurrentSession();
+        boolean fatr = false;
+        String query = "from users where ";
+
+        if (user.getRole() != null) { //role
+            query += "role=" + user.getRole();
+            fatr=true;
+        }
+        if (user.getFirstName() != null) { //firstName
+            if (fatr) {
+                query += " and ";
+            } else fatr=true;
+            query += "firstName=" + user.getFirstName();
+        }
+        if (user.getLastName() != null) { //lastName
+            if (fatr) {
+                query += " and ";
+            } else fatr=true;
+            query += "lastName=" + user.getLastName();
+        }
+        if (user.getBirthdate() != null) { //birthdate
+            if (fatr) {
+                query += " and ";
+            } else fatr=true;
+            query += "birthdate=" + user.getBirthdate();
+        }
+        @SuppressWarnings("unchecked")
+        TypedQuery<Users> q = session.createQuery(query);
+        return q.getResultList();
+    }
+
+    @Transactional(readOnly = true)
     @Override
     public List<Users> readAll() {
+        Session session = sessionFactory.getCurrentSession();
         @SuppressWarnings("unchecked")
-        TypedQuery<Users> query = sessionFactory.getCurrentSession().createQuery("from Users");
+        TypedQuery<Users> query = session.createQuery("from Users");
         return query.getResultList();
     }
 
+    //crUd
     @Override
     public void update(Users base, Users update_from) {
+        Session session = sessionFactory.getCurrentSession();
+        base = read(base);
         if (!base.getRole().equals(update_from.getRole())) { //role
-            sessionFactory.getCurrentSession().update(String.valueOf(update_from.getRole()), base);
+            session.update(String.valueOf(update_from.getRole()), base);
         }
         if (!base.getFirstName().equals(update_from.getFirstName())) { //firstName
-            sessionFactory.getCurrentSession().update(String.valueOf(update_from.getFirstName()), base);
+            session.update(String.valueOf(update_from.getFirstName()), base);
         }
         if (!base.getLastName().equals(update_from.getLastName())) { //lastName
-            sessionFactory.getCurrentSession().update(String.valueOf(update_from.getLastName()), base);
+            session.update(String.valueOf(update_from.getLastName()), base);
         }
         if (!base.getBirthdate().equals(update_from.getBirthdate())) { //birthdate
-            sessionFactory.getCurrentSession().update(String.valueOf(update_from.getBirthdate()), base);
+            session.update(String.valueOf(update_from.getBirthdate()), base);
         }
         if (!base.getEmail().equals(update_from.getEmail())) { //email
-            sessionFactory.getCurrentSession().update(String.valueOf(update_from.getEmail()), base);
+            session.update(String.valueOf(update_from.getEmail()), base);
         }
         if (!base.getPassword().equals(update_from.getPassword())) { //password
-            sessionFactory.getCurrentSession().update(String.valueOf(update_from.getPassword()), base);
+            session.update(String.valueOf(update_from.getPassword()), base);
         }
         if (!base.getIsDeleted().equals(update_from.getIsDeleted())) { //isDeleted
-            sessionFactory.getCurrentSession().update(String.valueOf(update_from.getIsDeleted()), base);
+            session.update(String.valueOf(update_from.getIsDeleted()), base);
         }
     }
 
+    //cruD
     @Override
     public void delete(Users user) {
-        sessionFactory.getCurrentSession().delete(user);
+        Session session = sessionFactory.getCurrentSession();
+        user = read(user);
+        session.delete(user);
     }
 }

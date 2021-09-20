@@ -5,6 +5,9 @@ import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
+import java.sql.Timestamp;
 import java.time.LocalDate;
 
 @Table(name = "users")
@@ -19,12 +22,12 @@ public class Users {
     @Column(name = "role", nullable = false, columnDefinition = "VARCHAR(45) DEFAULT 'Reader'")
     private Role role;
 
+    @NotBlank(message = "required")
     @Column(name = "firstName", nullable = false, length = 45)
-    @NotEmpty(message="Please Enter your first name")
     private String firstName;
 
+    @NotBlank(message = "required")
     @Column(name = "lastName", nullable = false, length = 45)
-    @NotEmpty(message="Please Enter your last name")
     private String lastName;
 
     @Convert(disableConversion = true)
@@ -32,16 +35,24 @@ public class Users {
     private LocalDate birthdate;
 
     @Column(name = "email", nullable = false, length = 128)
-    @Email(message = "{user.email.invalid}")
-    @NotEmpty(message="Please Enter your email")
+    @Pattern(regexp = "[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}", message = "Please enter correct email")
     private String email;
 
+    @NotBlank(message = "required")
     @Column(name = "password", nullable = false, length = 256)
-    @NotEmpty(message="Please Enter your password")
     private String password;
 
     @Column(name = "is_deleted", columnDefinition = "BOOLEAN DEFAULT FALSE")
     private Boolean isDeleted;
+
+    @Column(name = "CREATED_AT", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+    private Timestamp created_at;
+
+    @Column(name = "EDITED_AT")
+    private Timestamp edited_at;
+
+    @Column(name = "DELETED_AT")
+    private Timestamp deleted_at;
 
     public Boolean getIsDeleted() {
         return isDeleted;
@@ -105,6 +116,38 @@ public class Users {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public Boolean getDeleted() {
+        return isDeleted;
+    }
+
+    public void setDeleted(Boolean deleted) {
+        isDeleted = deleted;
+    }
+
+    public Timestamp getCreated_at() {
+        return created_at;
+    }
+
+    public void setCreated_at(Timestamp created_at) {
+        this.created_at = created_at;
+    }
+
+    public Timestamp getEdited_at() {
+        return edited_at;
+    }
+
+    public void setEdited_at(Timestamp edited_at) {
+        this.edited_at = edited_at;
+    }
+
+    public Timestamp getDeleted_at() {
+        return deleted_at;
+    }
+
+    public void setDeleted_at(Timestamp deleted_at) {
+        this.deleted_at = deleted_at;
     }
 
     @Override

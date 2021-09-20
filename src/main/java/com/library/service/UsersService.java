@@ -5,10 +5,10 @@ import com.library.model.Users;
 import java.util.List;
 
 public interface UsersService {
-    //TODO
-    public void create(Users user);
-    public Users read(Users user);
-    public List<Users> readAll();
-    public void update(Users base, Users update_from);
-    public void delete(Users user);
+    void create(Users user);
+    Users read(Users user);
+    List<Users> readByParam(Users user);
+    List<Users> readAll();
+    void update(Users base, Users update_from);
+    void delete(Users user);
 }

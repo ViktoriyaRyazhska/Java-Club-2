@@ -5,14 +5,18 @@ import com.library.model.Users;
 import com.library.service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
 public class UsersServiceImpl implements UsersService {
-    //TODO
-    @Autowired
-    UsersDAO dao;
+
+    private final UsersDAO dao;
+
+    public UsersServiceImpl(UsersDAO dao) {
+        this.dao = dao;
+    }
 
     @Override
     public void create(Users user) {
@@ -22,6 +26,11 @@ public class UsersServiceImpl implements UsersService {
     @Override
     public Users read(Users user) {
         return dao.read(user);
+    }
+
+    @Override
+    public List<Users> readByParam(Users user) {
+        return dao.readByParam(user);
     }
 
     @Override
